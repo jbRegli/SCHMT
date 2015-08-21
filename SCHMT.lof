@@ -1,0 +1,24 @@
+\select@language {french}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Deep learning procedure applied to a computer vision example\relax }}{5}{figure.caption.3}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces The perceptron network}}{7}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Activation function: The step function}}{8}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Activation function: The sigmoid}}{9}{figure.caption.6}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Activation function: The hyperbolic tangent}}{9}{figure.caption.7}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Activation function: The rectified linear}}{10}{figure.caption.8}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces A Multi-layers perceptron network}}{11}{figure.caption.9}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces The computation of depth}}{15}{figure.caption.10}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A Boltzmann machine}}{19}{figure.caption.11}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces A restricted Boltzmann machine}}{21}{figure.caption.12}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces The structure of the restricted Boltzmann machine}}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces The Gibbs sampling procedure}}{24}{figure.caption.14}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces An auto-encoder}}{26}{figure.caption.15}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces A 3 hidden layers 500-500-500 stack auto-encoder}}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces A 3 hidden layers 1000-1000-1000 stack auto-encoder}}{31}{figure.caption.17}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
