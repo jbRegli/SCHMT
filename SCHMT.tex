@@ -1,4 +1,4 @@
-%%%%%%%%%%%%%%%%%%%%%
+cd%%%%%%%%%%%%%%%%%%%%%
 % Type of document: %
 %%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper,11pt]{report}
@@ -52,7 +52,7 @@
 				\vspace*{2cm}
 			\end{sc}
 			%%% Author:
-			\\ \LARGE Jean-Baptiste Regli
+			\\ \LARGE Jean-Baptiste REGLI
 			\vspace*{0.2cm}
 			%%% Date
 			\\ \large 2013-2014
@@ -95,14 +95,40 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction:}
-  \label{chap:Intro}
+	\label{chap:Intro}
+		   
+	\section{Need for a better signal representation:}
+		\label{seq:Intro/Need}
 		
-  \section{Image representation:}
-    \label{seq:Intro/Image rep}
-    %TODO: Properties of a ``good'' image representation for classification.
-    The first part of this report will be dedicated to explaining the motivations as well as the construction process of the scattering transform (ST). To understand those motivations we will first provide an intuition of what a ``good'' representation of signal -for classification- is. We will then provide more formal mathematical definitions for our intuition and how this can be achieved.
-    
-    \subsection{Intuition of a ``good'' image representation:}
+		Our researches have been focused on \Important{high-dimensional classification problems}. Meaning that throughout this paper we will be working with several -says $N$- realizations of a signal $X =\{\bfx_{1}, ... , \bfx_{N}\}$  where,
+			
+		\begin{equation*}
+			\forall i \in \llbracket 1 , N \rrbracket \;\;\; \bfx_{i}=(x(1) \, ... \, x(d)) \;\;\;\;\; \text{with} \;\; d \sim 10^{6} \; \text{and} \; x(.) \in \dsR.  
+		\end{equation*}
+		
+		\begin{figure}
+			\begin{center}
+				\includegraphics[width=3.5in]{placeholder.jpg}
+			  \caption[High dimensional signals]{(a) Sound waveform (b) Picture}
+			  \label{fig:highDim signals}
+			\end{center}
+			%TODO: (a) Sound waveform (b) Picture
+		\end{figure}
+		
+		And we are interested in \Important{learning the labeling function} -says $f$- given $N$ labeled sampled values -training examples- $\{x_{i}, y_{i}=f(x_{i})\}_{i\leq N}$.\\
+		
+		A naive solution to this problem would be to infer the class of a new realization $\bfx$ by looking at its neighbors, e.g. K-Nearest Neighbors (KNN). This approach is working fine in the case of low dimensional problems (\textbf{\textit{citation KNN good perf}}). However it shows limitations in high dimensional cases (\textbf{\textit{citation KNN curse of dimensional}}), because the number of samled values of the signal needed to find a neighbor to a new realization $\bfx$ grow exponentially with the number of dimensions.\\
+			
+		To over come this issue one could try to reduce the number of dimensions of the problem. In the simple case the signal$\bfx$ belongs to a subset $\Omega \subset \dsR^{d}$ where $\Omega$ .
+		
+		%TODO: CCL sur image representation and clf
+		
+	\section{Image representation:}
+		\label{seq:Intro/Image rep}
+		%TODO: Properties of a ``good'' image representation for classification.
+		We are now interested in projecting our signal into a new space where the classification task would be simpler. To do so we need to project the signal into a ``good'' space, i.e. crate a good representation of our data. We will first provide an intuition of what ``good'' is and then provide more formal mathematical definitions for our intuition and how this can be achieved.
+%     
+		\subsection{Intuition of a ``good'' image representation:}
       \label{seq:Intro/Image rep/Intuition}
       One way to develop an intuition on what properties a ``good'' representation for classification have is to look at the human visual function and what he is able to tell apart.\\
       
@@ -117,7 +143,7 @@
 				  \begin{center}
 				    \includegraphics[width=3.5in]{placeholder.jpg}
 				    \caption[Translation invariance]{A human can easily tell that those two images are from the same class.}
-				    \label{fig:illustration translation invariance}
+				    \label{fig:Illustration translation invariance}
 				  \end{center}
 				  %TODO: (a) initial image (b) sifted one
 				\end{figure}
@@ -139,7 +165,7 @@
 					  \begin{center}
 					    \includegraphics[width=3.5in]{placeholder.jpg}
 					    \caption[Rotation invariance]{A human can easily tell that (a) and (b) are from the same class. (c) could be a  '6' slightly rotated or a '9' heavily rotated.}
-					    \label{fig:illustration rotation invariance}
+					    \label{fig:Illustration rotation invariance}
 					    %TODO: (a) initial image (b) sightly rotated one (c) 180 rotation
 					  \end{center}
 					\end{figure}	
@@ -148,42 +174,47 @@
 		\subsection{Formalization of a ``good'' image representation:}
       \label{seq:Intro/Image rep/Formalization}
       
-      Let us now try to provide formal mathematical framework to the properties listed above.\\
-      
-      In this document we define a signal as,
-      
-     \begin{defn} \textbf{Signal}\\ 
+      To formalize the intuitions on the representation stated earlier, we first need to define the signal. Throughout this document, a signal will be defined as,
+			
+			\begin{defn} \textbf{Signal}\\ 
 				A signal $f$ is a square-integrable $d$ dimensional real function.
-        \begin{equation*}
-	  				f \in \mathcal{L}^{2}(\mathds{R}^{d}).
+				\begin{equation*}
+					f \in \mathcal{L}^{2}(\dsR^{d}).
 				\end{equation*}
-				\label{def:signal}
-      \end{defn}
+				\label{def:Signal}
+			\end{defn}
+			
+			To be informative enough, a representation has to preserve separability between elements of different classes. Formally this is,
       
-      We will call $L_{(.)}$ the translation operator for the function in 
-      $\mathcal{L}^{2}(\mathds{R}^{d})$, \ie for $f \in \mathcal{L}^{2}(\mathds{R}^{d}) \;\; 
-      \text{and} \;\; (x,c) \in (\mathds{R}^{d})^{2} \;\;\;\; L_{c}f(x) = f(x-c)$. An operator is translation invariant -resp: canonical translation invariant- if,
+			\begin{prop} \textbf{Discriminability preservation}
+				A representation $\Phi$ preserves discriminabilty if all elements of two different classes are distance of margin $C$ in the representation space, i.e.:
+				\begin{equation*}
+					\forall (x,x') \in \left(\dsR^{d}\right)^{2} \; \exists C \in \dsR \;\; | \;\; \abs{f(x)-f(x')} = 1 \;\; \Rightarrow \;\; \norm{\Phi(x)-\Phi(x')} \geq C^{-1}
+				\end{equation*}
+				\label{pty:Discriminabilty}
+			\end{prop}
+  
+      The class associated to a representation of a signal appears to be invariant to small shifts. In this document we call $L_{(.)}$ the translation operator for the function in $\mathcal{L}^{2}(\dsR^{d})$, \ie for $f \in \mathcal{L}^{2}(\dsR^{d}) \;\; \text{and} \;\; (x,c) \in (\dsR^{d})^{2} \;\;\;\; L_{c}f(x) = f(x-c)$. An operator is translation invariant -resp: canonical translation invariant- if,
 
       \begin{prop} \textbf{Translation invariant}\\ 
-				An operator $\Phi: \mathcal{L}^{2}(\mathds{R}^{d}) \rightarrow \mathcal{H}$ where $\mathcal{H}$ is an Hilbert space is translation invariant if:
+				An operator $\Phi: \mathcal{L}^{2}(\dsR^{d}) \rightarrow \mathcal{H}$ where $\mathcal{H}$ is an Hilbert space is translation invariant if:
 	      	\begin{equation*}
-			  		\forall c \in \mathds{R}^{d} 
+			  		\forall c \in \dsR^{d} 
 			  		\;\; \text{and}  \;\;
-			  		\forall f \in \mathcal{L}^{2}(\mathds{R}^{d}) \;\;
+			  		\forall f \in \mathcal{L}^{2}(\dsR^{d}) \;\;
 			  		\Phi(L_{c}f) = \Phi(f).
 				\end{equation*}
-				\label{def:translation inv}
+				\label{pty:Translation invariance - intuition}
       \end{prop}
       \vspace{-30pt}
-      
       \begin{prop} \textbf{Canonical translation invariant}\\ 
-				An operator $\Phi: \mathcal{L}^{2}(\mathds{R}^{d}) \rightarrow \mathcal{H}$ where $\mathcal{H}$ is an Hilbert space is canonical translation invariant if:
+				An operator $\Phi: \mathcal{L}^{2}(\dsR^{d}) \rightarrow \mathcal{H}$ where $\mathcal{H}$ is an Hilbert space is canonical translation invariant if:
         \begin{equation*}
-			  		\forall f \in \mathcal{L}^{2}(\mathds{R}^{d}) \;\;
+			  		\forall f \in \mathcal{L}^{2}(\dsR^{d}) \;\;
 			  		\Phi(L_{a}f) = \Phi(f) 
-			  		\;\; \text{where} \; a \in \mathds{R}^{d} \; \text{is function of} \; f.
+			  		\;\; \text{where} \; a \in \dsR^{d} \; \text{is function of} \; f.
 				\end{equation*}
-				\label{ppt:translation inv}
+				\label{pty:Canonical translation invariance - intuition}
       \end{prop}
       
       For the usual representation operators instabilities to deformations are known to appear -especially at high frequencies. To prevent this, one would like the representation to be non-expansive,
@@ -191,30 +222,30 @@
       \begin{defn} \textbf{Non-expensive representation}
 				A representation $\Phi$ is non-expensive if,
 				\begin{equation}
-			  		\forall (f,h) \in (\mathcal{L}^{2}(\mathds{R}^{d}))^{2} \;\; 
+			  		\forall (f,h) \in (\mathcal{L}^{2}(\dsR^{d}))^{2} \;\; 
 			  		\norm{\Phi(f) - \Phi(h)} \leq \norm{f-h}.
 				\end{equation}
-				\label{def:non expensive}
+				\label{def:Non-expansivity - intuition}
       \end{defn}
       
       The stability to deformations of a non-expansive operator can be expressed as its Lipschitz continuity to the action of deformations close to translations \textbf{\textit{cite mallat GIS}}. Such a diffeormorphism transform can be expressed as,
       \begin{equation*}
       		\begin{split}
-      			L_{\tau}	: \; & \mathcal{L}^{2}(\mathds{R}^{d}) \rightarrow \mathcal{L}^{2}(\mathds{R}^{d})\\
+      			L_{\tau}	: \; & \mathcal{L}^{2}(\dsR^{d}) \rightarrow \mathcal{L}^{2}(\dsR^{d})\\
       							  & \;\;\;\; f \;\;\;\;\; \rightarrow  f(\mathds{1} - \tau)
 				\end{split}
       \end{equation*}
 
-			where $\tau(x) \in \mathds{R}^{d}$ is a displacement field.
+			where $\tau(x) \in \dsR^{d}$ is a displacement field.
 			
 			\begin{prop} \textbf{Lipschitz continuous}
-				A translation invariant operator $\Phi$ is said to be Lipschitz continuous to the action of $mathcal{C}^{2}$ diffeomorphisms if for any compact $\Omega \in \mathds{R}^{d}$ there exists $C$ such that for all $f \in \mathcal{L}^{2}(\mathds{R}^{d})$ supported in $\Omega$ and all $\tau \in mathcal{C}^{2}(\dsR^{d})$,
+				A translation invariant operator $\Phi$ is said to be Lipschitz continuous to the action of $mathcal{C}^{2}$ diffeomorphisms if for any compact $\Omega \in \dsR^{d}$ there exists $C$ such that for all $f \in \mathcal{L}^{2}(\dsR^{d})$ supported in $\Omega$ and all $\tau \in mathcal{C}^{2}(\dsR^{d})$,
 				\begin{equation}
 					\norm{\Phi(f) - \Phi(L_{\tau}f)}_{\mathcal{H}} \leq 
 					C \norm{f} \left(\sup_{x \in \dsR^{d}} \abs{\nabla \tau(x)} + \sup_{x \in \dsR^{d}} \abs{\mathit{H}\tau(x)}\right)
 					\label{eq:Lipschitz continuity}
 				\end{equation}
-				\label{pty:Lipschitz continuity}
+				\label{pty:Lipschitz continuity - intuition}
 			\end{prop}
       
       where $\abs{\nabla \tau(x)}$ and $\abs{\mathit{H}\tau(x)}$ are respectively the sup-norm and the sup-norm of the Hessian tensor of the matrix $\tau(x)$.\\
@@ -224,28 +255,44 @@
     \subsection{State of the art in image representation:}
       \label{seq:Intro/Image rep/State of the art}      
       
-      Now that we have listed the properties we would like our representation to have, let us have a look at the usual signal representation tools and see if they which of them they fulfil.\\
+			Now that we have listed the properties we would like our representation to have, let us have a look at the usual signal representation tools and see if they which of them they fulfil.\\
       
-      The first representation method one can think of is the modulus of the \Important{Fourier transform}. This operator is informational enough to allow -to a certain extent- discrimination different type of signal \textbf{\textit{find a citation for clf with fourier transform}}. It is also translation invariant \textbf{\textit{find a citation}}. However it is well known that those operators present instabilities to deformation at high frequencies \textbf{\textit{cite 10 from mallat}} and thus are not Lipschitz continuous to the action of diffeomorphisms.\\
+			The first representation method one can think of is the modulus of the \Important{Fourier transform}. This operator is informational enough to allow -to a certain extent- discrimination different type of signal \textbf{\textit{find a citation for clf with fourier transform}}. It is also translation invariant \textbf{\textit{find a citation}}. However it is well known that those operators present instabilities to deformation at high frequencies \textbf{\textit{cite 10 from mallat}} and thus are not Lipschitz continuous to the action of diffeomorphisms.\\
       
-			\Important{Wavelet transform} is another popular representation method. Again they provide a "good enough" representation to allow classification of different signals \textbf{\textit{find citations}}. Plus by grouping high frequencies into dyadic packet in $\dsR^{d}$, wavelet operators are stable to deformations \textbf{\textit{citation mallat's book}}. However wavelets are known to be non-invariant to translations.\\
+			\Important{Wavelet transform} is another popular representation method. Again they provide a "good enough" representation to allow classification of different signals \textbf{\textit{find citations}}. Plus by grouping high frequencies into dyadic packet in $\dsR^{d}$, wavelet operators are stable to deformations \textbf{\textit{citation mallat's book}}. 
+			
+% 			\begin{equation}
+% 				 = \begin{pmatrix} 
+% 			\end{equation}
+			
+			\begin{equation}
+				\begin{matrix}
+					W\bfx =
+					\begin{pmatrix}
+						\bfx \ast \phi \\[0.5em]
+						\bfx \ast \psi_{\lambda} \\[0.5em]
+					\end{pmatrix}
+					\begin{aligned}
+						\begin{matrix}
+							\rightarrow \text{averaging part}				\\[0.5em]
+							\rightarrow \text{high frequency part}	\\[0.5em]
+						\end{matrix}
+					\end{aligned}
+				\end{matrix}
+			\end{equation}
+		
+
+			However only the averaging part of a wavelet is invariant to translation ans thus wavelets themselves are known to be non-invariant to translations.\\
 			
 			Another signal representation method popular at the moment are the \Important{convolutional neural networks} \textbf{\textit{cite LeCun}}. As opposed to the two previously mentioned representation methods, those operators are not fixed but learned from the data \textbf{\textit{cite learning method from CNN}}. Over the past few year they have provided state of the art results on many standard classification task, such as MNIST \textbf{\textit{cite}}, CIFAR \textbf{\textit{cite}}, ImageNet \textbf{\textit{cite }} or \textbf{\textit{find a example in speech processing}}. Those good results are used to advocate that those networks are learning "good" representations. However it seems that in certain cases they learn representation of the data that are -for example- not invariant to deformations \textbf{\textit{cite Bruna and Al strange pties of NN}}.\\
-			
-			In the next section we will focus on the construction of a wavelet based operator with a structure somehow similar to a convolutional neural network which will be fulfilling all the properties of what we have defined as a "good" signal representation for classification.
-			
-      Another representation method popular at the moment is the convolutional neural networks.       
-      
-      
-  \section{Scattering transform:}
-    ??? - not sure yet
+			         
+	\section{Probabilistic graphical model:}
+		??? - not sure yet
     
-  \section{Probabilistic graphical model:}
-    ??? - not sure yet
-
-  \section{Outline of the report:}
+	\section{Outline of the report:}
     \label{seq:Intro/Outline of the report}    
-
+		The part~\ref{chap:ST} of this report will summarize and explain the recent work Stephane Mallat and his group on the \Important{Scattering Transform} (ST), a wavelet-based operator fulfilling all the properties of what we have defined as a ``good'' representation for signal classification. Second (see~\ref{chap:PGMs}) we will introduce the \Important{Probabilistic Graphical Models} (PGMs) as generative models that can be used -among other tasks- for classification. Then in~\ref{chap:SHMT} we will describe how the the representation produced by the scattering transform can be modeled by an hidden markov tree, using what we have named \Important{Scattering Hidden Markov Trees} (SCHMTs). Finally in~\ref{chap:Experimental results} we will provide some example of applications.
+    
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Scattering transform:}
@@ -253,226 +300,159 @@
   %TODO: In this section we will introduce the scattering transform as a mathematical object providing a deterministic representation of a signal.
   %TODO2:Properly cite mallat, bruna and al
   
-  In this section we describe the contruction process of a mathematical operator - the scattering
-  transform (ST)- designed to generate what we have considered to be an interesting representation of
-  our data (see \ref{seq:Intro/Image rep}). Therefore a scattering transform builds \Important{invariant}, \Important{stable} and 
-  \Important{informative representation} of signals through a \Important{non-linear},
-  \Important{unitary transform}. It is an operator delocalizing signal informational content into 
-  scattering decomposition path, computed by \Important{cascading wavelet/modulus operators}.
-  This architecture is similar to a \Important{convolutional neural network} (CNN) where the synaptic 
-  weights would be given by a wavelet operator instead of learned.\\
+	In this section we describe the construction process of a mathematical operator - the scattering transform (ST)- designed to generate what we have considered to be an interesting representation of our data (see \ref{seq:Intro/Image rep}). Therefore a scattering transform builds \Important{invariant}, \Important{stable} and \Important{informative representation} of signals through a \Important{non-linear},
+  \Important{unitary transform}. It is an operator delocalizing signal informational content into scattering decomposition path, computed by \Important{cascading wavelet/modulus operators}.
+  This architecture is similar to a \Important{convolutional neural network} (CNN) where the synaptic weights would be given by a wavelet operator instead of learned.\\
   
-  In \ref{seq:ST/CNN}, we will quickly introduce the standard architecture of a CNN, then we will
-  explain how are built the scattering operators (see \ref{seq:ST/SCN}) and review some of their
-  important properties (see {\textbf{\textit{ref: correct section}}). Finally, in 
-  \ref{seq:ST/Applications to clf}, we will describe how the scattering transform is usually used
-  for classification tasks.
+	In this section we study a wavelet-based representation method -the scattering transform- having the properties of what we have defined as a ``good'' representation for signal classification. We do so by first explaining how are built the scattering operators (see \ref{seq:ST/SCN}) and review some of their important properties (see {\textbf{\textit{ref: correct section}}). Once more familiar with the theory of the scattering transform we will see how similar in their architecture they are to Convolutional Neural Network (CNN) (see~\ref{seq:ST/CNN}). Finally, in \ref{seq:ST/Applications to clf}, we describe how the scattering transform is usually used in classification tasks.
 	
-  \section{Convolutional Neural Network:}
-    \label{seq:ST/CNN}
-    
-    %TODO: Quick presentation of those network architecture to explain the motivation of the scattering transform
- 
-    A convolutional neural network is a multilayer architecture cascading... \textbf{\textit{TBD}}
-    
-    \section{Scattering Convolution Network:}
-    \label{seq:ST/SCN}
-      %TODO Description of  the scattering tool -- Progressive construction of a roto-translation invariant representation.
-	      
-      In this section we first introduce a wavelet-based scattering transform built to have interesting
-      properties for classification tasks, meaning being translation invariant and stable to 
-      $\mathbf{\mathcal{L}^{2}}$ deformations. Then we describe its convolutional architecture.
+% 	\section{Scattering Convolution Network:}
+% 		%TODO Description of  the scattering tool -- Progressive construction of a roto-translation invariant representation.
+	    
+    In this section we first introduce a wavelet-based scattering transform built to have interesting properties for classification tasks, meaning being translation invariant and stable to $\mathbf{\mathcal{L}^{2}}$ deformations, while preserving the discriminabilty between classes. Then we explained how those operators can be stacked to create a ``deep'' scattering transform using a convolutional architecture.
       
-    \subsection{Scattering wavelets:}
-      \label{subseq:ST/SCN/Scattering wavelets}
+		\section{Scattering wavelets:}
+			\label{seq:ST/Scattering wavelets}
 
-      A two-dimensional directional wavelet is obtained by scaling and rotating a single band-pass 
-      filter $\psi$. If we let $G$ be a discrete, finite rotation group of $\dsR^{2}$, 
-      multi-scale directional wavelet filters are defined for any scale $j \in \dsZ$ and rotation
-      $r \in G$ by
+			A two-dimensional directional wavelet is obtained by scaling and rotating a single band-pass filter $\psi$. If we let $G$ be a discrete, finite rotation group of $\dsR^{2}$, multi-scale directional wavelet filters are defined for any scale $j \in \dsZ$ and rotation $r \in G$ by
       
       \begin{equation}
-	\label{eq:multi-scale directional wavelet}
-	\psi_{2^{j}r}(u) = 2^{2j} \psi(2^{j}r^{-1}u).
+				\label{eq:multi-scale directional wavelet}
+				\psi_{2^{j}r}(u) = 2^{2j} \psi(2^{j}r^{-1}u).
       \end{equation}
       
-      To simplify the notations, we will now denote $\lambda = \lambda(j,r) \; \eqdef \; 2^{j}r \in
-      \Lambda \; \eqdef \; G \times \dsZ$.\\
+      To simplify the notations, we will now denote $\lambda = \lambda(j,r) \; \eqdef \; 2^{j}r \in \Lambda \; \eqdef \; G \times \dsZ$.\\
       
-      A wavelet transform filters the signal $x$ using a family of wavelets $\{x \ast 
-      \psi_{\lambda}(u)\}_{\lambda}$. This is computed from a filter bank of dilated and rotated wavelets
-      having no orthogonality property and it creates a multi-scale and orientation representation of the
-      input.\\ 
+      A wavelet transform filters the signal $x$ using a family of wavelets $\{x \ast \psi_{\lambda}(u)\}_{\lambda}$. This is computed from a filter bank of dilated and rotated wavelets having no orthogonality property and it creates a multi-scale and orientation representation of the input.\\ 
       %TODO: maybe add part on aliasing and invertibility
       
-      If $u.u'$ and $\|u\|$ define respectively the inner product and the norm in $\dsR^{2}$,
-      the Morlet wavelet $\psi$ is an example of wavelet given by
+      If $u.u'$ and $\|u\|$ define respectively the inner product and the norm in $\dsR^{2}$, the Morlet wavelet $\psi$ is an example of wavelet given by,
       
-      \begin{equation*}
-	\label{eq:Morlet wavelet}
-	\psi(u) = C_{1}(e^{iu.\xi} - C_{2}) e^{\|u\|^{2}/(2 \sigma^{2})},
+      \begin{equation*} 
+				\label{eq:Morlet wavelet}
+				\psi(u) = C_{1}(e^{iu.\xi} - C_{2}) e^{\|u\|^{2}/(2 \sigma^{2})},
       \end{equation*}
 
-      where $C_{1}$, $\xi$ and $\sigma$ are meta-parameters of the wavelet and $C_{2}$ is adjusted
-      so that $\int \psi(u) du = 0$. Figure~\ref{fig:Morlet wavelet} shows a Morlet wavelet for 
-      $\xi= 3\pi/4$ and $\sigma=0.85$.\\
+      where $C_{1}$, $\xi$ and $\sigma$ are meta-parameters of the wavelet and $C_{2}$ is adjusted so that $\int \psi(u) du = 0$. Figure~\ref{fig:Morlet wavelet} shows a Morlet wavelet for  $\xi= 3\pi/4$ and $\sigma=0.85$.\\
       
       \begin{figure}
-	\begin{center}
-	  \includegraphics[width=3.5in]{placeholder.jpg}
-	  \caption{Complex Morlet wavelet.}
-	  \label{fig:Morlet wavelet}
-	  \end{center}	
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption{Complex Morlet wavelet.}
+					\label{fig:Morlet wavelet}
+				\end{center}	
       \end{figure}
       
-      As opposed to the Fourier sinusoidal waves, wavelets are operators stable to 
-      $\mathbf{\mathcal{L}^{2}}$ deformations as they can be expressed as localized waveforms 
-      (\textbf{\textit{citation}}). However, wavelet transforms compute convolutions with wavelets,
-      hence they are translation covariant operators (\textbf{\textit{citation}}).
+      As opposed to the Fourier sinusoidal waves, wavelets are operators stable to $\mathbf{\mathcal{L}^{2}}$ deformations as they can be expressed as localized waveforms (\textbf{\textit{citation}}). However, wavelet transforms compute convolutions with wavelets, hence they are translation covariant operators (\textbf{\textit{citation}}).\\
         
-      To ensure a translation invariant behavior to an operator commuting with them, one has to
-      introduce a non-linearity. For example if $R$ is a linear or non-linear operator commuting with
-      translations $L_{c}$, \ie $R(L_{c}x) = L_{c}R(x)$), then the integral $\int R(x(u))du$ is 
-      translation invariant. One can apply this to $R(x) = x \ast \psi_{\lambda}$ and gets the 
-      trivial invariant,
+      To ensure a translation invariant behavior to an operator commuting with them, one has to introduce a non-linearity. For example if $R$ is a linear or non-linear operator commuting with translations $L_{c}$, \ie $R(L_{c}x) = L_{c}R(x)$), then the integral $\int R(x(u))du$ is  translation invariant. One can apply this to $R(x) = x \ast \psi_{\lambda}$ and gets the trivial invariant, 
       
       \begin{equation*}
-	\label{eq:Trivial invariant}
-	\int x \ast \psi_{\lambda}(u)du = 0,
+				\label{eq:Trivial invariant}
+				\int x \ast \psi_{\lambda}(u)du = 0,
       \end{equation*}
       
-      for all $x$ as $\int \psi_{\lambda}(u)du = 0$. However to preserve the informative character of 
-      the  scattering operator, one has to ensure that the integral does not vanish. To do so an 
-      operator $M$ such that $R(x) = M(x \ast \psi_{\lambda})$ is introduced. If $M$ is a linear 
-      transformation commuting with translation then the integral still vanishes. Hence one has to 
-      choose $M$ to be a non-linear.\\
+      for all $x$ as $\int \psi_{\lambda}(u)du = 0$. However to preserve the informative character of the  scattering operator, one has to ensure that the integral does not vanish. To do so an operator $M$ such that $R(x) = M(x \ast \psi_{\lambda})$ is introduced. If $M$ is a linear  transformation commuting with translation then the integral still vanishes. Hence one has to choose $M$ to be a non-linear.\\
       
-      Keeping in mind that the scattering transform has to be stable to deformations and taking
-      advantages of the wavelet transform stability to small deformations in the input space,
-      we also impose that $M$ commutes with deformations
+      Keeping in mind that the scattering transform has to be stable to deformations and taking advantages of the wavelet transform stability to small deformations in the input space, we also impose that $M$ commutes with deformations, 
       
       \begin{equation*}
-	\label{eq:Commute with deformations}
-	\forall \tau(u) \; , \; M L_{\tau} = L_{\tau} M.
+				\label{eq:Commute with deformations}
+				\forall \tau(u) \; , \; M L_{\tau} = L_{\tau} M.
       \end{equation*}
       
-      If a weak differentiability condition is added, one can prove (\textbf{\textit{ref ISCN 6}}) that
-      $M$ must necessarily be a point-wise operator, \ie $Mx(u)$ only depends on the value of $x(u)$.
-      Finally, by adding an $\mathbf{\mathcal{L}^{2}}(\dsR^{2})$ stability constraint,
+      If a weak differentiability condition is added, one can prove (\textbf{\textit{ref ISCN 6}}) that $M$ must necessarily be a point-wise operator, \ie $Mx(u)$ only depends on the value of $x(u)$. Finally, by adding an $\mathbf{\mathcal{L}^{2}}(\dsR^{2})$ stability constraint,
       
       \begin{equation*}
-	\label{eq:L2 stability}
-	\forall (x,y) \in \mathbf{\mathcal{L}^{2}}(\dsR^{2})^{2} \; , \; 
-	\norm{Mx} = \norm{x} 
-	\; \text{and} \;
-	\norm{Mx-My} \leq \norm{x-y},
+				\label{eq:L2 stability}
+				\forall (x,y) \in \mathbf{\mathcal{L}^{2}}(\dsR^{2})^{2} \; , \; 
+				\norm{Mx} = \norm{x} 
+				\; \text{and} \;
+				\norm{Mx-My} \leq \norm{x-y},
       \end{equation*}     
       
-      one can show (\textbf{\textit{ref ISCN 6}}) that necessarily $Mx= e^{i\alpha}\abs{x}$. For the 
-      scattering transform $\alpha$ is set to $0$ and therefore the resulting coefficients are the 
-       $\mathbf{\mathcal{L}^{1}}(\dsR^{2})$ norms:
+      one can show (\textbf{\textit{ref ISCN 6}}) that necessarily $Mx= e^{i\alpha}\abs{x}$. For the scattering transform, the simplest solution of setting $\alpha$ to $0$ is choosed and therefore the resulting coefficients are the $\mathbf{\mathcal{L}^{1}}(\dsR^{2})$ norms:
        
       \begin{equation*}
-	\label{eq:L1 norm}
-	\norm{x \ast \psi_{\lambda}}_{1} = \int \abs{x \ast \psi_{\lambda}} du
+				\label{eq:L1 norm}
+				\norm{x \ast \psi_{\lambda}}_{1} = \int \abs{x \ast \psi_{\lambda}} du
       \end{equation*}      
       
-      The family of $\mathbf{\mathcal{L}^{1}}(\dsR^{2})$ normed wavelet $\{ \norm{x \ast 
-      \psi_{\lambda}}_{1}\}_{\lambda}$ generate a crude signal representation which measures the 
-      sparsity of the wavelet coefficients. One can prove (\textbf{\textit{ref ISCN 36}}) that $x$ can
-      be reconstructed from $\{ \abs{ x \ast \psi_{\lambda}(u)} \}_{\lambda}$ up to a multiplicative 
-      constant. Which means that the information loss in $\{ \norm{x \ast \psi_{\lambda_{1}}} 
-      \}_{\lambda}$ comes from the integration of the absolute value $\abs{ x \ast \psi_{\lambda}(u)}$
-      which removes all non-zero frequencies. However those components can be recovered by calculating 
-      the wavelet coefficients $\abs{ x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}(u)$. 
-      By doing so their $\mathbf{\mathcal{L}^{1}}(\dsR^{2})$ norms define a much larger family
-      of invariants:
+      The family of $\mathbf{\mathcal{L}^{1}}(\dsR^{2})$ normed wavelet $\{ \norm{x \ast \psi_{\lambda}}_{1}\}_{\lambda}$ generate a crude signal representation which measures the sparsity of the wavelet coefficients. One can prove (\textbf{\textit{ref ISCN 36}}) that $x$ can be reconstructed from $\{ \abs{ x \ast \psi_{\lambda}(u)} \}_{\lambda}$ up to a multiplicative constant. Which means that the information loss in $\{ \norm{x \ast \psi_{\lambda}}_{1} \}_{\lambda}$ comes from the integration of the absolute value $\abs{ x \ast \psi_{\lambda}(u)}$ which removes all non-zero frequencies. However those components can be recovered by calculating the wavelet coefficients $\abs{ x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}(u)$. By doing so their $\mathbf{\mathcal{L}^{1}}(\dsR^{2})$ norms define a much larger family of invariants:
       
       \begin{equation*}
-	\label{eq:2nd order}
-	\forall (\lambda_{1}, \lambda_{2}) 
-	\norm{ \abs{ x \ast \psi_{\lambda_{1}}} \ast \lambda_{2}}_{1} =
-	\int \abs{ \abs{ x \ast \psi_{\lambda_{1}}(u)} \ast \psi_{\lambda_{2}}} du
+				\label{eq:2nd order}
+				\forall (\lambda_{1}, \lambda_{2}) 
+				\norm{ \abs{ x \ast \psi_{\lambda_{1}}} \ast \lambda_{2}}_{1} =
+				\int \abs{ \abs{ x \ast \psi_{\lambda_{1}}(u)} \ast \psi_{\lambda_{2}}} du
       \end{equation*}          
       
-      By further iterating on the wavelet/modulus operators more translation invariant coefficients can 
-      be computed. Let us define:
+      By further iterating on the wavelet/modulus operators more translation invariant coefficients can be computed. Let us define:
       
       \begin{defn} \textbf{Scattering Propagator}\\ 
-	The scattering operator $U$ for a scale and an orientation $\lambda \in G \times \dsZ$ 
-	is defined as the absolute value of the input convolved with the wavelet operator at this 
-	scale and orientation.
-        
-        \begin{equation}
-	  \label{eq:scattering propagator}
-	  U[\lambda](x) \eqdef \abs{x \ast \psi_{\lambda}}
-	\end{equation}
-	\label{def:SO}
-      \end{defn}
-      
-      \begin{defn} \textbf{Path Ordered Scattering Propagators}\\ 
-	Any sequence $p = (\lambda_{1}, \lambda_{2},...,\lambda_{m})$ where $\forall i \in
-	\llbracket 1,m \rrbracket \lambda_{i} \in G \times \dsZ$ defines a \Important{path} of 
-	length $m$, \ie the ordered product of non-linear and non-commuting operators
-	
-	\begin{equation}
-	  \label{eq:path ordered SP}
-	  \begin{split}
-	    U[p]x &\eqdef U[\lambda_{m}]...U[\lambda_{2}]U[\lambda_{1}](x) \\
-		    &= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
-		    ...} \ast \psi_{\lambda_{m}}}	   
-	  \end{split}
-	\end{equation}
-	
-	With the convention: $U[\emptyset]x = x$\\
-	\label{def:path ordered SO}
+				The scattering operator $U$ for a scale and an orientation $\lambda \in G \times \dsZ$ is defined as the absolute value of the input convolved with the wavelet operator at this scale and orientation.
+				
+				\begin{equation}
+					\label{eq:scattering propagator}
+					U[\lambda](x) \eqdef \abs{x \ast \psi_{\lambda}}
+				\end{equation}
+				\label{def:SO}
+			\end{defn}
+						
+			\begin{defn} \textbf{Path Ordered Scattering Propagators}\\ 
+				Any sequence $p = (\lambda_{1}, \lambda_{2},...,\lambda_{m})$ where $\forall i \in \llbracket 1,m \rrbracket \lambda_{i} \in G \times \dsZ$ defines a \Important{path} of length $m$, \ie the ordered product of non-linear and non-commuting operators,
+				
+				\begin{equation}
+					\label{eq:path ordered SP}
+					\begin{split}
+						U[p]x &\eqdef U[\lambda_{m}]...U[\lambda_{2}]U[\lambda_{1}](x) \\
+							&= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
+							...} \ast \psi_{\lambda_{m}}}.   
+					\end{split}
+				\end{equation}
+				
+				With the convention: $U[\emptyset]x = x$\\
+				\label{def:path ordered SO}
       \end{defn} 
       
       From there one can provide a first formal definition of the scattering transform:
       
       \begin{defn} \textbf{Scattering Coefficient}\\
-	A scattering coefficient along the path $p$ is defined as an integral of the $p$ ordered 
-	scattering propagators, normalized by the response of a Dirac:
-      
-	\begin{equation}
-	  \label{eq:ST1}
-	  \bar{S}[p](x) \eqdef \mu_{p}^{-1} \int U[p]x(u) du
-	\end{equation}
-	
-	with,
-	
-	\begin{equation*}
-	  \label{eq:ST normalization}
-	  \mu_{p} \eqdef \int U[p]\delta(u)du      
-	\end{equation*}
-	\label{def:SC}
+				A scattering coefficient along the path $p$ is defined as an integral of the $p$ ordered scattering propagators, normalized by the response of a Dirac:
+
+				\begin{equation}
+					\label{eq:ST1}
+					\bar{S}[p](x) \eqdef \mu_{p}^{-1} \int U[p]x(u) du
+				\end{equation}
+				
+				with,
+				
+				\begin{equation*}
+					\label{eq:ST normalization}
+					\mu_{p} \eqdef \int U[p]\delta(u)du      
+				\end{equation*}
+				\label{def:SC}
       \end{defn}
       
-      We shall see later (\textbf{\textit{reference}}) that each scattering coefficient $\bar{S}[p](x)$ 
-      is -as desired - invariant to translation of the input $x$ and Lipschitz continuous to 
-      deformations.\\
+      We shall see later (\textbf{\textit{reference}}) that each scattering coefficient $\bar{S}[p](x)$ is -as desired - invariant to translation of the input $x$ and Lipschitz continuous to deformations.\\
       
-      For classification tasks, one might want to compute localized descriptors only invariant 
-      to translations smaller than a predefined scale $2^{J}$, while keeping the spatial variability at 
-      scales larger than $2^{J}$. One can achieved this by localizing the scattering integral with a 
-      scaled spatial window $\phi_{2^{J}}(u) = 2^{-2J} \phi(2^{-2J}u)$. This yield to the definition of
-      the windowed scattering transform:
+      For classification tasks, one might want to compute localized descriptors only invariant to translations smaller than a predefined scale $2^{J}$, while keeping the spatial variability at 
+      scales larger than $2^{J}$. One can achieved this by localizing the scattering integral with a scaled spatial window $\phi_{2^{J}}(u) = 2^{-2J} \phi(2^{-2J}u)$. This yield to the definition of the windowed scattering transform:
       
       \begin{defn} \textbf{-Windowed- Scattering Coefficient Of Order $m$}\\
-	If $p$ is a path of length $m \in \mathds{N}$, the -windowed- scattering coefficient of order m
-	at scale $2^{J}$ is defined as:
-	
-	\begin{equation}
-	  \label{eq:ST windowed}
-	  \begin{split}
-	    S_{J}[p](x) &\eqdef U[p]x \ast \phi_{2^{J}}(u) \\
-		        &= \int U[p]x(v) \phi_{2^{J}}(u-v) dv \\
-		        &= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
-		    ...} \ast \psi_{\lambda_{m}}} \ast \phi_{2^{J}}(u)
-	  \end{split}
-	\end{equation}
-	
-	With the convention: $S_{J}[\emptyset]x = x \ast \phi_{2^{J}}$\\
+				If $p$ is a path of length $m \in \mathds{N}$, the -windowed- scattering coefficient of order $m$ at scale $2^{J}$ is defined as:
+				
+				\begin{equation}
+					\label{eq:ST windowed}
+					\begin{split}
+						S_{J}[p](x) &\eqdef U[p]x \ast \phi_{2^{J}}(u) \\
+									&= \int U[p]x(v) \phi_{2^{J}}(u-v) dv \\
+									&= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
+							...} \ast \psi_{\lambda_{m}}} \ast \phi_{2^{J}}(u)
+					\end{split}
+				\end{equation}
+				
+				With the convention: $S_{J}[\emptyset]x = x \ast \phi_{2^{J}}$\\
       	\label{def:SC windozed}
       \end{defn}
 
@@ -481,41 +461,214 @@
 %       at interval proportional to the window size $2^{J}$. Averaging by $\phi_{2^{J}}$ implies that 
 %       $S_{J}[p]x(u)$ is nearly invariant 
 
-    \subsection{Scattering Convolution Network:}
-      \label{subseq:ST/SCN/SCN}
+		\section{Scattering Convolution Network:}
+			\label{seq:ST/SCN}
+			
+			This section introduces the scattering transform as an \Important{iterative process over a one-step operator} and creates a parallel with convolutional neural networks \textbf{\textit{cite LeCun convNet 11 of mallat long paper}}. Let us note denote $U_{J}[\Omega] \eqdef \{U_{J}[p]\}_{p \in \Omega}$ and $S_{J}[\Omega] \eqdef \{S_{J}[p]\}_{p \in \Omega}$ a family of operators indexed by a path set $\Omega$.\\
+			
+			One can compute a windowed scattering transform by iterating on the \Important{one-step propagator $U$} defined by,
+			
+			\begin{defn}  \textbf{One-step propagator}\\
+				The one-step propagator $U$ can be defined as,
+				\begin{equation}
+					\forall x \in \mathcal{L}^{2}(\dsR^{d}) \;\;\; U_{J} x = \{ A_{J}x , \; (U[\lambda]x)_{\lambda \in \Lambda_{J}} \},
+					\label{eq:One step propagator}
+				\end{equation}
+				
+				with $A_{J}x = x \ast \phi_{2J}$ and $U[\lambda]x = \abs{x \ast \psi_{\lambda}}$.
+				\label{def:One step propagator}
+			\end{defn}
+			
+			Indeed after calculating $U_{J}x$, applying $U_{J}$ again to each $U{\lambda}x$ yields a larger infinite family of functions. Furthermore since $U[\lambda]U[p] = U[p+\lambda]$ and $ A_{J}U[p] = S_{J}[p]$ it holds that,
+			
+			\begin{equation}
+					\forall x \in \mathcal{L}^{2}(\dsR^{d}) \;\;\; U_{J}U[p] x = \{ S_{J}[p]x , \; (U[p+\lambda]x)_{\lambda \in \Lambda_{J}} \},
+					\label{eq:SCN propagation 1}
+			\end{equation}
+			
+			Let $\Lambda_{J}^{m}$ be a set of path of length $m$ with the convention $\Lambda_{J}^{0} = \{ \emptyset \}$, its propagation is,
+			
+			\begin{equation}
+					\forall x \in \mathcal{L}^{2}(\dsR^{d}) \;\;\; U_{J}U[\Lambda_{J}^{m}] x = \{ S_{J}[\Lambda_{J}^{m}]x , \; (U[\Lambda_{J}^{m+1}]x)_{\lambda \in \Lambda_{J}} \},
+					\label{eq:SCN propagation 2}
+			\end{equation}
+			
+			Hence $S_{J}[\mathcal{P}_{J}]x$ can be computed from $x= U[\emptyset]x$ by iteratively computing $U_{J}U[\Lambda_{J}^{m}] x$ for $m$ going from $0$ to $\infty$. This iterative process is illustrated in Figure~\ref{fig:SCN} and one can notice that the scattering calculation as the same general architecture as the convolutional neural networks introduced by LeCun \textbf{\textit{cite LeCun convNet 11 of mallat long paper}}. Both CNN and scattering convolutional network (SCN) cascade convolutions and a ``pooling'' non linearity. However while convolution networks use kernel filters learned from the data with back-propagation algorithm, SCNs use a fixed wavelet filter bank. 
+			%TODO: more on the topic from the roto translation paper
+
+      \begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption[The scattering convolutional network architecture]{see mallat long paper p1341}
+					\label{fig:SCN}
+				\end{center}	
+      \end{figure}
       
-      \subsubsection{The first order scattering coefficient:}
-	\label{subsubseq:ST/SCN/SCN/1st order}
+	\section{Properties of the scattering transform:}
+		\label{seq:ST/Pties}
+		
+		This section provides a formal version of the previously mentioned properties of the scattering transform.
+
+		\subsection{Non-expansivity:}
+			\label{subseq:ST/Pties/Non-expansivity}
+			%TODO-DSTL: no proof.
+			%TODO-UCL: add proof of the property (in line as it is short)
+			
+			The scattering propagator $U_{J} x = \{ A_{J}x , \; (\abs{W_{J}x})_{\lambda \in \Lambda_{J}} \}$ results of the composition of a wavelet transform $W_{J}$ that is unitary and of a modulus operator that is non-expansive - as $\forall (a,b) \in \dsC^{2} \abs{\abs{a}-\abs{b}} \leq \abs{a-b}$- and is thus non-expansive. Since $S_{J}[\mathcal{P}_{J}]$ iterates on $U_{J}$, which is non-expansive, the proposition (\textbf{\textit{cite mallat's long report 12}}) proves that $S_{J}[\mathcal{P}_{J}]$ is also non-expansive.
+			
+			\begin{prop} \textbf{Non-expansivity}\\ 
+				The scattering transform is non expansive.
+				
+				\begin{equation}
+				  \forall (x,z) \in \mathcal{L}^{2}(\dsR^{d})^{2} \;\;\; \norm{S_{J}[\mathcal{P}_{J}]x - S_{J}[\mathcal{P}_{J}]z} \leq \norm{x-z}
+				\end{equation}
+
+			  \label{pty:Nonexpansivity}
+			\end{prop}
+
+		\subsection{Energy preservation:}
+			\label{subseq:ST/Pties/Energy}
+			%TODO-DSTL: no proof.
+			%TODO-UCL: add (proof for theorem ref available in annexe ref \textbf{\textit{proof in annexe}})
+			
+			We have seen (\textbf{\textit{reference to previous section if true or TODO}} that each propagator $U[\lambda]x = \abs{f \ast \psi_{\lambda}}$ captures the frequency energy contained in the signal $x$ over a frequency band covered by the Fourier transform $\hat{\psi}_{\lambda}$ and propagates this energy towards lower frequencies. We can thus prove  that under some assumption on the wavelet, the whole scattering energy ultimately reaches the minimum frequency $2^{-J}$ and is trapped by the low-pass filter $\phi_{2^{J}}$. Thus the energy propagated by a -windowed- scattering transform goes to $0$ as the path length increases, implying that $\norm{S_{J}[\mathcal{P}_{J}]} = \norm{x}$\\
+			
+			But first we need to define what an \Important{admissible scattering wavelet} is.
+			
+			\begin{prop} \textbf{Admissible scattering wavelet}\\ 
+				A scattering wavelet $\psi$ is admissible if there exist $\eta \in \dsR^{d}$ and $\rho \geq 0$, with $\abs{\hat{\rho}(\omega)} \leq \abs{\hat{\phi}(2\omega)}$ and $\hat{\rho}(\omega)=0$, such that the function,
+				
+				\begin{equation}
+					\hat{\Psi}(\omega) = \abs{\hat{\rho}(\omega - \eta)}^{2} - \sum_{k=1}^{+\infty}k(1-\abs{\hat{\rho}(2^{-k}(\omega - \eta)}^{2}),
+				\end{equation}
+				
+				satisfies,
+				
+				\begin{equation}
+				  \alpha = \inf_{1 \leq \abs{\omega}\leq 2} \sum_{j=-\infty}^{+\infty}\sum_{r \in G} \hat{\Psi}(2^{-j}r^{-1}\omega) \abs{\hat{\psi}(2^{-j}r^{-1}\omega)}^{2} > 0.
+				\end{equation}
+				
+				\label{pty:Admissible wavelet}
+			\end{prop}
+
+			We can now state,
+			
+			\begin{thm} \textbf{Energy conservation}\\ 
+				If the scattering wavelet $\psi$ is admissible, then for all signal $x \in \mathcal{L}^{2}(\dsR^{d})$, %TODO: define \Lambda
+				
+				\begin{equation}
+				  \lim_{m \rightarrow +\infty} \norm{U[\Lambda_{J}^{m}]x}^{2} = \lim_{m \rightarrow +\infty} \sum_{n=m}^{+\infty} \norm{S_{J}[\Lambda_{J}^{n}]x}^{2} = 0,
+					\label{eq:energy conservation 1}
+				\end{equation}
+				
+				and
+				
+				\begin{equation}
+				  \norm{S_{J}[P_{J}]x}^{2} = \norm{x}.
+				  \label{eq:energy conservation 2}
+				\end{equation}
+				\label{thm:Energy conservation}
+			\end{thm}
+
+			The proof of the theorem~\ref{thm:Energy conservation} also shows that the scattering energy propagates progressively towards lower frequencies and that \Important{the energy of $U[p]x$ is mainly concentrated along frequency decreasing paths $p=(\lambda_{k})_{k\leq m}$}, i.e. for which $\abs{\lambda_{k+1}} \leq \abs{\lambda_{k}}$. The energy contained in the other paths is negligible and thus for the rest of the paper \Important{only frequency decreasing path will be considered}.\\
+			
+			The decay of $\sum_{n=m}^{+\infty} \norm{S_{J}[\Lambda_{J}^{n}]x}^{2}$ implies that there exist a path length $m > 0$ after which all longer path can be neglected. For signal processing applications, this decay appears to be exponential. And \Important{for classification applications path of length $m = 3$} provides the most interesting results \textbf{\textit{cite mallat's long paper 1 3}}.
+			
+		\subsection{Translation invariance:}
+			\label{subseq:ST/Pties/Translation}
+			%TODO-DSTL: no proof.
+			%TODO-UCL: no proof neither -maybe an intuition.
+			
+			The translation invariance of the scattering transform $S_{J}[\mathcal{P}_{J}]$ can be proved for a limit metric when $J$ goes to infinity. To do so one can first prove that the scattering distance $\norm{S_{J}[\mathcal{P}_{J}]x - S_{J}[\mathcal{P}_{J}]z}$ converges when $J$ goes to infinity - as it is non-increasing when $J$ increases (see section~\ref{subseq:ST/Pties/Non-expansivity}). From there one can bound the distance between the scattering transform of the signal and the one of its translated version $\norm{S_{J}[ S_{J}[\mathcal{P}_{J}]\mathcal{L}_{c}x - \mathcal{P}_{J}]x}$ and prove that this bound tends to $0$ when $J$ goes to infinity. This yields to the following theorem,
+			
+			\begin{thm} \textbf{Translation invariance}\\
+				For admissible scattering wavelets,
+				
+				\begin{equation}
+					\forall x \in \mathcal{L}^{2}(\dsR^{d}), \; \forall c \in \dsR^{d} \;\;\; \lim_{J \rightarrow \infty} \norm{S_{J}[ S_{J}[\mathcal{P}_{J}]\mathcal{L}_{c}x - \mathcal{P}_{J}]x} = 0
+					\label{eq:Tranlation invariance}
+				\end{equation}
+				\label{thm:Translation invariance}
+			  
+			\end{thm}
+
+			\begin{note}
+			  A formal proof of~\ref{thm:Translation invariance} can be found in \textbf{\textit{cite Mallat's long paper}}.
+			\end{note}
 	
-	
-      
-      A scattering transform computes higher-order coefficients by further iterating on the wavelet 
-      transform/modulus operators. At a maximum scale $2^{J}$, wavelet coefficients are computed at
-      frequencies $2^{j} \geq 2^{-J}$, and lower frequencies are filtered by $\phi_{2^{J}} = 
-      2^{-2J} \phi(2^{-J}u)$.\\
-      
-      In the image processing case, as images are real-valued signal, one can only consider the 
-      ``positive'' rotations $r \in G^{+}$ with angles $[0, \pi)$:
-      
-      \begin{equation}
-	\label{eq:positive WT}
-	W_{J}x(u)
-      \end{equation}
+		\subsection{Lipschitz continuity to the action of diffeomorphisms:}
+			\label{subseq:ST/Pties/Lipschitz continuity}
+			%TODO-DSTL: no proof.
+			%TODO-UCL: no proof neither -maybe an intuition.
+			%TODO: change for the version from ISCN
+			
+			The Lipschitz continuity to the action of diffeomorphisms of $\dsR^{d}$ can be proved for those sufficiently close to a translation. Such diffeomorphisms maps $u$ to $u-\tau(u)$ where $\tau(u)$ is a displacement filed such that $\norm{\nabla \tau}_{\infty} < 1$. Let $L_{\tau}x(u)=x(u-\tau(u))$ denote the action of such diffeomorphisms on the signal $x$. Once again one can find an upper bound to the distance between the scattering transform of the signal and the one of its deformed version $\norm{S_{J}[\mathcal{P}_{J}]\mathcal{L}_{\tau}x - S_{J}[\mathcal{P}_{J}]x}$. With a bit of work on this bound one can then proved that the consequences of the action of $L_{\tau}$ is bounded by a translation term proportional to $2^{-J} \norm{\tau}_{\infty}$ and a deformation error proportional to $\norm{\nabla \tau}_{\infty}$. Finally some more work on the bounding term yields to the theorem,
+			
+			\begin{thm} \textbf{Lipschitz continuity to the action of diffeomorphisms} \\
+			  There exists $C$ such that all $x \in \mathcal{L}(\dsR^{d})$ with $\norm{U[\mathcal{P}_{J}]x}_{1} < \infty$ and all $\tau \in \mathcal{C}^{2}(\dsR^{d})$ with $\norm{\nabla \tau}_{\infty} < \frac{1}{2}$ satisfy,
+			  
+			  \begin{equation}
+					\norm{S_{J}[\mathcal{P}_{J}]\mathcal{L}_{\tau}x - S_{J}[\mathcal{P}_{J}]x + \tau . \nabla S_{J}[\mathcal{P}_{J}]x} \leq C \norm{U[\mathcal{P}_{J}]x}_{1} K(\tau),
+					\label{eq:Lipschitz continuity 1}
+			  \end{equation}
+
+			  with
+			  
+			  \begin{equation}
+					K(\tau) = 2^{-2J} \norm{\tau}_{\infty}^{2} + \norm{\nabla \tau}_{\infty} \left(\max \left( \log \frac{\norm{\Delta \tau}_{\infty}}{\norm{\nabla \tau}_{\infty}},1 \right) \right) + \norm{H\tau}_{\infty} 
+					\label{eq:Lipschitz continuity K(tau)}
+			  \end{equation}
+			  
+			  \label{thm:Lipschitz continuity}
+			\end{thm}
+			
+			\begin{note}
+			  Again a formal proof of~\ref{thm:Translation invariance} can be found in \textbf{\textit{cite Mallat's long paper}}.
+			\end{note}
+
+			\begin{rem}
+				If the case where $2^{J} \gg \norm{\tau}_{\infty}$ and $\norm{\nabla \tau}_{\infty} + \norm{H \tau}_{\infty} \ll 1$, then $K(\tau)$ becomes negligible and the displacement field $\tau(u)$ can be estimated at each $u \in \dsR^{d}$. This can be done by solving the linear equation resulting from~\ref{eq:Lipschitz continuity 1} under the assumptions mentioned above,
+				
+				\begin{equation}
+					\forall p \in \mathcal{P}_{J} \norm{S_{J}[p]\mathcal{L}_{\tau}x - S_{J}[p]x + \tau . \nabla S_{J}[p]x} \approx 0.
+					\label{eq:Lipschitz continuity 2}  
+				\end{equation}
+
+				\textbf{\textit{Find reference for Application of displacement field estimation - best if not video}}
+			\end{rem}
+			
+%       \subsubsection{The first order scattering coefficient:}
+% 	\label{subsubseq:ST/SCN/SCN/1st order}
+% 
+%       A scattering transform computes higher-order coefficients by further iterating on the wavelet transform/modulus operators. At a maximum scale $2^{J}$, wavelet coefficients are computed at frequencies $2^{j} \geq 2^{-J}$, and lower frequencies are filtered by $\phi_{2^{J}} =  2^{-2J} \phi(2^{-J}u)$.\\
+%       
+%       In the image processing case, as images are real-valued signal, one can only consider the ``positive'' rotations $r \in G^{+}$ with angles $[0, \pi)$:
+%       
+%       \begin{equation}
+% 				\label{eq:positive WT}
+% 				W_{J}x(u)
+%       \end{equation}
 
       
       
-    \subsection{Spatial Wavelet transform:}
-      \label{subseq:ST/RT ST networks/Spatial WT}
-      Introduction of the translation invariance.
-		
-    \subsection{Roto-translation wavelet transform:}
-      \label{subseq:ST/RT ST networks/RT WT}
-      Introduction of the pseudo rotation invariance.
+%     \subsection{Spatial Wavelet transform:}
+%       \label{subseq:ST/RT ST networks/Spatial WT}
+%       Introduction of the translation invariance.
+% 		
+%     \subsection{Roto-translation wavelet transform:}
+%       \label{subseq:ST/RT ST networks/RT WT}
+%       Introduction of the pseudo rotation invariance.       
+ 
 		
   \section{Application to classification:}
     \label{seq:ST/Applications to clf}
-    Examples of Mallat's work.
-      
+    %TODO: Examples of Mallat's work.
+    
+    The scattering transform has been designed in order to provide a ``good'' representation for signal classification. The classical way of using it for such a task is to use the features generated by the scattering transform of the dataset considered as inputs for a discriminative classifier (e.g. Support Vector Machine classifier). Using this model provides results able to compare with state of the art CNNs on some standard datasets \textbf{\textit{cite mallat}}. \\
+    
+    The energy contained in the scattering transform is mostly contained in the short frequency decreasing paths (see~\ref{subseq:ST/Pties/Energy}). Thus for most of the classification path of length $m=3$ provides the best trade out between classification performance and computational time. Unless stated otherwise this length will be use in all our experiments.
+    
+    
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Probabilistic graphical models:}
   \label{chap:PGMs}
@@ -556,33 +709,33 @@
       TBD
       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Hidden Markov trees:}
-  \label{chap:HMT}
-    More at length description of the specific properties of HMTs.
-	
-  \section{The tree structure:}
-    \label{seq:HMT/Tree:}
-    TBD
-
-  \section{Learning:}
-    \label{seq:HMT/EM}
-
-    \subsection{Expectation maximization:}
-      \label{subseq:HMT/EM}
-      EM by Crouse and EM by Durand
-      
-    \subsection{Variational methods:}
-      \label{subseq:HMT/Var}
-      Variational like Crouse and variational like Durand    
-  
-    
-  \section{Generation: Vitterbi algorithm:}
-    \label{seq:HMT/Generation}
+% \chapter{Hidden Markov trees:}
+%   \label{chap:HMT}
+%     More at length description of the specific properties of HMTs.
+% 	
+%   \section{The tree structure:}
+%     \label{seq:HMT/Tree:}
+%     TBD
+% 
+%   \section{Learning:}
+%     \label{seq:HMT/EM}
+% 
+%     \subsection{Expectation maximization:}
+%       \label{subseq:HMT/EM}
+%       EM by Crouse and EM by Durand
+%       
+%     \subsection{Variational methods:}
+%       \label{subseq:HMT/Var}
+%       Variational like Crouse and variational like Durand    
+%   
+%     
+%   \section{Generation: Vitterbi algorithm:}
+%     \label{seq:HMT/Generation}
 
 		
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Scattering hidden Markov tree:}
-  \label{chap:SHMT:}
+  \label{chap:SHMT}
 
   \section{Related work:}
     \label{seq:SHMT/Rel work}

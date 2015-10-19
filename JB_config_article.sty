@@ -1,5 +1,10 @@
 %%%% PERSONAL LATEX CONFIGURATION:
 
+% VERY USEFUL --- Command line to list labels by number of occurences ---
+% very nice to find multiply defined labels occurence:
+% perl -nE 'say $1 if /(\\label[^}]*})/' *.tex | sort | uniq -c | sort -n
+
+
 % Declare that this style file requires at least LaTeX version 2e:
 \NeedsTeXFormat{LaTeX2e}
 
@@ -123,7 +128,7 @@
 
 
 %%% Properties, Definitions...:
-\theoremstyle{plain}
+%\theoremstyle{plain}
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
