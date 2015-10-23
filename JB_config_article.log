@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  9 SEP 2015 15:43
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  19 OCT 2015 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -10,7 +10,7 @@ Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 LaTeX Warning: You have requested package `',
                but the package provides `JB_config_article'.
 
-Package: JB_config_article 2015/09: My custom LaTeX style for articles
+Package: JB_config_article 2015/09/10: My custom LaTeX style for articles
 
 ! LaTeX Error: \usepackage before \documentclass.
 
@@ -18,7 +18,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.13 \usepackage[utf8]{
+l.18 \usepackage[utf8]{
                        inputenc}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -30,7 +30,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.14 \usepackage[UKenglish,french]{
+l.19 \usepackage[UKenglish,french]{
                                    babel}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -42,7 +42,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 \usepackage[T1]{
+l.20 \usepackage[T1]{
                      fontenc}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -54,7 +54,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.16 \usepackage{
+l.21 \usepackage{
                  verbatim}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -66,7 +66,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.19 \usepackage{
+l.24 \usepackage{
                  soul}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -78,56 +78,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.20 \usepackage{
-                 color}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \usepackage{
-                 titlesec}	% Title formatting
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 \usepackage{
-                 colortbl}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 \usepackage{
-                 array}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
 l.25 \usepackage{
-                 cite}
+                 color}	% For highlighting ToDos and amendments
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -139,7 +91,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.26 \usepackage{
-                 wrapfig}
+                 titlesec}	% Title formatting
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -150,8 +102,32 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.29 \usepackage{
-                 stmaryrd}
+l.27 \usepackage{
+                 colortbl}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 \usepackage{
+                 array}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 ...2cm, bottom=3cm, left=2.7cm, right=2.7cm]{
+                                                  geometry}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -163,7 +139,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.30 \usepackage{
-                 amsmath, amsthm, amssymb, amsbsy, amsfonts,latexsym}
+                 cite}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -175,31 +151,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.31 \usepackage{
-                 mathrsfs}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 \usepackage{
-                 dsfont}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 \usepackage{
-                 mathtools}
+                 wrapfig}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -211,7 +163,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.34 \usepackage{
-                 bbold}
+                 stmaryrd}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -223,7 +175,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.35 \usepackage{
-                 float}
+                 amsmath, amsthm, amssymb, amsbsy, amsfonts,latexsym}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -234,8 +186,32 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.38 \usepackage[lined,algonl,boxed]{
-                                     algorithm2e}
+l.36 \usepackage{
+                 mathrsfs}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 \usepackage{
+                 dsfont}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38 \usepackage{
+                 mathtools}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -247,7 +223,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.39 \usepackage{
-                 algorithmic}
+                 bbold}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -258,8 +234,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.42 \usepackage{
-                 graphicx}
+l.40 \usepackage{
+                 float}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -270,8 +246,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 \usepackage{
-                 subfigure}
+l.43 \usepackage[lined,algonl,boxed]{
+                                     algorithm2e}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -283,7 +259,7 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.44 \usepackage{
-                 caption}
+                 algorithmic}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -294,20 +270,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.45 \usepackage{
-                 subcaption}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.46 \usepackage{
-                 epstopdf}	% Convert esp images to pdf:
+l.47 \usepackage{
+                 graphicx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
@@ -319,12 +283,48 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.49 \usepackage{
+                 caption}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 \usepackage{
+                 subcaption}
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.51 \usepackage{
+                 epstopdf}	% Convert esp images to pdf:
+\usepackage may only appear in the document preamble, i.e.,
+between \documentclass and \begin{document}.
+
+
+! LaTeX Error: \usepackage before \documentclass.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 \usepackage{
                  tikz}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.50 \usetikzlibrary
+l.55 \usetikzlibrary
                     {arrows}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -339,7 +339,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.50 \usetikzlibrary{a
+l.55 \usetikzlibrary{a
                       rrows}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -351,7 +351,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 50--51
+Overfull \hbox (20.0pt too wide) in paragraph at lines 55--56
 [] 
  []
 
@@ -362,7 +362,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.53 \usepackage{
+l.58 \usepackage{
                  multirow}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -374,19 +374,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.56 \usepackage{
-                 color}
-\usepackage may only appear in the document preamble, i.e.,
-between \documentclass and \begin{document}.
-
-
-! LaTeX Error: \usepackage before \documentclass.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.59 \usepackage{
+l.61 \usepackage{
                  ae}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -398,7 +386,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.60 \usepackage{
+l.62 \usepackage{
                  hyperref}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -410,7 +398,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.63 \usepackage{
+l.65 \usepackage{
                  epsf}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -422,7 +410,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 \usepackage{
+l.66 \usepackage{
                  url}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -434,14 +422,216 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 \usepackage{
+l.67 \usepackage{
                  microtype}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
-\c@defn=\count79
+\c@thm=\count79
+
+! LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.131 \newtheorem{thm}{Theorem}[section]
+                                        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Command \* already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 \newtheorem*{cor}{
+                        Corollary}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.134 \newtheorem*{cor}{C
+                         orollary}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 134--135
+[] 
+ []
+
 ! Undefined control sequence.
-l.161 \titleformat
+l.136 \theoremstyle
+                   {definition}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.136 \theoremstyle{d
+                     efinition}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+\c@defn=\count80
+
+! LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.137 \newtheorem{defn}{Definition}[section]
+                                            
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@con=\count81
+
+! LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.138 \newtheorem{con}{Conjecture}[section]
+                                           
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+\c@eg=\count82
+
+! LaTeX Error: No counter 'section' defined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.139 \newtheorem{eg}{Example}[section]
+                                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 136--140
+[]
+ []
+
+! Undefined control sequence.
+l.141 \theoremstyle
+                   {remark}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.141 \theoremstyle{r
+                     emark}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+
+! LaTeX Error: Command \* already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.142 \newtheorem*{rem}{
+                        Remark}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no R in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no k in font nullfont!
+
+! LaTeX Error: Command \* already defined.
+               Or name \end... illegal, see p.192 of the manual.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.143 \newtheorem*{note}{
+                         Note}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no N in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+\c@ques=\count83
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 141--145
+[]
+ []
+
+! Undefined control sequence.
+l.182 \titleformat
                   {\chapter}% reformat chapter headings
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -450,7 +640,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.161 \titleformat{\chapter
+l.182 \titleformat{\chapter
                            }% reformat chapter headings
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -465,7 +655,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.162   [
+l.183   [
          hang]% like section, with number on same line
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -477,7 +667,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.163   {\Huge
+l.184   {\Huge
               \bfseries}% formatting applied to whole
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -486,7 +676,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.164   {\thechapter
+l.185   {\thechapter
                     }% Chapter number
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -500,7 +690,7 @@ Missing character: There is no 5 in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 162--167
+Overfull \hbox (20.0pt too wide) in paragraph at lines 183--188
 [] 
  []
 
@@ -512,10 +702,10 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 162--167
 
  
 Here is how much of TeX's memory you used:
- 102 strings out of 493304
- 653 string characters out of 6139871
+ 121 strings out of 493304
+ 746 string characters out of 6139871
  51880 words of memory out of 5000000
- 3659 multiletter control sequences out of 15000+600000
+ 3678 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  12i,1n,11p,149b,55s stack positions out of 5000i,500n,10000p,200000b,80000s

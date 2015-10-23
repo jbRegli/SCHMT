@@ -1,4 +1,4 @@
-cd%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%
 % Type of document: %
 %%%%%%%%%%%%%%%%%%%%%
 \documentclass[a4paper,11pt]{report}
@@ -100,10 +100,10 @@ cd%%%%%%%%%%%%%%%%%%%%%
 	\section{Need for a better signal representation:}
 		\label{seq:Intro/Need}
 		
-		Our researches have been focused on \Important{high-dimensional classification problems}. Meaning that throughout this paper we will be working with several -says $N$- realizations of a signal $X =\{\bfx_{1}, ... , \bfx_{N}\}$  where,
+		Our researches have been focused on \Important{high-dimensional classification problems}. Meaning that throughout this paper we will be working with several -says $N$- realizations of a signal $X =\{\bfx_{1}, \dots  , \bfx_{N}\}$  where,
 			
 		\begin{equation*}
-			\forall i \in \llbracket 1 , N \rrbracket \;\;\; \bfx_{i}=(x(1) \, ... \, x(d)) \;\;\;\;\; \text{with} \;\; d \sim 10^{6} \; \text{and} \; x(.) \in \dsR.  
+			\forall i \in \llbracket 1 , N \rrbracket \;\;\; \bfx_{i}=(x(1) \, \dots  \, x(d)) \;\;\;\;\; \text{with} \;\; d \sim 10^{6} \; \text{and} \; x(.) \in \dsR.  
 		\end{equation*}
 		
 		\begin{figure}
@@ -400,14 +400,14 @@ cd%%%%%%%%%%%%%%%%%%%%%
 			\end{defn}
 						
 			\begin{defn} \textbf{Path Ordered Scattering Propagators}\\ 
-				Any sequence $p = (\lambda_{1}, \lambda_{2},...,\lambda_{m})$ where $\forall i \in \llbracket 1,m \rrbracket \lambda_{i} \in G \times \dsZ$ defines a \Important{path} of length $m$, \ie the ordered product of non-linear and non-commuting operators,
+				Any sequence $p = (\lambda_{1}, \lambda_{2},\dots ,\lambda_{m})$ where $\forall i \in \llbracket 1,m \rrbracket \lambda_{i} \in G \times \dsZ$ defines a \Important{path} of length $m$, \ie the ordered product of non-linear and non-commuting operators,
 				
 				\begin{equation}
 					\label{eq:path ordered SP}
 					\begin{split}
-						U[p]x &\eqdef U[\lambda_{m}]...U[\lambda_{2}]U[\lambda_{1}](x) \\
+						U[p]x &\eqdef U[\lambda_{m}]\dots U[\lambda_{2}]U[\lambda_{1}](x) \\
 							&= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
-							...} \ast \psi_{\lambda_{m}}}.   
+							\dots } \ast \psi_{\lambda_{m}}}.   
 					\end{split}
 				\end{equation}
 				
@@ -448,7 +448,7 @@ cd%%%%%%%%%%%%%%%%%%%%%
 						S_{J}[p](x) &\eqdef U[p]x \ast \phi_{2^{J}}(u) \\
 									&= \int U[p]x(v) \phi_{2^{J}}(u-v) dv \\
 									&= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
-							...} \ast \psi_{\lambda_{m}}} \ast \phi_{2^{J}}(u)
+							\dots } \ast \psi_{\lambda_{m}}} \ast \phi_{2^{J}}(u)
 					\end{split}
 				\end{equation}
 				
@@ -672,40 +672,99 @@ cd%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Probabilistic graphical models:}
   \label{chap:PGMs}
-  In this chapter, we will introduce the two mains classes of probabilistic graphical models. 
-  (1) The Bayesian networks. 
-  (2) The Hidden Markov Models.
+  
+  Those models use a \Important{graph based representation of conditional dependence between a set of random variables} and thus encode a complete distribution over a multi-dimensional space in a compact -or factorized- graph.The field of PGMs can be split into two main families, the \Important{Bayesian Networks} (BNs) and the \Important{Markov models} (MMs). As they are graphical models, both families encompass the properties of factorization and independences defined by the graph, but differ when it comes to the specificities of the set of independences they can encode as well as the factorization of the distribution that they can induce (  \textbf{\textit{cite: Bishop, Christopher M. (2006). "Chapter 8. Graphical Models" (PDF). Pattern Recognition and Machine Learning. Springer. pp. 359–422. ISBN 0-387-31073-8. MR 2247587}}).\\
+  
+  Add par on how they will be used.\\ %TODO: how they will be used
+  
+  The aim of this section is not to provide a complete overview of the Probabilistic graphical models but rather to introduce some interesting concepts that have been used in our work. Someone with more interest in PGMs could refer to \textbf{\textit{cite A tutorial on learning BN}} or \textbf{\textit{cite cours dafney koller}}. 
+  This chapter introduces those two main classes of probabilistic graphical models. Section~\ref{seq:PGMs/BN} focuses on the Bayesian networks, while section~\ref{seq:PGMs/MM} provides more details about the Markov models.
 	
   \section{Bayesian Network:}  
     \label{seq:PGMs/BN}
-    Quick overview over the main methods for BNs.
-    
+    A BN is subclass of probabilistic graphical model where the set of random variables and their conditional dependencies are expressed via a \Important{directed acyclic graph} (DAG). The architecture of the Bayesian Networks is further explained in section~\ref{subseq:PGMs/BN/Architecture}. Then section~\ref{subseq:PGMs/BN/Learning} presents a brief overview of the state of the art in terms of learning algorithm for BNs and section~\ref{subseq:PGMs/BN/Inference} describes the inference mechanism for those networks.
+        
     \subsection{Architecture:}
       \label{subseq:PGMs/BN/Architecture}
-      TBD
+      
+      Bayesian networks can be defined as,
+      
+      \begin{defn} \textbf{Bayesian Network}\\
+				For a set of random variables $\bfX = \{X_{i}\}_{i \in \llbracket1,N \rrbracket}$ a Bayesian network consists of a \Important{direct acyclic graph} $\mathcal{G}$ encoding a set of conditional independence assertions about the random variables in $\bfX$ and  a set $P$ of \Important{local probability distribution associated with each variable}. Each node of $\mathcal{G}$ represent one of the random variable $X_{i}$ and each edge $E_{i \rightarrow j}$ represents the conditional dependence between the nodes $X_{i}$ and $X_{j}$.
+				\label{def:BN}
+      \end{defn}
+     
+			\begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption{Example of Bayesian network.} %TODO: graph from http://www.cse.unsw.edu.au/~cs9417ml/Bayes/Pages/Bayesian_Networks_Definition.html
+					\label{fig:Eg BN}
+				\end{center}
+			\end{figure}
+
+			For such networks the following property holds,
+			
+			\begin{prop} \textbf{Conditional independence for Bayesian networks}\\ %TODO: quote [Nilsson, 1998] [Nilsson, 1998] Nilsson N,, Artificial Intelligence: a new synthesis, Morgan Kaufmann,1998 
+				In a Bayesian network each node of the graph are "conditionally independent of any subset of the nodes that are not descendants of itself given its parent".
+				
+				\begin{equation}
+				  P(\{X_{i}\}_{i \in \llbracket1,N \rrbracket}) = \prod_{i=1}^{N} P(X_{i} | \rho(X_{i}))
+				  \label{eq:BN CI}
+				\end{equation}
+				
+				where $\rho(X_{i})$ are the parents of the node $X_{i}$. 
+				\label{pty:CI for BNs}
+			\end{prop}
+			
+			Thus in a Bayesian network a node with no parents is not conditioned on the other random variables. Such a node is called a \Important{prior probability}.\\
+
+			By their architecture, Bayesian networks allow to simplify the computation of the joint probability distribution. For example for the network defined by figure~\ref{fig:Eg BN}, one can obtain $P(X_{1},X_{2},X_{3},X_{4},X_{5},X_{6})$ by the use of chain rules and theory on conditional independent,
+			
+			\begin{equation*}
+			  \begin{split}
+			    P(X_{1},X_{2},X_{3},X_{4},X_{5},X_{6})
+						&= P(X_{6} | X_{3},X_{4},X_{5}) P(X_{1},X_{2},X_{3},X_{4},X_{5}) \\
+						&= P(X_{6} | X_{3},X_{4},X_{5}) P(X_{3} | X_{1},X_{5}) P(X_{4}| X_{2}) P(X_{5}| X_{2}) P(X_{1},X_{2})\\
+						&= P(X_{6} | X_{3},X_{4},X_{5}) P(X_{3} | X_{1},X_{5}) P(X_{4}| X_{2}) P(X_{5}| X_{2}) P(X_{2}|X_{1}) P(X_{1}).\\
+			  \end{split}
+			  \label{eq:Eg BN CI}
+			\end{equation*}
+      
+%       are directed acyclic graphs whose nodes represent random variables in the Bayesian sense. Those nodes can be observable quantities, latent variables, unknown parameters or hypotheses. Edges of the graph represent conditional dependencies between the variables.  nodes that are not connected represent variables that are conditionally independent of each other. Each node is associated with a probability function that takes, as input, a particular set of values for the node's parent variables, and gives (as output) the probability (or probability distribution, if applicable) of the variable represented by the node. For example, if m parent nodes represent m Boolean variables then the probability function could be represented by a table of 2^m entries, one entry for each of the 2^m possible combinations of its parents being true or false
 
     \subsection{Learning:}
       \label{subseq:PGMs/BN/Learning}
-      TBD
+      
+      In some application the structure $\mathcal{G}$ and the set $P$ of local probability distribution associated with each variable of the network are provided. In such a case the BNs are ``simply'' used for inference. The task is then to infer the most probable values for a subset $\bfY \subset \bfX$, given a partially complete set of realizations $\bfX_{obs} \subset \bfX \backslash \bfY$.\\
+      
+      However, most of the time the full characterization of the BN is not provided. Ignoring the case of missing data, one can split the learning problem into two main categories:
+      \begin{itemize}
+				\item \Important{Local probability distributions:} In this case the structure of the graph $\mathcal{G}$ is known and fixed before hand. It can be provided by an expert (e.g. Microsoft trouble shooting system \textbf{\textit{cite}}) or be imposed by some construction rules (e.g. Boltzmann Machine \textbf{\textit{cite}}, Restricted Boltzmann Machine \textbf{\textit{cite}} ...). The task at end is then to learn the parameters governing the local probability distributions of the Bayesian network.
+        \item \Important{Architecture and local probability distributions:} In this case the architecture of the network has to be learned along side with the local probability distributions. This problem is not developed in the rest of this paper, but one could refer to \textbf{\textit{cite A tutorial on learning BN}} for an introduction to this problem.
+      \end{itemize}
+      
+      \subsubsection{Expectation-maximization:}
+      
+      \subsubsection{Variational Bayes:}
 
     \subsection{Inference:}
       \label{subseq:PGMs/BN/Inference}
-      TBD
+      \url{http://www.cse.unsw.edu.au/~cs9417ml/Bayes/Pages/Bayesian_Networks_Inference.html}
       
-  \section{Hidden Markov Models:}
-    \label{seq:PGMs/HMM}
+  \section{Markov Models:}
+    \label{seq:PGMs/MM}
     Quick overview over the main methods for HMMs.
     
     \subsection{Architecture:}
-      \label{subseq:PGMs/HMM/Architecture}
+      \label{subseq:PGMs/MM/Architecture}
       TBD
 
     \subsection{Learning:}
-      \label{subseq:PGMs/HMM/Learning}
+      \label{subseq:PGMs/MM/Learning}
       TBD
 
     \subsection{Inference:}
-      \label{subseq:PGMs/HMM/Inference}
+      \label{subseq:PGMs/MM/Inference}
       TBD
       
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -736,18 +795,122 @@ cd%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Scattering hidden Markov tree:}
   \label{chap:SHMT}
+  Section~\ref{seq:ST/Applications to clf} introduced the usage of scattering networks combined with an support vector machine classifier to achieve state of the art classification performances on some problems. However this method provides a boolean answer for each class. Some methods to express the output of an SVM as a probability exists (\textbf{\textit{cite: Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods (1999)}} but they are just a rescaling of the output and not a true probabilistic approach. If one is interested in a true probabilistic model to describe the scattering coefficient it is quite natural to try to express them as a probabilistic graphical model. Indeed if one hide the propagation step from the scattering transform (see~\ref{seq:ST/SCN}) the scattering network defines a tree structure. \\
 
-  \section{Related work:}
+	\begin{figure}
+			\begin{center}
+				\includegraphics[width=3.5in]{placeholder.jpg}
+				\caption{Scattering transform tree.} %TODO: SCHMT without hidden state/node
+				\label{fig:ST tree}
+			\end{center}
+	\end{figure}
+  
+  To simplify the notation in the remainder of this section, let $\mcalT$ denotes the tree  structure defines as state above and depicted in figure~\ref{fig:ST tree}. Let $I$ denotes the total number of nodes -i.e. scattering coefficient and let $S_{i}$ for $i \in \llbracket1, I \rrbracket$ denotes one of the node $S[p_{i}]x \in \mcalT$ for a given path $p_{i} = [\lambda_{1} ... \lambda_{k}]$ ($k \in \dsN$). Note that for the sake of clarity the signal dependence of the node $S_{i}$ has been removed from the notation and in the remainder of the paper the short notation $i \in \mcalT$ will be use to denote a path belonging to the tree. Let also use the convention $S_{0} = S[\emptyset]x$. Finally let $\rho_{i}$ and $\mcalC(i)$ denote respectively the parent of a node $i$ and the set of children of the node $i$. Note also that a node $S_{i}$ can have no children, in such a case this node is a leaf of the tree.\\
+  
+  The remainder of this section is organized as follows: Section~\ref{seq:SHMT/Rel work} introduces related work and provide a description of the SCHMT model. Section~\ref{seq:SHMT/Hypos} details the hypothesis needed to develop this model as well as provides some intuition on their validity. Finally section~\ref{seq:SHMT/Learning} and~\ref{seq:SHMT/Clf} respectively describe the learning algorithm for the parameters of the model and the classification method.
+
+  
+  \section{SCHMT model and related works:}
+		%TODO1: add to the scattering transform section a simple notation for the scattering coef
+		%TODO2: modify this section accordingly
     \label{seq:SHMT/Rel work}
-  
-    Wavelet hidden markov trees
-  
+      
+    The idea behind the SCHMT model is to say that the more detailed representation of the signal is somehow correlated to the less detailed one from which it is generated. More formally this means that for a signal $x$, $S_{i}$ is somehow correlated to $S_{\rho(i)}$. To do so one could model the scattering network by a Markov tree and assumes the following:
+    
+    \begin{equation}
+      P(S_{i} |\mcalT) = P(S_{i} | S_{\rho(i)}).
+      \label{eq:SMT - false hypo}
+    \end{equation}\\
+
+    Those independence properties yield to the graph displays in figure~\ref{fig:ST tree}. However models trying to describe directly the correlation across coefficients at different scales have been studied for traditional wavelet transforms \textbf{\textit{cite: in Crouse previous work}} and it seems that a simple one-step Markovian assumption across scale is notsufficient to describe the complex relationship between wavelet coefficients.\\
+    
+    A common approach when a direct Markovian model does not hold is to introduce hidden states and to assume the Markovian property across those states. The observed nodes are then only dependent on their state. This is the architecture adopted for the SCHMT and its graph is represented in figure~\ref{fig:SCHMT 1}. This model has the following independence properties,
+    
+    \begin{equation}
+      P(H_{i} |\mcalT) = P(H_{i} | H_{\rho(i)}),
+      \label{eq:SCHMT - hypo 1}
+    \end{equation}    
+    \begin{equation}
+      P(S_{i} |\mcalT) = P(S_{i} | H_{i}).
+      \label{eq:SCHMT - hypo 2}
+    \end{equation} \\
+    
+		\begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption{Scattering Hidden Markov Tree.} %TODO: SCHMT
+					\label{fig:SCHMT 1}
+				\end{center}
+		\end{figure}
+		
+		As the scattering transform is closely related to wavelet transforms it is not surprising to find similar ideas exploited for wavelet trees. MS. Crouse proposed where an Hidden Markov Tree Model is used to model the wavelet coefficients \textbf{\textit{cite: Crouse}} of a classic wavelet trees. Later N. Kingsbury \textbf{\textit{cite: Kingsbury}} adapted MS. Crouse's model to his Dual wavelet complex trees. The resulting hidden Markov tree models provides better classification performances than MS. Course's WHMT as the wavelet used generate a ``better'' representation of the signal -in the sense defined in section~\ref{seq:Intro/Image rep/Intuition}. Indeed this version can leverage the quasi-translation invariance property of the complex wavelets. The improvement in performances due to the quasi-invariance property provides a good motivation to try the hidden Markov tree modeling on the scattering transform as they have even ``better'' representational properties (see~\ref{seq:ST/Pties}. The parameters of the original WHMT were trained using a version of the \Important{Expectation-Maximization} adapted to binary hidden Markov trees. However this learning method suffered from overflowing issues \textbf{\textit{cite: ? - Durand?}}, JB. Durand \textbf{\textit{cite: Durand}} proposed a smoothed version of the training algorithm preventing overflowing.\\\\
+   
+		\begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption{Wavelet hidden Markov tree.} %TODO: course's model
+					\label{fig:WHMT}
+				\end{center}
+		\end{figure}
+	  
+	  A scattering hidden Markov tree is composed by a set of visible nodes $\{\bfS_{i}\}_{i \in \mcalT}$ and a set of of hidden node $\{\bfH_{i}\}_{i \in \mcalT}$. Then the tree is parametrised as follow,
+	  
+    \begin{itemize}
+      \item For any index $i$ of the tree, $S_{i} \in \dsR^{d}$ and $H_{i} \in \llbracket 1,K \rrbracket$ where $K$ is the number of possible hidden states.
+      \item The initial hidden state is drawn from a discrete non uniform distribution $\pi_{0}$ such that:
+	  	  \begin{equation}
+					\forall k \in \llbracket 1,K \rrbracket \;\;\; \pi_{0}(k) = P(H_{i}=k).
+					\label{eq:SCHMT - initial distribution}
+				\end{equation}
+      \item For any index $i$ of the tree, the probability of the visible node $S_{i}$ is a mixture of Gaussian conditional to the hidden state $H_{i}$. 
+				\begin{equation}
+				  \forall i \in \mcalT \;\;\; P(S_{i} | H_{i}) = \sum_{k=1}^{K} w_{k,i} \mcalN(\mu_{k,i},\sigma_{k,i}).
+				  \label{eq:SCHMT - Mixt of Gaussian}
+				\end{equation}
+				where $\mu_{k,i}$, $\sigma_{k,i}$ and $w_{i}$ are respectively the mean, the variance and the weight for the $k$-th value of the mixture and the node $i$.
+			\item For any index $i$ of the tree, the probability to move from one state to the other in characterized by a transition matrix,
+				\begin{equation}
+				  \forall i \in \mcalT \backslash\{0\} \;\;\; P(H_{i} | H_{\rho(i)}) = \pi_{i} P(H_{\rho(i)}),
+				  \label{eq:SCHMT - Transition proba}
+				\end{equation}
+				where,
+				\begin{equation}
+						\forall i \in \mcalT \backslash \{ 0 \} \;\;\; \pi_{i} = \left[P(H_{i}= m | H_{\rho(i)}=n) \right]_{m,n \in \llbracket 1,K \rrbracket^{2}}. %TODO: check if m and n are correct
+						\label{eq:SCHMT - Transition matrix}
+				\end{equation}
+				Using the chain rule of probability $P(H_{i})$ can be expressed from the root node as,
+				\begin{equation}
+				  \forall i \in \mcalT \backslash\{0\} \;\;\; P(H_{i} | H_{\rho(i)}) = \prod_{}\pi_{i} P(H_{\rho(i)}),
+				  \label{eq:SCHMT - Transition proba}
+				\end{equation}
+			
+			
+				
+				
+			
+
+      
+    \end{itemize}
+
+    
+    \textbf{\textit{cite: Durand}} improved the learning algorithm proposed by MS. Crouse and \textbf{\textit{cite: Kingsburry}} adapted this model to the dual complex wavelet trees.\\
+    
+    While having the same 
+    
   \section{Hypothesis:}
     \label{seq:SHMT/Hypos}
     (1) 2 populations. (2) Persistence. 
       
-  \section{Persistence:}
-    \label{seq:SHMT/Persistence}
+%   \section{Persistence:}
+%     \label{seq:SHMT/Persistence}
+%     Hopefully some kind of proof there.
+    
+  \section{Learning the tree structure:}
+    \label{seq:SHMT/Learning}
+    Hopefully some kind of proof there.
+    
+  \section{Classification:}
+    \label{seq:SHMT/Clf}
     Hopefully some kind of proof there.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

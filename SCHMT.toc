@@ -1,36 +1,39 @@
 \select@language {french}
-\contentsline {chapter}{\numberline {1}Introduction:}{4}{chapter.1}
-\contentsline {section}{\numberline {1.1}Need for a better signal representation:}{4}{section.1.1}
-\contentsline {section}{\numberline {1.2}Image representation:}{4}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Intuition of a ``good'' image representation:}{5}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Formalization of a ``good'' image representation:}{5}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}State of the art in image representation:}{7}{subsection.1.2.3}
-\contentsline {section}{\numberline {1.3}Probabilistic graphical model:}{8}{section.1.3}
-\contentsline {section}{\numberline {1.4}Outline of the report:}{8}{section.1.4}
-\contentsline {chapter}{\numberline {2}The Scattering transform:}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}Scattering wavelets:}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}Scattering Convolution Network:}{12}{section.2.2}
-\contentsline {section}{\numberline {2.3}Properties of the scattering transform:}{12}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Non-expansivity:}{13}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Energy preservation:}{13}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Translation invariance:}{14}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Lipschitz continuity to the action of diffeomorphisms:}{14}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Application to classification:}{15}{section.2.4}
-\contentsline {chapter}{\numberline {3}Probabilistic graphical models:}{16}{chapter.3}
-\contentsline {section}{\numberline {3.1}Bayesian Network:}{16}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Architecture:}{16}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Learning:}{16}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Inference:}{16}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Hidden Markov Models:}{16}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Architecture:}{16}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Learning:}{16}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Inference:}{16}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Scattering hidden Markov tree:}{17}{chapter.4}
-\contentsline {section}{\numberline {4.1}Related work:}{17}{section.4.1}
-\contentsline {section}{\numberline {4.2}Hypothesis:}{17}{section.4.2}
-\contentsline {section}{\numberline {4.3}Persistence:}{17}{section.4.3}
-\contentsline {chapter}{\numberline {5}Experimental results:}{18}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion:}{19}{chapter.6}
-\contentsline {paragraph}{Scattering hidden Markov tree:}{19}{paragraph*.9}
-\contentsline {paragraph}{Next steps:}{19}{paragraph*.10}
-\contentsline {chapter}{\numberline {7}Acknowledgements:}{20}{chapter.7}
+\contentsline {chapter}{\numberline {1}Introduction:}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Need for a better signal representation:}{5}{section.1.1}
+\contentsline {section}{\numberline {1.2}Image representation:}{5}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Intuition of a ``good'' image representation:}{6}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Formalization of a ``good'' image representation:}{6}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}State of the art in image representation:}{8}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Probabilistic graphical model:}{9}{section.1.3}
+\contentsline {section}{\numberline {1.4}Outline of the report:}{9}{section.1.4}
+\contentsline {chapter}{\numberline {2}The Scattering transform:}{10}{chapter.2}
+\contentsline {section}{\numberline {2.1}Scattering wavelets:}{10}{section.2.1}
+\contentsline {section}{\numberline {2.2}Scattering Convolution Network:}{13}{section.2.2}
+\contentsline {section}{\numberline {2.3}Properties of the scattering transform:}{13}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Non-expansivity:}{14}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Energy preservation:}{14}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Translation invariance:}{15}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Lipschitz continuity to the action of diffeomorphisms:}{15}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Application to classification:}{16}{section.2.4}
+\contentsline {chapter}{\numberline {3}Probabilistic graphical models:}{17}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bayesian Network:}{17}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Architecture:}{17}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Learning:}{18}{subsection.3.1.2}
+\contentsline {subsubsection}{Expectation-maximization:}{19}{subsubsection*.10}
+\contentsline {subsubsection}{Variational Bayes:}{19}{subsubsection*.11}
+\contentsline {subsection}{\numberline {3.1.3}Inference:}{19}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Markov Models:}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Architecture:}{19}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Learning:}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Inference:}{19}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Scattering hidden Markov tree:}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}SCHMT model and related works:}{21}{section.4.1}
+\contentsline {section}{\numberline {4.2}Hypothesis:}{23}{section.4.2}
+\contentsline {section}{\numberline {4.3}Learning the tree structure:}{23}{section.4.3}
+\contentsline {section}{\numberline {4.4}Classification:}{23}{section.4.4}
+\contentsline {chapter}{\numberline {5}Experimental results:}{24}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion:}{25}{chapter.6}
+\contentsline {paragraph}{Scattering hidden Markov tree:}{25}{paragraph*.15}
+\contentsline {paragraph}{Next steps:}{25}{paragraph*.16}
+\contentsline {chapter}{\numberline {7}Acknowledgements:}{26}{chapter.7}

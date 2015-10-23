@@ -1,14 +1,18 @@
 \select@language {french}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces High dimensional signals}}{4}{figure.caption.3}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Translation invariance}}{5}{figure.caption.4}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces stability to deformations}}{5}{figure.caption.5}
-\contentsline {figure}{\numberline {1.4}{\ignorespaces Rotation invariance}}{6}{figure.caption.6}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces High dimensional signals}}{5}{figure.caption.3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Translation invariance}}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces stability to deformations}}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Rotation invariance}}{7}{figure.caption.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Complex Morlet wavelet.\relax }}{10}{figure.caption.7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The scattering convolutional network architecture}}{13}{figure.caption.8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Complex Morlet wavelet.\relax }}{11}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces The scattering convolutional network architecture}}{14}{figure.caption.8}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of Bayesian network.\relax }}{18}{figure.caption.9}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Scattering transform tree.\relax }}{20}{figure.caption.12}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Scattering Hidden Markov Tree.\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Wavelet hidden Markov tree.\relax }}{22}{figure.caption.14}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
