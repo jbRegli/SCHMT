@@ -29,7 +29,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 \graphicspath{{Images/}} 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Start the document
 \begin{document}
 
@@ -93,17 +93,17 @@
 	\renewcommand{\listfigurename}{List of figures:}
 	\listoffigures
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Introduction:}
 	\label{chap:Intro}
 		   
 	\section{Need for a better signal representation:}
 		\label{seq:Intro/Need}
 		
-		Our researches have been focused on \Important{high-dimensional classification problems}. Meaning that throughout this paper we will be working with several -says $N$- realizations of a signal $X =\{\bfx_{1}, ... , \bfx_{N}\}$  where,
+		Our researches have been focused on \Important{high-dimensional classification problems}. Meaning that throughout this paper we will be working with several -says $N$- realizations of a signal $X =\{\bfx_{1}, \dots  , \bfx_{N}\}$  where,
 			
 		\begin{equation*}
-			\forall i \in \llbracket 1 , N \rrbracket \;\;\; \bfx_{i}=(x(1) \, ... \, x(d)) \;\;\;\;\; \text{with} \;\; d \sim 10^{6} \; \text{and} \; x(.) \in \dsR.  
+			\forall i \in \llbracket 1 , N \rrbracket \;\;\; \bfx_{i}=(x(1) \, \dots  \, x(d)) \;\;\;\;\; \text{with} \;\; d \sim 10^{6} \; \text{and} \; x(.) \in \dsR.  
 		\end{equation*}
 		
 		\begin{figure}
@@ -292,9 +292,9 @@
 	\section{Outline of the report:}
     \label{seq:Intro/Outline of the report}    
 		The part~\ref{chap:ST} of this report will summarize and explain the recent work Stephane Mallat and his group on the \Important{Scattering Transform} (ST), a wavelet-based operator fulfilling all the properties of what we have defined as a ``good'' representation for signal classification. Second (see~\ref{chap:PGMs}) we will introduce the \Important{Probabilistic Graphical Models} (PGMs) as generative models that can be used -among other tasks- for classification. Then in~\ref{chap:SHMT} we will describe how the the representation produced by the scattering transform can be modeled by an hidden markov tree, using what we have named \Important{Scattering Hidden Markov Trees} (SCHMTs). Finally in~\ref{chap:Experimental results} we will provide some example of applications.
-    
-    
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{The Scattering transform:}
   \label{chap:ST}
   %TODO: In this section we will introduce the scattering transform as a mathematical object providing a deterministic representation of a signal.
@@ -400,14 +400,14 @@
 			\end{defn}
 						
 			\begin{defn} \textbf{Path Ordered Scattering Propagators}\\ 
-				Any sequence $p = (\lambda_{1}, \lambda_{2},...,\lambda_{m})$ where $\forall i \in \llbracket 1,m \rrbracket \lambda_{i} \in G \times \dsZ$ defines a \Important{path} of length $m$, \ie the ordered product of non-linear and non-commuting operators,
+				Any sequence $p = (\lambda_{1}, \lambda_{2},\dots ,\lambda_{m})$ where $\forall i \in \llbracket 1,m \rrbracket \lambda_{i} \in G \times \dsZ$ defines a \Important{path} of length $m$, \ie the ordered product of non-linear and non-commuting operators,
 				
 				\begin{equation}
 					\label{eq:path ordered SP}
 					\begin{split}
-						U[p]x &\eqdef U[\lambda_{m}]...U[\lambda_{2}]U[\lambda_{1}](x) \\
+						U[p]x &\eqdef U[\lambda_{m}]\dots U[\lambda_{2}]U[\lambda_{1}](x) \\
 							&= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
-							...} \ast \psi_{\lambda_{m}}}.   
+							\dots } \ast \psi_{\lambda_{m}}}.   
 					\end{split}
 				\end{equation}
 				
@@ -448,7 +448,7 @@
 						S_{J}[p](x) &\eqdef U[p]x \ast \phi_{2^{J}}(u) \\
 									&= \int U[p]x(v) \phi_{2^{J}}(u-v) dv \\
 									&= \abs{\abs{\abs{\abs{x \ast \psi_{\lambda_{1}}} \ast \psi_{\lambda_{2}}} 
-							...} \ast \psi_{\lambda_{m}}} \ast \phi_{2^{J}}(u)
+							\dots } \ast \psi_{\lambda_{m}}} \ast \phi_{2^{J}}(u)
 					\end{split}
 				\end{equation}
 				
@@ -503,6 +503,7 @@
 					\label{fig:SCN}
 				\end{center}	
       \end{figure}
+      
       
 	\section{Properties of the scattering transform:}
 		\label{seq:ST/Pties}
@@ -573,6 +574,18 @@
 			The proof of the theorem~\ref{thm:Energy conservation} also shows that the scattering energy propagates progressively towards lower frequencies and that \Important{the energy of $U[p]x$ is mainly concentrated along frequency decreasing paths $p=(\lambda_{k})_{k\leq m}$}, i.e. for which $\abs{\lambda_{k+1}} \leq \abs{\lambda_{k}}$. The energy contained in the other paths is negligible and thus for the rest of the paper \Important{only frequency decreasing path will be considered}.\\
 			
 			The decay of $\sum_{n=m}^{+\infty} \norm{S_{J}[\Lambda_{J}^{n}]x}^{2}$ implies that there exist a path length $m > 0$ after which all longer path can be neglected. For signal processing applications, this decay appears to be exponential. And \Important{for classification applications path of length $m = 3$} provides the most interesting results \textbf{\textit{cite mallat's long paper 1 3}}.
+			
+			The two restrictions stated above yields to an easier parametrization of a scattering network. Indeed when only the frequency decreasing paths up until a given order a scattering network is completely defined by:
+			\begin{itemize}
+			  \item $M$: The maximum path length considered.
+			  \item $J$: The coarsest scale level considered.
+			  \item $L$: The number of orientation considered, which can be define as the cardinality of the previously define $G$.
+			\end{itemize}
+			
+			Hence for a given set of parameter $(M,J,L)$, one can generate one and only one scattering network -with frequency decreasing paths. Each node of this network generates a -possibly empty- set of of nodes of size,
+			
+			 %TODO: add formula of number of child node.
+			 
 			
 		\subsection{Translation invariance:}
 			\label{subseq:ST/Pties/Translation}
@@ -669,7 +682,7 @@
     The energy contained in the scattering transform is mostly contained in the short frequency decreasing paths (see~\ref{subseq:ST/Pties/Energy}). Thus for most of the classification path of length $m=3$ provides the best trade out between classification performance and computational time. Unless stated otherwise this length will be use in all our experiments.
     
     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Probabilistic graphical models:}
   \label{chap:PGMs}
   
@@ -767,7 +780,7 @@
       \label{subseq:PGMs/MM/Inference}
       TBD
       
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % \chapter{Hidden Markov trees:}
 %   \label{chap:HMT}
 %     More at length description of the specific properties of HMTs.
@@ -792,7 +805,7 @@
 %     \label{seq:HMT/Generation}
 
 		
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Scattering hidden Markov tree:}
   \label{chap:SHMT}
   Section~\ref{seq:ST/Applications to clf} introduced the usage of scattering networks combined with an support vector machine classifier to achieve state of the art classification performances on some problems. However this method provides a boolean answer for each class. Some methods to express the output of an SVM as a probability exists (\textbf{\textit{cite: Probabilistic Outputs for Support Vector Machines and Comparisons to Regularized Likelihood Methods (1999)}} but they are just a rescaling of the output and not a true probabilistic approach. If one is interested in a true probabilistic model to describe the scattering coefficient it is quite natural to try to express them as a probabilistic graphical model. Indeed if one hide the propagation step from the scattering transform (see~\ref{seq:ST/SCN}) the scattering network defines a tree structure. \\
@@ -805,7 +818,7 @@
 			\end{center}
 	\end{figure}
   
-  To simplify the notation in the remainder of this section, let $\mcalT$ denotes the tree  structure defines as state above and depicted in figure~\ref{fig:ST tree}. Let $I$ denotes the total number of nodes -i.e. scattering coefficient and let $S_{i}$ for $i \in \llbracket1, I \rrbracket$ denotes one of the node $S[p_{i}]x \in \mcalT$ for a given path $p_{i} = [\lambda_{1} ... \lambda_{k}]$ ($k \in \dsN$). Note that for the sake of clarity the signal dependence of the node $S_{i}$ has been removed from the notation and in the remainder of the paper the short notation $i \in \mcalT$ will be use to denote a path belonging to the tree. Let also use the convention $S_{0} = S[\emptyset]x$. Finally let $\rho_{i}$ and $\mcalC(i)$ denote respectively the parent of a node $i$ and the set of children of the node $i$. Note also that a node $S_{i}$ can have no children, in such a case this node is a leaf of the tree.\\
+  To simplify the notation in the remainder of this section, let $\mcalT$ denotes the tree  structure defines as state above and depicted in figure~\ref{fig:ST tree}. Let $I$ denotes the total number of nodes -i.e. scattering coefficient and let $S_{i}$ for $i \in \llbracket0, I-1 \rrbracket$ denotes one of the node $S[p_{i}]x \in \mcalT$ for a given path $p_{i} = [\lambda_{0} ... \lambda_{u}]$ ($u\in \dsN$). Note that $S_{i}$ represents a node and does not depends on the signal $x$. For a given signal $x$, a realisation of the node $i$ is denoted by $S_{i}= s_{i} = S[\lambda_{i}]x$ where $\lambda_{i}$ denotes the path in the scattering tree to the node $i$. Note also that in the remainder of the paper the short notation $i \in \mcalT$ will be use to denote $\lambda_{i}$. Let also use the convention $S_{0} = S[\emptyset]x$. Finally let $\rho_{i}$ and $\mcalC(i)$ denote respectively the parent of a node $i$ and the set of children of the node $i$. Note also that a node $S_{i}$ can have no children, in such a case this node is a leaf of the tree.\\
   
   The remainder of this section is organized as follows: Section~\ref{seq:SHMT/Rel work} introduces related work and provide a description of the SCHMT model. Section~\ref{seq:SHMT/Hypos} details the hypothesis needed to develop this model as well as provides some intuition on their validity. Finally section~\ref{seq:SHMT/Learning} and~\ref{seq:SHMT/Clf} respectively describe the learning algorithm for the parameters of the model and the classification method.
 
@@ -843,7 +856,7 @@
 				\end{center}
 		\end{figure}
 		
-		As the scattering transform is closely related to wavelet transforms it is not surprising to find similar ideas exploited for wavelet trees. MS. Crouse proposed where an Hidden Markov Tree Model is used to model the wavelet coefficients \textbf{\textit{cite: Crouse}} of a classic wavelet trees. Later N. Kingsbury \textbf{\textit{cite: Kingsbury}} adapted MS. Crouse's model to his Dual wavelet complex trees. The resulting hidden Markov tree models provides better classification performances than MS. Course's WHMT as the wavelet used generate a ``better'' representation of the signal -in the sense defined in section~\ref{seq:Intro/Image rep/Intuition}. Indeed this version can leverage the quasi-translation invariance property of the complex wavelets. The improvement in performances due to the quasi-invariance property provides a good motivation to try the hidden Markov tree modeling on the scattering transform as they have even ``better'' representational properties (see~\ref{seq:ST/Pties}. The parameters of the original WHMT were trained using a version of the \Important{Expectation-Maximization} adapted to binary hidden Markov trees. However this learning method suffered from overflowing issues \textbf{\textit{cite: ? - Durand?}}, JB. Durand \textbf{\textit{cite: Durand}} proposed a smoothed version of the training algorithm preventing overflowing.\\\\
+		As the scattering transform is closely related to wavelet transforms it is not surprising to find similar ideas exploited for wavelet trees. MS. Crouse proposed where an Hidden Markov Tree Model is used to model the wavelet coefficients \textbf{\textit{cite: Crouse}} of a classic wavelet trees. Later N. Kingsbury \textbf{\textit{cite: Kingsbury}} adapted MS. Crouse's model to his Dual wavelet complex trees. The resulting hidden Markov tree models provides better classification performances than MS. Course's WHMT as the wavelet used generate a ``better'' representation of the signal -in the sense defined in section~\ref{seq:Intro/Image rep/Intuition}. Indeed this version can leverage the quasi-translation invariance property of the complex wavelets. The improvement in performances due to the quasi-invariance property provides a good motivation to try the hidden Markov tree modeling on the scattering transform as they have even ``better'' representational properties (see~\ref{seq:ST/Pties}. The parameters of the original WHMT were trained using a version of the \Important{Expectation-Maximization} adapted to binary hidden Markov trees. However this learning method suffered from overflowing issues \textbf{\textit{cite: ? - Durand?}}, JB. Durand \textbf{\textit{cite: Durand}} proposed a smoothed version of the training algorithm preventing overflowing.\\
    
 		\begin{figure}
 				\begin{center}
@@ -857,66 +870,269 @@
 	  
     \begin{itemize}
       \item For any index $i$ of the tree, $S_{i} \in \dsR^{d}$ and $H_{i} \in \llbracket 1,K \rrbracket$ where $K$ is the number of possible hidden states.
-      \item The initial hidden state is drawn from a discrete non uniform distribution $\pi_{0}$ such that:
+      
+      \item The initial hidden state is drawn from a discrete non uniform \Important{initial distribution} $\pi_{0}$ such that:
 	  	  \begin{equation}
-					\forall k \in \llbracket 1,K \rrbracket \;\;\; \pi_{0}(k) = P(H_{i}=k).
+					\forall k \in \llbracket 1,K \rrbracket \;\;\; \pi_{0}(k) = P(H_{0}=k).
 					\label{eq:SCHMT - initial distribution}
 				\end{equation}
-      \item For any index $i$ of the tree, the probability of the visible node $S_{i}$ is a mixture of Gaussian conditional to the hidden state $H_{i}$. 
+				
+      \item For any index $i$ of the tree, the \Important{emission distribution} describe the probability of the visible node $S_{i}$ conditional to the hidden state $H_{i}$,
 				\begin{equation}
-				  \forall i \in \mcalT \;\;\; P(S_{i} | H_{i}) = \sum_{k=1}^{K} w_{k,i} \mcalN(\mu_{k,i},\sigma_{k,i}).
+				  \forall i \in \mcalT \;\; \forall k \in \llbracket1,K\rrbracket \;\; \text{and} \;\; \forall s \in \dsR
+					\;\;\;\;\;\;P(S_{i}=s|H_{i}=k) = P_{\theta_{k,i}}(s)
+					\label{eq:SCHMT - Emission distr}
+				\end{equation}
+				Where $P_{\theta}$ belongs to a parametric distribution family and where $\theta$ is the vector of \Important{emission parameters}. In the remainder of the paper the emission distribution is a Gaussian so that,  
+      	\begin{equation}
+				  \forall i \in \mcalT \;\; \forall k \in \llbracket1,K\rrbracket \;\; \text{and} \;\; \forall s \in \dsR
+					\;\;\;\;\;\; P(S_{i}=s | H_{i}=k) = \mcalN(\mu_{k,i},\sigma_{k,i}).
 				  \label{eq:SCHMT - Mixt of Gaussian}
 				\end{equation}
-				where $\mu_{k,i}$, $\sigma_{k,i}$ and $w_{i}$ are respectively the mean, the variance and the weight for the $k$-th value of the mixture and the node $i$.
-			\item For any index $i$ of the tree, the probability to move from one state to the other in characterized by a transition matrix,
+				where $\theta_{k,i}=(\mu_{k,i},\sigma_{k,i})$ where $\mu_{k,i}$ and $\sigma_{k,i})$ are respectively the mean and the variance of the Gaussian for the $k$-th value of the mixture and the node $i$.
+				
+			\item For any index $i$ of the tree, the probability to move from one state to the other in characterized by a \Important{transition probability},
 				\begin{equation}
-				  \forall i \in \mcalT \backslash\{0\} \;\;\; P(H_{i} | H_{\rho(i)}) = \pi_{i} P(H_{\rho(i)}),
-				  \label{eq:SCHMT - Transition proba}
+					\forall i \in \mcalT \backslash \{ 0 \} \;\;\; \forall g,k \in \llbracket1,K\rrbracket^{2}
+					\;\;\;\;\;\; \epsilon_{i}^{(gk)} = P(H_{i}= k | H_{\rho(i)}=g), 
+					\label{eq:SCHMT - Transition matrix}
 				\end{equation}
-				where,
+				where $\epsilon_{i}$ defines a transition probability matrix such that,
 				\begin{equation}
-						\forall i \in \mcalT \backslash \{ 0 \} \;\;\; \pi_{i} = \left[P(H_{i}= m | H_{\rho(i)}=n) \right]_{m,n \in \llbracket 1,K \rrbracket^{2}}. %TODO: check if m and n are correct
-						\label{eq:SCHMT - Transition matrix}
+				  \forall i \in \mcalT \backslash\{0\} \;\;\;  \forall k \in \llbracket1,K\rrbracket
+					\;\;\;\;\;\;  P(H_{i}=k) = \sum_{g=1}^{K} \epsilon_{i}^{(gk)} P(H_{\rho(i)}=g). %TODO: Check if it is conditional or not.
+				  \label{eq:SCHMT - State proba 1}
 				\end{equation}
-				Using the chain rule of probability $P(H_{i})$ can be expressed from the root node as,
-				
-			
-			
-				
-				
-			
-
-      
-    \end{itemize}
-
+				And using the chain rule of probability one can express $P(H_{i})$ from the root node's initial distribution.\\
+		\end{itemize}
+		
+		The SCHMT model is thus fully described by,
+		\begin{equation}
+			\Theta = \big(\pi_{0}, \{ \epsilon_{i}, \{ \theta_{k,i} \}^{k\in\llbracket1,K\rrbracket} \}_{i\in\mcalT}\big).
+			\label{eq:SCHMT - parameters}
+		\end{equation}
+		
+		
+    The SCHMT model differs from the previous work by the shape of its tree structure. Previous work are based on regular binary tree structures where all the leafs have the same depth the scattering tree is a irregular tree. As seen in section~\ref{seq:ST/SCN} each node has $TODO$ children. This yields to an architecture where each node have a different number of children and where leafs can be found at any depth of the tree. However as detailed in section~\ref{seq:SHMT/Learning}, the learning algorithm can be adapted to this case. Another difference between SCHMT and the previous works is the non-homogeneity of the transition matrix. Indeed by the nature of the scattering transform one can expect a non homogeneous transmission of the information across the orders and thus to accomodate this the learning algorithm has also be adapted to this case.\\
     
-    \textbf{\textit{cite: Durand}} improved the learning algorithm proposed by MS. Crouse and \textbf{\textit{cite: Kingsburry}} adapted this model to the dual complex wavelet trees.\\
+    Even though the theoretical framework of SCHMT holds for any $K \in \dsN^{\ast}$, in the remainder of the work $K$ is set to $2$. This means that the scattering coefficient are described by a mixture of two Gaussians and can be in \Important{two states, $(H)$ High or $(L)$ Low}. This model yields to sparser representations as the number of hidden states is highly constrained.
     
-    While having the same 
     
   \section{Hypothesis:}
     \label{seq:SHMT/Hypos}
-    (1) 2 populations. (2) Persistence. 
-      
-%   \section{Persistence:}
-%     \label{seq:SHMT/Persistence}
-%     Hopefully some kind of proof there.
     
+    Expressing the dependencies between the scattering coefficients as an Hidden Markov Tree implies that two modeling assumptions are done. The first assumption reflects the fact that the scattering coefficients can effectively be expressed by two hidden states,\\
+    
+    \begin{assumption}\textbf{Two populations:}\\
+			A signal's scattering transform can be described as two clusters of coefficients' value. The smooth regions are represented by small scattering coefficients, while edges, ridges, and other singularities are represented by large coefficients.\\
+			\label{assum:2pop}
+    \end{assumption}
+    
+    As this assumption is common for standard or complex wavelet (\textbf{\textit{cite: Kingsbury}} and because a scattering coefficient of order $m$ can simply be seen as the modulus of a ``new'' signal -i.e. the scattering coefficient of order $m-1$, the two-populations assumption for scattering network is reasonable. This intuition can be confirmed by plotting the scattering coefficients obtained for several signals.\\
+    
+		\begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption[Two populations - experiment 1.]{Two populations - experiment 1: The signal is a binary square (0: background, 1: square) with noise. The scattering network has $m=3$ layers, $J=3$ scales and $L=2$ orientations.} %TODO: plots from exp_two_populations from the square
+					\label{fig:2pop - 1}
+				\end{center}
+		\end{figure}    
+		
+		\begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption[Two populations - experiment 2.]{Two populations - experiment 1: The signal is the picture of Lena. The scattering network has $m=3$ layers, $J=3$ scales and $L=2$ orientations.} %TODO: plots from exp_two_populations from Lena
+					\label{fig:2pop - 2}
+				\end{center}
+		\end{figure}
+		
+		Figure~\ref{fig:2pop - 1} displays the scattering coefficients of a noisy binary square. Note that for sake of clarity a ``small'' network has been used. This does not affect the observations that can be made and one can notice that the highest values of the scattering coefficient are obtained on highly informational pixels (edges in this case) while the low informational pixels are represented by scattering coefficients near $0$. Similar observations can be made for more complex signal -such as the one displays in~\ref{fig:2pop - 2}. A statistical interpretation of the two-populations implies that scattering coefficients have a non-Gaussian marginal statistics, that is, their marginal probability density functions have a large peak at zero (many small coefficients) and heavy tails (a few large coefficients). Finally since many real-world signals (photograph-like images, for example) consist mostly of smooth regions separated by a few singularities, the two populations assumption tells us that the scattering coefficients are a sparse representation for these signals (this notion of sparsity can be made mathematically precise; see \textbf{\textit{cite: Kingsbury - 4, 5]}} for example). Most of the scattering coefficient magnitudes (representing the smooth regions) are small, while a few of them (representing the singularities and encoding the informational content) are large.\\
+		
+		The second assumptions transcripts the smoothness of the states across the scattering transform and can be stated as,\\
+		
+		\begin{assumption}\textbf{Persistence:}\\
+		  Along a scattering path high and low scattering coefficient values cascade across the scattering orders.\\
+		  \label{assum:Persistence}
+		\end{assumption}
+
+		This assumption codifies how the hidden states are structured. Smooth regions/singularities are represented by low/high values at every order. Persistence leads to scattering coefficient values that are statistically dependent along the branches of the scattering tree. Figure~\ref{fig:Persistence - 1} displays the magnitude of the scattering coefficient for a given node $i$ of the tree against those of its father $\rho(i)$. A clear positive correlation can be observed between the magnitude of the father and the son. Furthermore the transitions can be regrouped in two main clusters: Low-Low and High-High. This tends to confirm the validity of the persistence assumption. A second experiment computes the average correlation between each pair father/child of the tree for signal belonging to different classes. Again this experiments advocates in favor of a correlation in between the magnitude of the connected nodes.  
+		
+		\begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption[Persistence - experiment 1.]{Persistence - experiment 1: Plot the magnitude of the scattering coefficients at a given index $i$ of the tree against those of its father $\rho(i)$.} %TODO: plots from exp_correlation
+					\label{fig:Persistence - 1}
+				\end{center}
+		\end{figure} 
+		
+		\begin{figure}
+				\begin{center}
+					\includegraphics[width=3.5in]{placeholder.jpg}
+					\caption[Persistence - experiment 2.]{Persistence - experiment 2:.} %TODO: plots from exp_correlation_set
+					\label{fig:Persistence - 2}
+				\end{center}
+		\end{figure}
+		
+		
   \section{Learning the tree structure:}
     \label{seq:SHMT/Learning}
-    Hopefully some kind of proof there.
+    
+    As seen in~\ref{subseq:PGMs/MM/Learning} training Markov  models can be done using \Important{Expectation-Maximization} methods. Hidden Markov chains use a version of the EM algorithm called \Important{Forward-Backward} algorithm allowing the propagation of the hidden states along the chain. MS. Crouse \textbf{\textit{cite: Crouse}} proposed the \Important{Upward-Downward algorithm}, an adaptation to the hidden Markov trees of the Forward-Backward algorithm. Both algorithm were suffering from overflowing problems \textbf{\textit{cite: Durand 9 }} and JB. Durand \textbf{\textit{cite: Durand}} adapted \textbf{\textit{name + cite: Durand 7}} work to create a smoothed version of the learning algorithm for trees. This section proposes a rewriting of JB. Durand's version of the Upward-Downward algorithm adapted to non-regular non-binary HMTs.\\
+       
+    To do so one needs to introduce the following notations,
+    \begin{itemize}
+      \item $\forall i \in \mcalT$ let $\bar{\mcalS}_{i}= \bar{s}_{i}$ be the observed subtree rooted at node $i$. By convention $\bar{\mcalS}_{0}$ denotes the entire observed tree.
+      \item $\forall i \in \mcalT$ let $\bar{\mcalS}_{c(i)}= \bar{s}_{c(i)}$ be the entire -possibly empty collection of observed subtrees rooted at children of node $i$ (i.e. the subtree $\bar{s}_{u}$ except its root $s_{u}$).
+      \item If $\bar{\mcalS}_{i}$ is a proper subtree of $\bar{\mcalS}_{j}$, then $\bar{\mcalS}_{j\backslash i} = \bar{s}_{j\backslash i}$ is the subtree rooted at node $j$ except the subtree rooted at node $i$.
+      \item $\forall i \in \mcalT$ let $\bar{\mcalS}_{1\backslash c(i)}= \bar{s}_{1\backslash c(i)}$ be the entire tree except for the subtrees rooted at children of node $i$.
+    \end{itemize}
+    Note that those notations transpose to the hidden state and for instance $\bar{\mcalH}_{i}= \bar{h}_{i}$ is the state subtree rooted at node $i$.\\
+    %TODO: Figure for the cliques as Durand (if time)
+    
+    \subsection{E-Step:}
+			\label{subseq:SHMT/Learning/E}
+			The smoothed version of the E-step requires the computation of the conditional probability distribution $\xi_{i}(k) = P(H_{i}=k | \bar{\mcalS}_{i}= \bar{s}_{i})$ (smoothed probability) and $P(H_{i}=k, H_{\rho(i)}=g | \bar{\mcalS}_{i}= \bar{s}_{i})$ for each node $i \in mcalT$ and state $k$ and $g$. A decomposition of the smoothed probability adapted to the HMT structure is,
+			
+			\begin{equation}
+			  \xi_{u}(k) = 
+					\frac{P(\bar{\mcalS}_{1\backslash i}= \bar{s}_{1\backslash i} | H_{i}=k)}
+						{P(\bar{\mcalS}_{1\backslash i}= \bar{s}_{i\backslash i} | \bar{\mcalS}_{1}= \bar{s}_{i})} 
+					P(H_{i}= k |\bar{\mcalS}_{i}= \bar{s}_{i})
+				\label{eq:Smoothed P decomposition}
+			\end{equation}
+			
+			The smoothed upward-downward algorithm requires the introduction the following quantities,
+			
+			\begin{equation}
+			  \beta_{i}(k) = P(H_{i}=k | \bar{\mcalS}_{i}= \bar{s}_{i})
+			  \label{eq:UD beta node}
+			\end{equation}
+			\begin{equation}
+			  \beta_{\rho(i)i}(k) = \frac{P(\bar{\mcalS}_{i}= \bar{s}_{i} | H_{\rho(i)}=k)} {P(\bar{\mcalS}_{i}= \bar{s}_{i}) }
+			  \label{eq:UD beta node and parents}
+			\end{equation}
+						\begin{equation}
+			  \alpha_{i}(k) = \frac{P(\bar{\mcalS}_{1\backslash i}= \bar{s}_{1\backslash i} | H_{\rho(i)}=k)} {P(\bar{\mcalS}_{1\backslash i}= \bar{s}_{1\backslash i} | \bar{\mcalS}_{i}= \bar{s}_{i} ) }
+			  \label{eq:UD alpha}
+			\end{equation}\\
+			
+			The smoothed upward-downward algorithm also requires the preliminary knowledge  of the marginal state distributions $P(H_{i}=k)$ for each node $i$. However this can simply be achieved by a downward recursion initialized for the root node with $P(H_{0}=k)=\pi_{0}(k)$ and then using the recursive formula~\ref{eq:SCHMT - State proba 1}.
+			
+			\subsubsection{Upward recursion:}
+				The upward algorithm is initialized at all the leaf of the tree, by computing $\beta_{i}(k)$ using,
+				
+				\begin{equation}
+					\begin{split}
+						\beta_{i}(k)	&= P(H_{i}=k | \bar{\mcalS}_{i}= \bar{s}_{i})\\
+													&= \frac{P(S_{i}= s_{i} | H_{i}=k)P(H_{i}=k)} {P(S_{i}= s_{i})}\\
+													&= \frac{P_{\theta_{k,i}}(s_{i}) P(H_{i}=k)} {N_{i}},
+						\end{split}
+						\label{eq:upward beta leaf}
+				\end{equation}
+				
+				where the normalization factor for the leaf nodes $N_{i}$ is given by,
+				\begin{equation}
+					N_{i}	= P(S_{i}= s_{i}) = \sum_{k=1}^{K} P_{\theta_{k,i}}(s_{i}) P(H_{i}=k).
+					\label{eq:upward normalization leaf}
+				\end{equation}
+				
+				Then one can recursively (upward recursion) compute $\beta_{i}(k)$ for the remaining nodes of the tree using,
+				
+				\begin{equation}
+					\begin{split}
+						\beta_{i}(k)	&= P(H_{i}=k | \bar{\mcalS}_{i}= \bar{s}_{i})\\
+													&= \left[ \prod_{j \in c(u)} P(\bar{\mcalS}_{j}= \bar{s}_{j} | H_{i}=k) \right] P(S_{i}= s_{i} | H_{i}=k) \frac{P(H_{i}=k)} {P(\bar{\mcalS}_{i}= \bar{s}_{i})}\\
+													&= \left[ \frac{\prod_{j \in c(u)} P(\bar{\mcalS}_{j}= \bar{s}_{j} | H_{i}=k)} {P(\bar{\mcalS}_{j}= \bar{s}_{j})} \right]
+														P(S_{i}= s_{i} | H_{i}=k) P(H_{i}=k) 
+														\frac{\prod_{j \in c(u)} P(\bar{\mcalS}_{j}= \bar{s}_{j})} {P(\bar{\mcalS}_{i}= \bar{s}_{i})}\\
+													&= \frac{ \left[ \prod_{j \in c(i)} \beta_{ij}(k) \right] P_{\theta_{k,i}}(s_{i})P(H_{i}=k)}{N_{i}},
+						\end{split}
+						\label{eq:upward beta node}
+				\end{equation}
+				
+				where the normalization factor for the non-leaf nodes $N_{i}$ is given by,
+				\begin{equation}
+					\begin{split}
+						N_{i}	&= \frac{P(\bar{\mcalS}_{i}}{\prod_{j \in c(u)} P(\bar{\mcalS}_{j}= \bar{s}_{j})}\\
+									&= \sum_{k=1}^{K} \left[ \prod_{j \in c(i)} \beta_{ij}(k) \right]  P_{\theta_{k,i}}(s_{i})P(H_{i}=k).
+					\end{split}
+					\label{eq:upward normalization others}
+				\end{equation}
+
+				For all node $i$, the quantities $\beta_{\rho(i)i}(k)$ can be extracted from $\beta_{i}$ using,
+				
+				\begin{equation}
+					\begin{split}
+						\beta_{\rho(i)i}(k)	&= \frac{P(\bar{\mcalS}_{i}= \bar{s}_{i} | H_{\rho(i)}=k)} {P(\bar{\mcalS}_{i}= \bar{s}_{i}) }\\
+																&= \frac{ \sum_{l=1}^{K} P(\bar{\mcalS}_{i}= \bar{s}_{i} | H_{i}=l) P(H_{i}= k | H_{\rho(i)}=k)} {P(\bar{\mcalS}_{i}= \bar{s}_{i}) }\\
+																&= \sum_{l=1}^{K} \frac{ P(H_{i}=l | \bar{\mcalS}_{i}= \bar{s}_{i} |)}{P(H_{i}=l)} P(H_{i}= l | H_{\rho(i)}=k)\\
+																&= \sum_{l=1}^{K} \frac{\beta_{i}(l) \epsilon_{i}^{(kl)}}{P(H_{i}=l)}.
+						\end{split}
+						\label{eq:upward beta node and parents}
+				\end{equation}
+				
+				Those relationships one can derive the the upward algorithm,
+			
+				\begin{center}
+					\begin{algorithm}
+						\textbf{Meta-parameters:}\\
+							$K$\\
+								
+						\textbf{Initialization:}\\
+							\tcp{$P_{\theta_{k,i}}(s_{i})$:}
+							\For{All the node $i$ of the tree $\mcalT$}{
+								$P_{\theta_{k,i}}(s_{i}) = \mcalN(s_{i} | \mu_{k,i},\sigma_{k,i})$
+								}
+								
+							\tcp{Loop over the leafs $i$ of the tree:}
+							\For{All the leaf $i$ of the tree $\mcalT$}{
+								$\beta_{i}(k) = \frac{P_{\theta_{k,i}}(s_{i}) P(H_{i}=k)}{\sum_{l=1}^{K} P_{\theta_{l,i}}(s_{i}) P(H_{i}=l)}$\\
+								$\beta_{i,\rho(i)}(k) = \sum_{l=1}^{K}\frac{\beta_{i}(l) \epsilon(k,l)}{P(H_{i}=l)} . P(H_{\rho(i)}=k)$ \\
+								$l_{i} = 0$
+								}
+% 						
+% 										
+% 						\While{convergence}{
+% 							- \textit{Descent direction:} \\
+% 							$\bfp^{(\ell)} = -\bfB_{(\ell)}^{-1} \nabla U(f|\hat\beta^{(\ell)})$ \\
+% 							
+% 							- \textit{Optimal step in the direction $\bfp^{(\ell)}$:} \\
+% 							$\mu^{(\ell)} = \argmin_{\mu \in \mathbb{R}} \left[
+% 							U(f| (\bftheta_{(\ell)} + \mu \bfp^{(\ell)})^\top \bfrho) \right]$\\
+% 							
+% 							$\bftheta^{(\ell+1)} = \bftheta^{(\ell)} + \mu^{(\ell)} \bfp^{(\ell)}$\\      
+% 							$\hat\beta^{(\ell+1)} = \bftheta^{(\ell) \top} \bfrho $ \\
+% 							
+% 							- \textit{Hessian matrix estimate:} \\
+% 							$\bfeta^{(\ell)} = 
+% 							\nabla U(f|\hat\beta^{(\ell+1)})-\nabla U(f|\hat\beta^{(\ell)})$\\
+% 							
+% 							$\bfB_{(\ell+1)} \!\! = \!\! \bfB_{(\ell)} + \displaystyle \frac{\bfeta^{(\ell)} \bfeta^{(\ell)\top}}
+% 							{\mu^{(\ell)} \bfeta^{(\ell)\top} \bfp^{(\ell)}}
+% 									- \frac{\bfB_{(\ell)} \bfp^{(\ell)} \bfp^{(\ell)\top} \bfB_{(\ell)}}
+% 									{\bfp^{(\ell)\top} \bfB_{(\ell)} \bfp^{(\ell)}}$
+% 									\\
+% 							$l = l+1$
+% 						}
+						\caption{Smoothed upward algorithm}
+						\label{algo:Smoothed upward}		
+					\end{algorithm}        
+				\end{center}
+
     
   \section{Classification:}
     \label{seq:SHMT/Clf}
-    Hopefully some kind of proof there.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    
+    The 
+    
+    %TODO: MAP algo
+    
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Experimental results:}
   \label{chap:Experimental results}
   TBD
   
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Conclusion:}
   \paragraph{Scattering hidden Markov tree:}
     TBD
@@ -926,18 +1142,19 @@
     Bayesian neural networks
     
     
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Acknowledgements:}
 
 	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%   
 % Bibliography %
 %%%%%%%%%%%%%%%%
 \begin{thebibliography}{99}
   
 \end{thebibliography}
-     
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % THE END
 \end{document}

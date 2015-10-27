@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {2.3.1}Non-expansivity:}{14}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}Energy preservation:}{14}{subsection.2.3.2}
 \contentsline {subsection}{\numberline {2.3.3}Translation invariance:}{15}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Lipschitz continuity to the action of diffeomorphisms:}{15}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.4}Lipschitz continuity to the action of diffeomorphisms:}{16}{subsection.2.3.4}
 \contentsline {section}{\numberline {2.4}Application to classification:}{16}{section.2.4}
 \contentsline {chapter}{\numberline {3}Probabilistic graphical models:}{17}{chapter.3}
 \contentsline {section}{\numberline {3.1}Bayesian Network:}{17}{section.3.1}
@@ -30,10 +30,12 @@
 \contentsline {chapter}{\numberline {4}Scattering hidden Markov tree:}{20}{chapter.4}
 \contentsline {section}{\numberline {4.1}SCHMT model and related works:}{21}{section.4.1}
 \contentsline {section}{\numberline {4.2}Hypothesis:}{23}{section.4.2}
-\contentsline {section}{\numberline {4.3}Learning the tree structure:}{23}{section.4.3}
-\contentsline {section}{\numberline {4.4}Classification:}{23}{section.4.4}
-\contentsline {chapter}{\numberline {5}Experimental results:}{24}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion:}{25}{chapter.6}
-\contentsline {paragraph}{Scattering hidden Markov tree:}{25}{paragraph*.15}
-\contentsline {paragraph}{Next steps:}{25}{paragraph*.16}
-\contentsline {chapter}{\numberline {7}Acknowledgements:}{26}{chapter.7}
+\contentsline {section}{\numberline {4.3}Learning the tree structure:}{25}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}E-Step:}{26}{subsection.4.3.1}
+\contentsline {subsubsection}{Upward recursion:}{26}{subsubsection*.19}
+\contentsline {section}{\numberline {4.4}Classification:}{27}{section.4.4}
+\contentsline {chapter}{\numberline {5}Experimental results:}{29}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion:}{30}{chapter.6}
+\contentsline {paragraph}{Scattering hidden Markov tree:}{30}{paragraph*.21}
+\contentsline {paragraph}{Next steps:}{30}{paragraph*.22}
+\contentsline {chapter}{\numberline {7}Acknowledgements:}{31}{chapter.7}

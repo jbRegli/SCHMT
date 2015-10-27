@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  19 OCT 2015 14:13
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  27 OCT 2015 17:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,6 +263,42 @@ l.44 \usepackage{
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
+! Undefined control sequence.
+l.46 \SetCommentSty
+                   {mycommfont}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 \SetCommentSty{m
+                     ycommfont}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no m in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 46--47
+[] 
+ []
+
 
 ! LaTeX Error: \usepackage before \documentclass.
 
@@ -270,7 +306,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 \usepackage{
+l.49 \usepackage{
                  graphicx}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -282,7 +318,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.49 \usepackage{
+l.51 \usepackage{
                  caption}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -294,7 +330,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.50 \usepackage{
+l.52 \usepackage{
                  subcaption}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -306,7 +342,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.51 \usepackage{
+l.53 \usepackage{
                  epstopdf}	% Convert esp images to pdf:
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -318,13 +354,13 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.54 \usepackage{
+l.56 \usepackage{
                  tikz}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
 
 ! Undefined control sequence.
-l.55 \usetikzlibrary
+l.57 \usetikzlibrary
                     {arrows}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -339,7 +375,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.55 \usetikzlibrary{a
+l.57 \usetikzlibrary{a
                       rrows}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -351,7 +387,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no w in font nullfont!
 Missing character: There is no s in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 55--56
+Overfull \hbox (20.0pt too wide) in paragraph at lines 57--58
 [] 
  []
 
@@ -362,7 +398,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.58 \usepackage{
+l.60 \usepackage{
                  multirow}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -374,7 +410,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.61 \usepackage{
+l.63 \usepackage{
                  ae}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -386,7 +422,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.62 \usepackage{
+l.64 \usepackage{
                  hyperref}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -398,7 +434,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65 \usepackage{
+l.67 \usepackage{
                  epsf}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -410,7 +446,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.66 \usepackage{
+l.68 \usepackage{
                  url}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -422,7 +458,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.67 \usepackage{
+l.69 \usepackage{
                  microtype}
 \usepackage may only appear in the document preamble, i.e.,
 between \documentclass and \begin{document}.
@@ -435,7 +471,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.131 \newtheorem{thm}{Theorem}[section]
+l.173 \newtheorem{thm}{Theorem}[section]
                                         
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -449,7 +485,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134 \newtheorem*{cor}{
+l.176 \newtheorem*{cor}{
                         Corollary}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -462,7 +498,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.134 \newtheorem*{cor}{C
+l.176 \newtheorem*{cor}{C
                          orollary}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -477,12 +513,12 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no y in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 134--135
+Overfull \hbox (20.0pt too wide) in paragraph at lines 176--177
 [] 
  []
 
 ! Undefined control sequence.
-l.136 \theoremstyle
+l.178 \theoremstyle
                    {definition}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -497,7 +533,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.136 \theoremstyle{d
+l.178 \theoremstyle{d
                      efinition}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -520,7 +556,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.137 \newtheorem{defn}{Definition}[section]
+l.179 \newtheorem{defn}{Definition}[section]
                                             
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -534,7 +570,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.138 \newtheorem{con}{Conjecture}[section]
+l.180 \newtheorem{con}{Conjecture}[section]
                                            
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -548,19 +584,19 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.139 \newtheorem{eg}{Example}[section]
+l.181 \newtheorem{eg}{Example}[section]
                                        
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 136--140
+Overfull \hbox (20.0pt too wide) in paragraph at lines 178--182
 []
  []
 
 ! Undefined control sequence.
-l.141 \theoremstyle
+l.183 \theoremstyle
                    {remark}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -575,7 +611,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.141 \theoremstyle{r
+l.183 \theoremstyle{r
                      emark}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -594,7 +630,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.142 \newtheorem*{rem}{
+l.184 \newtheorem*{rem}{
                         Remark}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -614,7 +650,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.143 \newtheorem*{note}{
+l.185 \newtheorem*{note}{
                          Note}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -625,13 +661,14 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no e in font nullfont!
 \c@ques=\count83
+\c@assumption=\count84
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 141--145
+Overfull \hbox (20.0pt too wide) in paragraph at lines 183--188
 []
  []
 
 ! Undefined control sequence.
-l.182 \titleformat
+l.224 \titleformat
                   {\chapter}% reformat chapter headings
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -640,7 +677,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.182 \titleformat{\chapter
+l.224 \titleformat{\chapter
                            }% reformat chapter headings
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -655,7 +692,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.183   [
+l.225   [
          hang]% like section, with number on same line
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -667,7 +704,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
-l.184   {\Huge
+l.226   {\Huge
               \bfseries}% formatting applied to whole
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -676,7 +713,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.185   {\thechapter
+l.227   {\thechapter
                     }% Chapter number
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -690,7 +727,7 @@ Missing character: There is no 5 in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no m in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 183--188
+Overfull \hbox (20.0pt too wide) in paragraph at lines 225--230
 [] 
  []
 
@@ -702,10 +739,10 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 183--188
 
  
 Here is how much of TeX's memory you used:
- 121 strings out of 493304
- 746 string characters out of 6139871
+ 212 strings out of 493304
+ 1191 string characters out of 6139871
  51880 words of memory out of 5000000
- 3678 multiletter control sequences out of 15000+600000
+ 3769 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  12i,1n,11p,149b,55s stack positions out of 5000i,500n,10000p,200000b,80000s

@@ -42,6 +42,8 @@
 %%% Algorithm packages:
 \usepackage[lined,algonl,boxed]{algorithm2e}
 \usepackage{algorithmic}
+\newcommand\mycommfont[1]{\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
 
 %%% Image packages:
 \usepackage{graphicx}
@@ -182,7 +184,7 @@
 \newtheorem*{rem}{Remark}
 \newtheorem*{note}{Note}
 \newtheorem{ques}{Question}
-
+\newtheorem{assumption}{Assumption}
 
 
 \def\simapprox{\,{\buildrel approx \over \sim}\,}
