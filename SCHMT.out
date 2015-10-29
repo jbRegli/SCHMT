@@ -32,7 +32,13 @@
 \BOOKMARK [1][-]{section.4.3}{Learning the tree structure:}{chapter.4}% 32
 \BOOKMARK [2][-]{subsection.4.3.1}{E-Step:}{section.4.3}% 33
 \BOOKMARK [3][-]{subsubsection*.19}{Upward recursion:}{subsection.4.3.1}% 34
-\BOOKMARK [1][-]{section.4.4}{Classification:}{chapter.4}% 35
-\BOOKMARK [0][-]{chapter.5}{Experimental results:}{}% 36
-\BOOKMARK [0][-]{chapter.6}{Conclusion:}{}% 37
-\BOOKMARK [0][-]{chapter.7}{Acknowledgements:}{}% 38
+\BOOKMARK [3][-]{subsubsection*.21}{Downward recursion:}{subsection.4.3.1}% 35
+\BOOKMARK [3][-]{subsubsection*.23}{Conditional properties:}{subsection.4.3.1}% 36
+\BOOKMARK [2][-]{subsection.4.3.2}{M-Step:}{section.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.3.3}{EM algorithm:}{section.4.3}% 38
+\BOOKMARK [1][-]{section.4.4}{Classification:}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter.5}{Experimental results:}{}% 40
+\BOOKMARK [1][-]{section.5.1}{Shapes:}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{Sonar Imagery:}{chapter.5}% 42
+\BOOKMARK [0][-]{chapter.6}{Conclusion:}{}% 43
+\BOOKMARK [0][-]{chapter.7}{Acknowledgements:}{}% 44
