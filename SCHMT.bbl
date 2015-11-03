@@ -1,0 +1,176 @@
+\begin{thebibliography}{}
+
+\bibitem[Abdel-Hamid et~al., 2012]{abdel2012applying}
+Abdel-Hamid, O., Mohamed, A.-r., Jiang, H., and Penn, G. (2012).
+\newblock Applying convolutional neural networks concepts to hybrid nn-hmm
+  model for speech recognition.
+\newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2012 IEEE
+  International Conference on}, pages 4277--4280. IEEE.
+
+\bibitem[And{\'e}n and Mallat, 2011]{anden2011multiscale}
+And{\'e}n, J. and Mallat, S. (2011).
+\newblock Multiscale scattering for audio classification.
+\newblock In {\em ISMIR}, pages 657--662.
+
+\bibitem[Baker et~al., 2014]{baker2014using}
+Baker, M.~J., Trevisan, J., Bassan, P., Bhargava, R., Butler, H.~J., Dorling,
+  K.~M., Fielden, P.~R., Fogarty, S.~W., Fullwood, N.~J., Heys, K.~A., et~al.
+  (2014).
+\newblock Using fourier transform ir spectroscopy to analyze biological
+  materials.
+\newblock {\em Nature protocols}, 9(8):1771--1791.
+
+\bibitem[Beyer et~al., 1999]{beyer1999nearest}
+Beyer, K., Goldstein, J., Ramakrishnan, R., and Shaft, U. (1999).
+\newblock When is “nearest neighbor” meaningful?
+\newblock In {\em Database Theory—ICDT’99}, pages 217--235. Springer.
+
+\bibitem[Bracewell, 1965]{bracewell1965fourier}
+Bracewell, R. (1965).
+\newblock The fourier transform and iis applications.
+\newblock {\em New York}.
+
+\bibitem[Brailean and Katsaggelos, 1996]{brailean1996recursive}
+Brailean, J.~C. and Katsaggelos, A.~K. (1996).
+\newblock Recursive map displacement field estimation and its applications.
+\newblock In {\em Image Processing, 1996. Proceedings., International
+  Conference on}, volume~1, pages 917--920. IEEE.
+
+\bibitem[Bruna, 2012]{bruna2012commute}
+Bruna, J. (2012).
+\newblock Operators commuting with diffeomorphisms.
+
+\bibitem[Bruna and Mallat, 2010]{bruna2010classification}
+Bruna, J. and Mallat, S. (2010).
+\newblock Classification with scattering operators.
+\newblock {\em arXiv preprint arXiv:1011.3023}.
+
+\bibitem[Bruna and Mallat, 2013]{bruna2013invariant}
+Bruna, J. and Mallat, S. (2013).
+\newblock Invariant scattering convolution networks.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 35(8):1872--1886.
+
+\bibitem[Cover and Hart, 1967]{cover1967nearest}
+Cover, T.~M. and Hart, P.~E. (1967).
+\newblock Nearest neighbor pattern classification.
+\newblock {\em Information Theory, IEEE Transactions on}, 13(1):21--27.
+
+\bibitem[Crouse et~al., 1998]{crouse1998wavelet}
+Crouse, M.~S., Nowak, R.~D., and Baraniuk, R.~G. (1998).
+\newblock Wavelet-based statistical signal processing using hidden markov
+  models.
+\newblock {\em Signal Processing, IEEE Transactions on}, 46(4):886--902.
+
+\bibitem[De~Chazal et~al., 2000]{de2000using}
+De~Chazal, P., Celler, B., and Reilly, R. (2000).
+\newblock Using wavelet coefficients for the classification of the
+  electrocardiogram.
+\newblock In {\em Engineering in Medicine and Biology Society, 2000.
+  Proceedings of the 22nd Annual International Conference of the IEEE},
+  volume~1, pages 64--67. IEEE.
+
+\bibitem[Durand et~al., 2004]{durand2004computational}
+Durand, J.-B., Goncalves, P., and Gu{\'e}don, Y. (2004).
+\newblock Computational methods for hidden markov tree models-an application to
+  wavelet trees.
+\newblock {\em Signal Processing, IEEE Transactions on}, 52(9):2551--2560.
+
+\bibitem[Hinton et~al., 2012]{hinton2012improving}
+Hinton, G.~E., Srivastava, N., Krizhevsky, A., Sutskever, I., and
+  Salakhutdinov, R.~R. (2012).
+\newblock Improving neural networks by preventing co-adaptation of feature
+  detectors.
+\newblock {\em arXiv preprint arXiv:1207.0580}.
+
+\bibitem[H{\"o}rmander, 1971]{hormander1971fourier}
+H{\"o}rmander, L. (1971).
+\newblock Fourier integral operators. i.
+\newblock {\em Acta mathematica}, 127(1):79--183.
+
+\bibitem[Kingsbury, 2001]{kingsbury2001complex}
+Kingsbury, N. (2001).
+\newblock Complex wavelets for shift invariant analysis and filtering of
+  signals.
+\newblock {\em Applied and computational harmonic analysis}, 10(3):234--253.
+
+\bibitem[Kreutz-Delgado et~al., 2003]{kreutz2003dictionary}
+Kreutz-Delgado, K., Murray, J.~F., Rao, B.~D., Engan, K., Lee, T.-W., and
+  Sejnowski, T.~J. (2003).
+\newblock Dictionary learning algorithms for sparse representation.
+\newblock {\em Neural computation}, 15(2):349--396.
+
+\bibitem[Krizhevsky et~al., 2012]{krizhevsky2012imagenet}
+Krizhevsky, A., Sutskever, I., and Hinton, G.~E. (2012).
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock In {\em Advances in neural information processing systems}, pages
+  1097--1105.
+
+\bibitem[LeCun and Bengio, 1995]{lecun1995convolutional}
+LeCun, Y. and Bengio, Y. (1995).
+\newblock Convolutional networks for images, speech, and time series.
+\newblock {\em The handbook of brain theory and neural networks}, 3361(10).
+
+\bibitem[LeCun et~al., 2010]{lecun2010convolutional}
+LeCun, Y., Kavukcuoglu, K., and Farabet, C. (2010).
+\newblock Convolutional networks and applications in vision.
+\newblock In {\em Circuits and Systems (ISCAS), Proceedings of 2010 IEEE
+  International Symposium on}, pages 253--256. IEEE.
+
+\bibitem[Lin and Zha, 2008]{lin2008riemannian}
+Lin, T. and Zha, H. (2008).
+\newblock Riemannian manifold learning.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 30(5):796--809.
+
+\bibitem[Lohmiller and Slotine, 1998]{lohmiller1998contraction}
+Lohmiller, W. and Slotine, J.-J.~E. (1998).
+\newblock On contraction analysis for non-linear systems.
+\newblock {\em Automatica}, 34(6):683--696.
+
+\bibitem[Mallat, 1999]{mallat1999wavelet}
+Mallat, S. (1999).
+\newblock {\em A wavelet tour of signal processing}.
+\newblock Academic press.
+
+\bibitem[Mallat, 2012]{mallat2012gis}
+Mallat, S. (Oct. 2012).
+\newblock Group invariant scattering.
+\newblock {\em Communications in Pure and Applied Mathematics},
+  65(10):1331--1398.
+
+\bibitem[Platt et~al., 1999]{platt1999probabilistic}
+Platt, J. et~al. (1999).
+\newblock Probabilistic outputs for support vector machines and comparisons to
+  regularized likelihood methods.
+\newblock {\em Advances in large margin classifiers}, 10(3):61--74.
+
+\bibitem[Sifre and Mallat, 2013]{sifre2013rotation}
+Sifre, L. and Mallat, S. (2013).
+\newblock Rotation, scaling and deformation invariant scattering for texture
+  discrimination.
+
+\bibitem[Simard et~al., 2003]{simard2003best}
+Simard, P.~Y., Steinkraus, D., and Platt, J.~C. (2003).
+\newblock Best practices for convolutional neural networks applied to visual
+  document analysis.
+\newblock In {\em null}, page 958. IEEE.
+
+\bibitem[Szegedy et~al., 2013]{szegedy2013intriguing}
+Szegedy, C., Zaremba, W., Sutskever, I., Bruna, J., Erhan, D., Goodfellow, I.,
+  and Fergus, R. (2013).
+\newblock Intriguing properties of neural networks.
+\newblock {\em arXiv preprint arXiv:1312.6199}.
+
+\bibitem[Waldspurger et~al., 2015]{waldspurger2015phase}
+Waldspurger, I., d’Aspremont, A., and Mallat, S. (2015).
+\newblock Phase recovery, maxcut and complex semidefinite programming.
+\newblock {\em Mathematical Programming}, 149(1-2):47--81.
+
+\bibitem[Zhang et~al., 2012]{zhang2012adaptive}
+Zhang, Z., Wang, J., and Zha, H. (2012).
+\newblock Adaptive manifold learning.
+\newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
+  on}, 34(2):253--265.
+
+\end{thebibliography}

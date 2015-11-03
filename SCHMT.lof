@@ -2,25 +2,26 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {1.1}{\ignorespaces High dimensional signals}}{5}{figure.caption.3}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Translation invariance}}{6}{figure.caption.4}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces stability to deformations}}{6}{figure.caption.5}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Stability to deformations}}{7}{figure.caption.5}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Rotation invariance}}{7}{figure.caption.6}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Complex Morlet wavelet.\relax }}{11}{figure.caption.7}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces The scattering convolutional network architecture}}{14}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Frequency decreasing scattering convolution network\relax }}{16}{figure.caption.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of Bayesian network.\relax }}{18}{figure.caption.9}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Example of Bayesian network.\relax }}{19}{figure.caption.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Scattering transform tree.\relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Scattering Hidden Markov Tree.\relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Wavelet hidden Markov tree.\relax }}{22}{figure.caption.14}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Two populations - experiment 1.}}{24}{figure.caption.15}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Two populations - experiment 2.}}{24}{figure.caption.16}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Persistence - experiment 1.}}{25}{figure.caption.17}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Persistence - experiment 2.}}{25}{figure.caption.18}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Scattering transform tree.\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Scattering Hidden Markov Tree.\relax }}{22}{figure.caption.14}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Wavelet hidden Markov tree.\relax }}{23}{figure.caption.15}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Two populations - experiment 1.}}{25}{figure.caption.16}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Two populations - experiment 2.}}{25}{figure.caption.17}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Persistence - experiment 1.}}{26}{figure.caption.18}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Persistence - experiment 2.}}{26}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Shape classification: square}}{33}{figure.caption.28}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Shape classification: triangle}}{34}{figure.caption.29}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Seabed patchs\relax }}{34}{figure.caption.30}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Ripple patchs\relax }}{34}{figure.caption.31}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Shape classification: square}}{34}{figure.caption.29}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Shape classification: triangle}}{35}{figure.caption.30}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Seabed patchs\relax }}{35}{figure.caption.31}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Ripple patchs\relax }}{35}{figure.caption.32}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

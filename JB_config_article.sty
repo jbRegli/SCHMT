@@ -157,9 +157,11 @@
 \def\bfbeta{{\boldsymbol \beta}}
 \def\bftheta{{\boldsymbol \theta}}
 \def\bfrho{{\boldsymbol \rho}}
+
 \newcommand{\mbe}{\mathbb{E}}
 \newcommand{\mbE}{\mathbb{E}}
 \renewcommand{\d}[1]{\ensuremath{\operatorname{d}\!{#1}}}
+\def\st{\text{s.t.}}
 
 %%% Ensemble:
 \def\dsR{{\mathds{R}}}
@@ -173,12 +175,11 @@
 \newtheorem{thm}{Theorem}[section]
 \newtheorem{lem}[thm]{Lemma}
 \newtheorem{prop}[thm]{Proposition}
-\newtheorem*{cor}{Corollary}
+\newtheorem{cor}[thm]{Corollary}
 
-\theoremstyle{definition}
-\newtheorem{defn}{Definition}[section]
-\newtheorem{con}{Conjecture}[section]
-\newtheorem{eg}{Example}[section]
+\newtheorem{defn}[thm]{Definition}
+\newtheorem{con}[thm]{Conjecture}
+\newtheorem{eg}[thm]{Example}
 
 \theoremstyle{remark}
 \newtheorem*{rem}{Remark}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  29 OCT 2015 18:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  3 NOV 2015 18:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1081,11 +1081,8 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2013/05/23 v2.5a microtype main configuration file (RS)
 ))
 \c@thm=\count156
-\c@defn=\count157
-\c@con=\count158
-\c@eg=\count159
-\c@ques=\count160
-\c@assumption=\count161
+\c@ques=\count157
+\c@assumption=\count158
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip82
@@ -1120,16 +1117,16 @@ LaTeX Info: Redefining \up on input line 34.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count162
+\scratchcounter=\count159
 \scratchdimen=\dimen217
 \scratchbox=\box49
-\nofMPsegments=\count163
-\nofMParguments=\count164
+\nofMPsegments=\count160
+\nofMParguments=\count161
 \everyMPshowfont=\toks52
-\MPscratchCnt=\count165
+\MPscratchCnt=\count162
 \MPscratchDim=\dimen218
-\MPnumerator=\count166
-\makeMPintoPDFobject=\count167
+\MPnumerator=\count163
+\makeMPintoPDFobject=\count164
 \everyMPtoPDFconversion=\toks53
 )
 *geometry* driver: auto-detecting
@@ -1179,7 +1176,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count168
+\c@section@level=\count165
 )
 LaTeX Info: Redefining \ref on input line 34.
 LaTeX Info: Redefining \pageref on input line 34.
@@ -1204,7 +1201,7 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-<Images/placeholder.jpg, id=183, 351.3125pt x 193.72375pt>
+<Images/placeholder.jpg, id=187, 351.3125pt x 193.72375pt>
 File: Images/placeholder.jpg Graphic file (type jpg)
 
 <use Images/placeholder.jpg>
@@ -1278,7 +1275,12 @@ Package pdftex.def Info: Images/placeholder.jpg used on input line 90.
 
 ]
 Chapitre 1.
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 106.
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 107.
 
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
@@ -1293,266 +1295,277 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--119
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 120--121
-
- []
-
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--142
+Underfull \hbox (badness 10000) in paragraph at lines 136--137
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 145.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 140.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 156.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 151.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 167.
-(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
-File: Images/placeholder.jpg Graphic file (type jpg)
-
-<use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 179.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 159.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
- <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 179.
+
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 159.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [6]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
-
 File: Images/placeholder.jpg Graphic file (type jpg)
+ <use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 162.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
+
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 230.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 185.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 230.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 185.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [7]
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
+Underfull \hbox (badness 10000) in paragraph at lines 239--240
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 261--262
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+Underfull \hbox (badness 10000) in paragraph at lines 244--245
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 290.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 262.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 290.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 262.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [8]
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
 
  []
 
 
-LaTeX Warning: Reference `chap:Experimental results' on page 9 undefined on inp
-ut line 297.
+Underfull \hbox (badness 10000) in paragraph at lines 267--268
+
+ []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 301.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 284.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 301.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 284.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [9]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 306--309
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 
-LaTeX Warning: Reference `sec:ST/CNN' on page 10 undefined on input line 310.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 329--331
+Underfull \hbox (badness 10000) in paragraph at lines 309--311
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+
+ []
+
+File: Images/placeholder.jpg Graphic file (type jpg)
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 323.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
 [10
 
 ]
-File: Images/placeholder.jpg Graphic file (type jpg)
- <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 343.
-(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
+Underfull \hbox (badness 10000) in paragraph at lines 338--339
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
-
- []
-
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 385.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 369.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 385.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 369.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [11]
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
-
- []
-
 File: Images/placeholder.jpg Graphic file (type jpg)
+
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 456.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 438.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 456.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 438.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [12]
-Underfull \hbox (badness 10000) in paragraph at lines 470--471
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 468--469
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 504.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 485.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 522.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 497.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
 
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 522.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 497.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [13]
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
+Underfull \hbox (badness 10000) in paragraph at lines 520--521
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 563.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 533.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 563.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 533.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [14]
-Underfull \hbox (badness 10000) in paragraph at lines 577--578
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 622.
-(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 586.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 622.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 598.
+(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
+
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 598.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [15]
-Underfull \hbox (badness 10000) in paragraph at lines 683--684
+File: Images/placeholder.jpg Graphic file (type jpg)
+ <use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 639.
+(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
+
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 639.
+(pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 652--653
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 689.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 657.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 689.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 657.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
- [16]
+ [17]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 692--693
+Underfull \hbox (badness 10000) in paragraph at lines 660--661
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--695
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 715.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 683.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
- [17
+ [18
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 735--736
+Underfull \hbox (badness 10000) in paragraph at lines 703--704
 
  []
 
 
-Overfull \hbox (23.8297pt too wide) in paragraph at lines 747--747
+Overfull \hbox (23.8297pt too wide) in paragraph at lines 715--715
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--755
+Underfull \hbox (badness 10000) in paragraph at lines 722--723
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+aett on input line 768.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 736.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -1562,373 +1575,379 @@ Package microtype Info: Loading generic settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (10.92542pt too wide) in paragraph at lines 768--769
+Overfull \hbox (10.92542pt too wide) in paragraph at lines 736--737
 [][]$\T1/aett/m/n/10.95 http : / / www . cse . unsw . edu . au / ~cs9417ml / Ba
 yes / Pages / Bayesian _ Networks _ Inference .
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 769.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 737.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 769.
-(pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
- [18]
-File: Images/placeholder.jpg Graphic file (type jpg)
-
-<use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 812.
-(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
-File: Images/placeholder.jpg Graphic file (type jpg)
- <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 812.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 737.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [19]
+File: Images/placeholder.jpg Graphic file (type jpg)
+
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 780.
+(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
+ <use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 780.
+(pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
+ [20]
 Chapitre 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--815
+Underfull \hbox (badness 10000) in paragraph at lines 782--783
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 818.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 786.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 824--825
+Underfull \hbox (badness 10000) in paragraph at lines 792--793
 
  []
 
-[20
+[21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 839--840
+Underfull \hbox (badness 10000) in paragraph at lines 807--808
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 841--842
+Underfull \hbox (badness 10000) in paragraph at lines 809--810
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 852--853
+Underfull \hbox (badness 10000) in paragraph at lines 820--821
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 856.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 824.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 862--863
+Underfull \hbox (badness 10000) in paragraph at lines 830--831
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 863.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 831.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 863.
-(pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
- [21]
-File: Images/placeholder.jpg Graphic file (type jpg)
-
-<use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 866.
-(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 908--910
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 919--920
-
- []
-
-File: Images/placeholder.jpg Graphic file (type jpg)
-<use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 920.
-(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
-File: Images/placeholder.jpg Graphic file (type jpg)
- <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 920.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 831.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [22]
-Underfull \hbox (badness 10000) in paragraph at lines 927--928
+File: Images/placeholder.jpg Graphic file (type jpg)
+
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 834.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 876--878
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 934--935
+Underfull \hbox (badness 10000) in paragraph at lines 887--888
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 938.
-(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
-File: Images/placeholder.jpg Graphic file (type jpg)
- <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 946.
-(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 952--953
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 954--955
-
- []
-
-File: Images/placeholder.jpg Graphic file (type jpg)
-<use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 955.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 888.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 955.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 888.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [23]
-File: Images/placeholder.jpg Graphic file (type jpg)
+Underfull \hbox (badness 10000) in paragraph at lines 895--896
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 902--903
+
+ []
+
+File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 955.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 906.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
+ <use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 914.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 920--921
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 922--923
+
+ []
+
+File: Images/placeholder.jpg Graphic file (type jpg)
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 923.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 955.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 923.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [24]
 File: Images/placeholder.jpg Graphic file (type jpg)
 
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 965.
-(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
-File: Images/placeholder.jpg Graphic file (type jpg)
- <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 973.
-(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 983--984
-
- []
-
-File: Images/placeholder.jpg Graphic file (type jpg)
-<use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 984.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 923.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 984.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 923.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 993--995
+File: Images/placeholder.jpg Graphic file (type jpg)
 
- []
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 933.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
+ <use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 941.
+(pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1021--1022
+Underfull \hbox (badness 10000) in paragraph at lines 951--952
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1036.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 952.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1036.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 952.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [26]
-File: Images/placeholder.jpg Graphic file (type jpg)
+Underfull \hbox (badness 10000) in paragraph at lines 961--963
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 989--990
+
+ []
+
+File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1119.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1004.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1119.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1004.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [27]
 File: Images/placeholder.jpg Graphic file (type jpg)
 
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1119.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1087.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1119.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1087.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [28]
 File: Images/placeholder.jpg Graphic file (type jpg)
 
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1184.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1087.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1184.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1087.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1242--1243
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1244--1245
-
- []
-
 File: Images/placeholder.jpg Graphic file (type jpg)
+
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1284.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1152.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1284.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1152.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [30]
-File: Images/placeholder.jpg Graphic file (type jpg)
+Underfull \hbox (badness 10000) in paragraph at lines 1210--1211
 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1212--1213
+
+ []
+
+File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1284.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1252.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1284.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1252.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [31]
 File: Images/placeholder.jpg Graphic file (type jpg)
 
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1303.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1252.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1303.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1252.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
  [32]
+File: Images/placeholder.jpg Graphic file (type jpg)
+
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1271.
+(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
+ <use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1271.
+(pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
+ [33]
 Chapitre 5.
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1314.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1282.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1323.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1291.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 
 
 LaTeX Font Warning: Font shape `T1/aett/bx/it' undefined
-(Font)              using `T1/aett/m/n' instead on input line 1334.
+(Font)              using `T1/aett/m/n' instead on input line 1302.
 
 
-Overfull \hbox (1.30878pt too wide) in paragraph at lines 1334--1335
+Overfull \hbox (1.30878pt too wide) in paragraph at lines 1302--1303
 \T1/aett/m/n/10.95 system / uploads / attachment _ data / file / 326061 / Defen
 ceReporter _ Winter2009 . pdf$[]\T1/aer/m/n/10.95 (-20) . This
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1334--1335
+Underfull \hbox (badness 10000) in paragraph at lines 1302--1303
 
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1338.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1306.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1347.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1315.
 (pdftex.def)             Requested size: 252.94499pt x 139.4869pt.
 
 
-Package caption Warning: \label without proper \caption on input line 1370.
+Package caption Warning: \label without proper \caption on input line 1338.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:Clf_ripple' on page 33 undefined on input line 13
-54.
+LaTeX Warning: Reference `tab:Clf_ripple' on page 34 undefined on input line 13
+22.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1354--1355
+Underfull \hbox (badness 10000) in paragraph at lines 1322--1323
 
  []
 
-[33
+[34
 
 ]
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1355.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1323.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1355.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1323.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
- [34]
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1363
+ [35]
+Underfull \hbox (badness 10000) in paragraph at lines 1331--1331
 []|\T1/aer/m/n/10.95 (+20) Classification
  []
 
 File: Images/placeholder.jpg Graphic file (type jpg)
 <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1379.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1347.
 (pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
 File: Images/placeholder.jpg Graphic file (type jpg)
  <use Images/placeholder.jpg>
-Package pdftex.def Info: Images/placeholder.jpg used on input line 1379.
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1347.
 (pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
- [35]
+ [36]
 Chapitre 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1382--1383
+Underfull \hbox (badness 10000) in paragraph at lines 1350--1351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1388--1389
+Underfull \hbox (badness 10000) in paragraph at lines 1356--1357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1390--1391
+Underfull \hbox (badness 10000) in paragraph at lines 1358--1359
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1392--1393
+Underfull \hbox (badness 10000) in paragraph at lines 1360--1361
 
  []
 
-[36
-
-]
-Chapitre 7.
 [37
 
 ]
+Chapitre 7.
+(./SCHMT.bbl [38
 
-LaTeX Warning: Empty `thebibliography' environment on input line 1408.
+] [39
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1413.
-[38
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1382.
+File: Images/placeholder.jpg Graphic file (type jpg)
+ <use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1382.
+(pdftex.def)             Requested size: 28.45274pt x 15.6874pt.
+File: Images/placeholder.jpg Graphic file (type jpg)
 
-]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1413.
+<use Images/placeholder.jpg>
+Package pdftex.def Info: Images/placeholder.jpg used on input line 1382.
+(pdftex.def)             Requested size: 42.67912pt x 23.53256pt.
+ [40]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1382.
  (./SCHMT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1413.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1413.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1382.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1382.
 
 Package rerunfilecheck Info: File `SCHMT.out' has not changed.
-(rerunfilecheck)             Checksum: 8E7EF65BD9BE31F96A15CA435FE08D69;3117.
+(rerunfilecheck)             Checksum: F7D20D27F5714204FEFFAC063BC3FACF;3177.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
@@ -1936,16 +1955,16 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1413.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1382.
  ) 
 Here is how much of TeX's memory you used:
- 23057 strings out of 493304
- 384547 string characters out of 6139871
- 535243 words of memory out of 5000000
- 25316 multiletter control sequences out of 15000+600000
- 92010 words of font info for 470 fonts, out of 8000000 for 9000
+ 23187 strings out of 493304
+ 386536 string characters out of 6139871
+ 537018 words of memory out of 5000000
+ 25336 multiletter control sequences out of 15000+600000
+ 99078 words of font info for 534 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 63i,21n,57p,1441b,754s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,21n,57p,1441b,571s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texli
@@ -1964,15 +1983,16 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/doublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/doublestroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stm
-aryrd/stmary10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/s
-tmary8.pfb>
-Output written on SCHMT.pdf (39 pages, 423681 bytes).
+ype1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/d
+oublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doubl
+estroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/s
+tmary10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary8.
+pfb>
+Output written on SCHMT.pdf (41 pages, 447478 bytes).
 PDF statistics:
- 720 PDF objects out of 1000 (max. 8388607)
- 647 compressed objects within 7 object streams
- 189 named destinations out of 1000 (max. 500000)
- 66930 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 827 PDF objects out of 1000 (max. 8388607)
+ 750 compressed objects within 8 object streams
+ 223 named destinations out of 1000 (max. 500000)
+ 66938 words of extra memory for PDF output out of 74296 (max. 10000000)
 

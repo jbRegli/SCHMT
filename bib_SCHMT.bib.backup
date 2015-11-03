@@ -1,0 +1,111 @@
+% KNN: low dimensional classification    
+@article{cover1967nearest,
+  title={Nearest neighbor pattern classification},
+  author={Cover, Thomas M and Hart, Peter E},
+  journal={Information Theory, IEEE Transactions on},
+  volume={13},
+  number={1},
+  pages={21--27},
+  year={1967},
+  publisher={IEEE}
+}
+
+% KNN: curse of dimensionality
+@incollection{beyer1999nearest,
+  title={When is “nearest neighbor” meaningful?},
+  author={Beyer, Kevin and Goldstein, Jonathan and Ramakrishnan, Raghu and Shaft, Uri},
+  booktitle={Database Theory—ICDT’99},
+  pages={217--235},
+  year={1999},
+  publisher={Springer}
+}
+
+% Manifold learning - 1:
+@article{lin2008riemannian,
+  title={Riemannian manifold learning},
+  author={Lin, Tong and Zha, Hongbin},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={30},
+  number={5},
+  pages={796--809},
+  year={2008},
+  publisher={IEEE}
+}
+
+% Manifold learning - 2 - Adaptive:
+@article{zhang2012adaptive,
+  title={Adaptive manifold learning},
+  author={Zhang, Zhenyue and Wang, Jing and Zha, Hongyuan},
+  journal={Pattern Analysis and Machine Intelligence, IEEE Transactions on},
+  volume={34},
+  number={2},
+  pages={253--265},
+  year={2012},
+  publisher={IEEE}
+}
+
+% Sparse dictionary learning:
+@article{kreutz2003dictionary,
+  title={Dictionary learning algorithms for sparse representation},
+  author={Kreutz-Delgado, Kenneth and Murray, Joseph F and Rao, Bhaskar D and Engan, Kjersti and Lee, Te-Won and Sejnowski, Terrence J},
+  journal={Neural computation},
+  volume={15},
+  number={2},
+  pages={349--396},
+  year={2003},
+  publisher={MIT Press}
+}
+
+% ST - Rotational invariance:
+@MISC{sifre2013rotation,
+  title = {Rotation, Scaling and Deformation Invariant Scattering for Texture Discrimination},
+  author = {L. Sifre and S. Mallat},
+  journal={Computer Vision and Pattern Recognition, IEEE Conference on},
+  pages={1233--1240},
+  year = {2013}
+  publisher={IEEE}
+}
+
+% ST - group invariant scattering:
+@article{mallat2012gis,
+  title={Group Invariant Scattering},
+  author={S. Mallat}, 
+  journal={Communications in Pure and Applied Mathematics},
+  volume={65},
+  number={10},
+  pages={1331--1398},
+  year={Oct. 2012}
+  publisher={Courant Institute of Mathematical Sciences, New York University}
+}
+
+% Fourier transform for classification:
+@article{baker2014using,
+  title={Using Fourier transform IR spectroscopy to analyze biological materials},
+  author={Baker, Matthew J and Trevisan, J{\'u}lio and Bassan, Paul and Bhargava, Rohit and Butler, Holly J and Dorling, Konrad M and Fielden, Peter R and Fogarty, Simon W and Fullwood, Nigel J and Heys, Kelly A and others},
+  journal={Nature protocols},
+  volume={9},
+  number={8},
+  pages={1771--1791},
+  year={2014},
+  publisher={Nature Publishing Group}
+}
+
+% Fourier translation stability: shift theorem
+@article{bracewell1965fourier,
+  title={The Fourier Transform and IIS Applications},
+  author={Bracewell, Ron},
+  journal={New York},
+  year={1965}
+}
+
+% A Fourier modulus representation $\Psi(x)=|\hat{x}| is not stable to deformation because high frequencies are severely distorted by  small deformations.
+@article{hormander1971fourier,
+  title={Fourier integral operators. I},
+  author={H{\"o}rmander, Lars},
+  journal={Acta mathematica},
+  volume={127},
+  number={1},
+  pages={79--183},
+  year={1971},
+  publisher={Springer}
+}
