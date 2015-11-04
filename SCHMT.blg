@@ -20,45 +20,48 @@ I was expecting a `,' or a `}'---line 206 of file bib_SCHMT.bib
  :   publisher={CMAP Tech. Report, Ecole Polytechnique}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-You've used 30 entries,
+Warning--I didn't find a database entry for "udrc"
+Warning--to sort, need author or key in udrc2015sonar
+Warning--empty year in udrc2015sonar
+You've used 36 entries,
             1935 wiz_defined-function locations,
-            651 strings with 8848 characters,
-and the built_in function-call counts, 13011 in all, are:
-= -- 1312
-> -- 519
-< -- 26
-+ -- 178
-- -- 174
-* -- 1082
-:= -- 2184
-add.period$ -- 94
-call.type$ -- 30
-change.case$ -- 234
-chr.to.int$ -- 30
-cite$ -- 30
-duplicate$ -- 511
-empty$ -- 908
-format.name$ -- 223
-if$ -- 2606
+            684 strings with 9715 characters,
+and the built_in function-call counts, 15313 in all, are:
+= -- 1554
+> -- 582
+< -- 30
++ -- 198
+- -- 194
+* -- 1275
+:= -- 2564
+add.period$ -- 113
+call.type$ -- 36
+change.case$ -- 274
+chr.to.int$ -- 36
+cite$ -- 39
+duplicate$ -- 602
+empty$ -- 1087
+format.name$ -- 250
+if$ -- 3068
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 29
-newline$ -- 151
-num.names$ -- 90
-pop$ -- 215
+missing$ -- 34
+newline$ -- 181
+num.names$ -- 105
+pop$ -- 247
 preamble$ -- 1
-purify$ -- 235
+purify$ -- 275
 quote$ -- 0
-skip$ -- 404
+skip$ -- 471
 stack$ -- 0
-substring$ -- 955
-swap$ -- 102
-text.length$ -- 10
+substring$ -- 1158
+swap$ -- 114
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 178
-warning$ -- 0
-while$ -- 110
+type$ -- 214
+warning$ -- 2
+while$ -- 131
 width$ -- 0
-write$ -- 389
+write$ -- 466
 (There were 3 error messages)

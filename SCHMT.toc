@@ -31,9 +31,9 @@
 \contentsline {chapter}{\numberline {4}Scattering hidden Markov tree:}{21}{chapter.4}
 \contentsline {section}{\numberline {4.1}SCHMT model and related works:}{22}{section.4.1}
 \contentsline {section}{\numberline {4.2}Hypothesis:}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Learning the tree structure:}{26}{section.4.3}
+\contentsline {section}{\numberline {4.3}Learning the tree structure:}{27}{section.4.3}
 \contentsline {subsection}{\numberline {4.3.1}E-Step:}{27}{subsection.4.3.1}
-\contentsline {subsubsection}{Upward recursion:}{27}{subsubsection*.20}
+\contentsline {subsubsection}{Upward recursion:}{28}{subsubsection*.20}
 \contentsline {subsubsection}{Downward recursion:}{30}{subsubsection*.22}
 \contentsline {subsubsection}{Conditional properties:}{30}{subsubsection*.24}
 \contentsline {subsection}{\numberline {4.3.2}M-Step:}{31}{subsection.4.3.2}
@@ -42,7 +42,8 @@
 \contentsline {chapter}{\numberline {5}Experimental results:}{34}{chapter.5}
 \contentsline {section}{\numberline {5.1}Shapes:}{34}{section.5.1}
 \contentsline {section}{\numberline {5.2}Sonar Imagery:}{34}{section.5.2}
+\contentsline {section}{\numberline {5.3}Segmentation:}{36}{section.5.3}
 \contentsline {chapter}{\numberline {6}Conclusion:}{37}{chapter.6}
-\contentsline {paragraph}{Scattering hidden Markov tree:}{37}{paragraph*.34}
-\contentsline {paragraph}{Next steps:}{37}{paragraph*.35}
+\contentsline {paragraph}{Scattering hidden Markov tree:}{37}{paragraph*.35}
+\contentsline {paragraph}{Next steps:}{37}{paragraph*.36}
 \contentsline {chapter}{\numberline {7}Acknowledgements:}{38}{chapter.7}

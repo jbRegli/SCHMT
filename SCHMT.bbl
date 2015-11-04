@@ -1,5 +1,11 @@
 \begin{thebibliography}{}
 
+\bibitem[udr, ]{udrc2015sonar}
+Dstl's datasets.
+\newblock
+  \url{https://www.gov.uk/government/uploads/system/uploads/attachment_data/file/326061/DefenceReporter_Winter2009.pdf}.
+\newblock Accessed: 04-11-2015.
+
 \bibitem[Abdel-Hamid et~al., 2012]{abdel2012applying}
 Abdel-Hamid, O., Mohamed, A.-r., Jiang, H., and Penn, G. (2012).
 \newblock Applying convolutional neural networks concepts to hybrid nn-hmm
@@ -70,11 +76,32 @@ De~Chazal, P., Celler, B., and Reilly, R. (2000).
   Proceedings of the 22nd Annual International Conference of the IEEE},
   volume~1, pages 64--67. IEEE.
 
+\bibitem[Devijver, 1985]{devijver1985baum}
+Devijver, P.~A. (1985).
+\newblock Baum's forward-backward algorithm revisited.
+\newblock {\em Pattern Recognition Letters}, 3(6):369--373.
+
+\bibitem[DeVore et~al., 1992]{devore1992image}
+DeVore, R.~A., Jawerth, B., and Lucier, B.~J. (1992).
+\newblock Image compression through wavelet transform coding.
+\newblock {\em Information Theory, IEEE Transactions on}, 38(2):719--746.
+
+\bibitem[Donoho, 1993]{donoho1993unconditional}
+Donoho, D.~L. (1993).
+\newblock Unconditional bases are optimal bases for data compression and for
+  statistical estimation.
+\newblock {\em Applied and computational harmonic analysis}, 1(1):100--115.
+
 \bibitem[Durand et~al., 2004]{durand2004computational}
 Durand, J.-B., Goncalves, P., and Gu{\'e}don, Y. (2004).
 \newblock Computational methods for hidden markov tree models-an application to
   wavelet trees.
 \newblock {\em Signal Processing, IEEE Transactions on}, 52(9):2551--2560.
+
+\bibitem[Ephraim and Merhav, 2002]{ephraim2002hidden}
+Ephraim, Y. and Merhav, N. (2002).
+\newblock Hidden markov processes.
+\newblock {\em Information Theory, IEEE Transactions on}, 48(6):1518--1569.
 
 \bibitem[Hinton et~al., 2012]{hinton2012improving}
 Hinton, G.~E., Srivastava, N., Krizhevsky, A., Sutskever, I., and
@@ -116,6 +143,12 @@ LeCun, Y., Kavukcuoglu, K., and Farabet, C. (2010).
 \newblock Convolutional networks and applications in vision.
 \newblock In {\em Circuits and Systems (ISCAS), Proceedings of 2010 IEEE
   International Symposium on}, pages 253--256. IEEE.
+
+\bibitem[Lee et~al., 1996]{lee1996new}
+Lee, N., Huynh, Q., and Schwartz, S. (1996).
+\newblock New method of linear time-frequency analysis for signal detection.
+\newblock In {\em Time-Frequency and Time-Scale Analysis, 1996., Proceedings of
+  the IEEE-SP International Symposium on}, pages 13--16. IEEE.
 
 \bibitem[Lin and Zha, 2008]{lin2008riemannian}
 Lin, T. and Zha, H. (2008).

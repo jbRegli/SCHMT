@@ -1,0 +1,66 @@
+% SCHMT
+
+%%%% TO LATE CROP THE PDF AT THE CORRECT SIZE FOR PLOTING: %%%%
+% pdfcrop --margins '-0 -0 -0 -428' scat_HMT.pdf ../SCHMT_crop.pdf
+
+\documentclass{article}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+\tikzset{
+  treenode/.style = {align=center, inner sep=0pt, text centered,  font=\sffamily},
+  % U node: empty black circle text abov
+  arn_H/.style = {treenode, circle, blue, draw=black, text width=1.5em, font=\tiny}, % font=\sffamily\bfseries
+  arn_V/.style = {treenode, circle, white, draw=black, fill=black, text width=1.5em, very thick},
+  label_U/.style = {node distance=0mm, draw=white, fill=white!20}
+  %   arn_x/.style = {treenode, rectangle, draw=black,
+%     minimum width=0.5em, minimum height=0.5em}% arbre rouge noir, nil
+}
+
+\begin{document}
+\hspace*{-35mm}%
+	\begin{tikzpicture}[->,>=stealth',
+		level 1/.style={sibling distance=45mm, level distance = 2cm},
+    level 2/.style={sibling distance=12mm, level distance = 2cm}
+    ] 
+		\node [arn_V][label={[draw=red]above:{\color{red}State}}]{$L$}[xshift=-10mm, yshift=+0mm] 
+			% 0-th layer Hidden ST node:
+			child{node [arn_H][xshift=+48mm, yshift=+18mm]
+												[label=above:{\color{blue}$S_{J}[\emptyset]x$}]{$S_{\emptyset}$}}
+			% 1-st layer visible Propagation State nodes:
+			child{node [arn_V][label={[draw=red, distance=00mm]93:{\color{red}State}}]{$H$}  
+				% 1-st order hidden SC node:
+				child{node [arn_H][xshift=+5mm, yshift=+18mm]
+													[label={left:{\color{blue}$S[\lambda_{1}]x$}}]{$S_{1}$}}
+				% 2-nd layer visible Propagation State nodes:
+				child{node [arn_V][label={[draw=red, distance=00mm]93:{\color{red}State}}] {$H$}
+					% 2-nd hidden SC node:
+					child{node [arn_H][xshift=-10mm, yshift=+18mm]
+														[label={left:{\color{blue}$S[\lambda_{1},\lambda_{2}]x$}}]{$S_{1,1}$}}
+					}
+				% 2-nd -rest of- visible Propagation State nodes:
+				child{node [arn_V] {$H$}}
+				child{node [arn_V] {$L$}}
+			}
+			% 1-st -rest of- visible Propagation State nodes:
+			child{node [arn_V]{$L$}
+						% 1-st order hidden SC node::
+						child{node [arn_H][xshift=+5mm, yshift=+18mm]{$S_{2}$}}
+						% 2-nd -rest of- visible Propagation State nodes:
+						child{node [arn_V] {$H$}}
+						child{node [arn_V] {$L$}}
+						child{node [arn_V] {$L$}}
+							}
+			child{node [arn_V]{$H$}
+						% 1-st order hidden SC node::
+						child{node [arn_H][xshift=+5mm, yshift=+18mm]{$S_{3}$}}
+						% 2-nd -rest of- visible Propagation State nodes:
+						child{node [arn_V] {$H$}} 
+						child{node [arn_V] {$H$}}
+						child{node [arn_V] {$H$}}
+							}
+		; 
+	\end{tikzpicture}
+\end{document}
+
+% [label=left:{\color{blue}$S_{J}[\lambda_{1},\lambda_{2}]x$}]
