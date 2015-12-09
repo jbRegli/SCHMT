@@ -25,20 +25,20 @@
 		level 1/.style={sibling distance=45mm, level distance = 2cm},
     level 2/.style={sibling distance=12mm, level distance = 2cm}
     ] 
-		\node [arn_U][label=above:{$x$}][xshift=-10mm, yshift=+0mm] {$U_{\emptyset}$}
+		\node [arn_U][label=above:{$\mathbf{x}$}][xshift=-10mm, yshift=+0mm] {$U_{\emptyset}$}
 			% S node:
  			child{node [arn_S][xshift=+48mm, yshift=+18mm]
-												[label={[draw=blue]left:{\color{blue}$S_{J}[\emptyset]x=x \ast \phi_{J}$}}]{}}
+												[label={[draw=blue]left:{\color{blue}$S_{J}[\emptyset]\mathbf{x}=\mathbf{x} \ast \phi_{J}$}}]{}}
 			% Propagation nodes:
-			child{node [arn_U][label={[label distance=00mm]93:{\color{gray}$U[\lambda_{1}]x = |x \ast \psi_{\lambda_{1}}|$}}]{$U_{1}$}  
+			child{node [arn_U][label={[label distance=00mm]93:{\color{gray}$U[\lambda_{1}]\mathbf{x} = |\mathbf{x} \ast \psi_{\lambda_{1}}|$}}]{$U_{1}$}  
 						% S node:
 						child{node [arn_S][xshift=+5mm, yshift=+18mm]
-															[label={[draw=blue]left:{\color{blue}$S_{J}[\lambda_{1}]x = U_{J}[\lambda_{1}]x \ast \phi_{J}$}}]{}}
+															[label={[draw=blue]left:{\color{blue}$S_{J}[\lambda_{1}]\mathbf{x} = U_{J}[\lambda_{1}]\mathbf{x} \ast \phi_{J}$}}]{}}
 						% Propagation nodes:
-						child{node [arn_U][label={[label distance=00mm]93:{\color{gray}$U[\lambda_{1},\lambda_{2}]x = ||x \ast \psi_{\lambda_{1}}| \ast \psi_{\lambda_{2}} |$}}] {$U_{1,1}$}
+						child{node [arn_U][label={[label distance=00mm]93:{\color{gray}$U[\lambda_{1},\lambda_{2}]\mathbf{x} = ||\mathbf{x} \ast \psi_{\lambda_{1}}| \ast \psi_{\lambda_{2}} |$}}] {$U_{1,1}$}
 							% S node:
 							child{node [arn_S][xshift=-10mm, yshift=+18mm]
-																[label={[draw=blue]left:{\color{blue}$S_{J}[\lambda_{1},\lambda_{2}]x$}}]{}}
+																[label={[draw=blue]left:{\color{blue}$S_{J}[\lambda_{1},\lambda_{2}]\mathbf{x}$}}]{}}
 						}
 						child{node [arn_U] {$U_{1,2}$}}
 						child{node [arn_U] {$U_{1,3}$}}

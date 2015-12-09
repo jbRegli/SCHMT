@@ -3,65 +3,71 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: SCHMT.aux
 The style file: apalike.bst
 Database file #1: bib_SCHMT.bib
-I was expecting a `,' or a `}'---line 66 of file bib_SCHMT.bib
+I was expecting a `,' or a `}'---line 71 of file bib_SCHMT.bib
  :   
  :   publisher={IEEE}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 78 of file bib_SCHMT.bib
+I was expecting a `,' or a `}'---line 83 of file bib_SCHMT.bib
  :   
  :   publisher={Courant Institute of Mathematical Sciences, New York University}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
 Warning--entry type for "bruna2012commute" isn't style-file defined
---line 202 of file bib_SCHMT.bib
-I was expecting a `,' or a `}'---line 206 of file bib_SCHMT.bib
+--line 235 of file bib_SCHMT.bib
+I was expecting a `,' or a `}'---line 239 of file bib_SCHMT.bib
  :   
  :   publisher={CMAP Tech. Report, Ecole Polytechnique}
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "udrc"
-Warning--to sort, need author or key in udrc2015sonar
-Warning--empty year in udrc2015sonar
-You've used 36 entries,
+Repeated entry---line 305 of file bib_SCHMT.bib
+ : @inproceedings{anden2011multiscale
+ :                                   ,
+I'm skipping whatever remains of this entry
+Warning--entry type for "lecun2015web" isn't style-file defined
+--line 365 of file bib_SCHMT.bib
+Warning--entry type for "udrc2015sonar" isn't style-file defined
+--line 653 of file bib_SCHMT.bib
+Warning--empty journal in smolensky1986information
+You've used 64 entries,
             1935 wiz_defined-function locations,
-            684 strings with 9715 characters,
-and the built_in function-call counts, 15313 in all, are:
-= -- 1554
-> -- 582
-< -- 30
-+ -- 198
-- -- 194
-* -- 1275
-:= -- 2564
-add.period$ -- 113
-call.type$ -- 36
-change.case$ -- 274
-chr.to.int$ -- 36
-cite$ -- 39
-duplicate$ -- 602
-empty$ -- 1087
-format.name$ -- 250
-if$ -- 3068
+            825 strings with 14339 characters,
+and the built_in function-call counts, 26093 in all, are:
+= -- 2615
+> -- 1003
+< -- 55
++ -- 348
+- -- 332
+* -- 2121
+:= -- 4439
+add.period$ -- 201
+call.type$ -- 64
+change.case$ -- 477
+chr.to.int$ -- 64
+cite$ -- 65
+duplicate$ -- 1047
+empty$ -- 1839
+format.name$ -- 431
+if$ -- 5193
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 34
-newline$ -- 181
-num.names$ -- 105
-pop$ -- 247
+missing$ -- 65
+newline$ -- 322
+num.names$ -- 192
+pop$ -- 449
 preamble$ -- 1
-purify$ -- 275
+purify$ -- 484
 quote$ -- 0
-skip$ -- 471
+skip$ -- 818
 stack$ -- 0
-substring$ -- 1158
-swap$ -- 114
-text.length$ -- 11
+substring$ -- 1846
+swap$ -- 187
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 214
-warning$ -- 2
-while$ -- 131
+type$ -- 372
+warning$ -- 1
+while$ -- 219
 width$ -- 0
-write$ -- 466
-(There were 3 error messages)
+write$ -- 824
+(There were 4 error messages)

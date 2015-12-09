@@ -1,49 +1,48 @@
 \select@language {french}
 \contentsline {chapter}{\numberline {1}Introduction:}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Need for a better signal representation:}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Image representation:}{6}{section.1.2}
-\contentsline {subsection}{\numberline {1.2.1}Intuition of a ``good'' image representation:}{6}{subsection.1.2.1}
-\contentsline {subsection}{\numberline {1.2.2}Formalization of a ``good'' image representation:}{7}{subsection.1.2.2}
-\contentsline {subsection}{\numberline {1.2.3}State of the art in image representation:}{9}{subsection.1.2.3}
-\contentsline {section}{\numberline {1.3}Probabilistic graphical model:}{9}{section.1.3}
-\contentsline {section}{\numberline {1.4}Outline of the report:}{9}{section.1.4}
-\contentsline {section}{\numberline {1.5}Contribution:}{9}{section.1.5}
-\contentsline {chapter}{\numberline {2}The Scattering transform:}{10}{chapter.2}
-\contentsline {section}{\numberline {2.1}Scattering wavelets:}{10}{section.2.1}
-\contentsline {section}{\numberline {2.2}Scattering Convolution Network:}{13}{section.2.2}
-\contentsline {section}{\numberline {2.3}Properties of the scattering transform:}{14}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Non-expansivity:}{14}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Energy preservation:}{14}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Translation invariance:}{16}{subsection.2.3.3}
-\contentsline {subsection}{\numberline {2.3.4}Lipschitz continuity to the action of diffeomorphisms:}{16}{subsection.2.3.4}
-\contentsline {section}{\numberline {2.4}Application to classification:}{17}{section.2.4}
-\contentsline {chapter}{\numberline {3}Probabilistic graphical models:}{18}{chapter.3}
-\contentsline {section}{\numberline {3.1}Bayesian Network:}{18}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Architecture:}{18}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Learning:}{19}{subsection.3.1.2}
-\contentsline {subsubsection}{Expectation-maximization:}{20}{subsubsection*.11}
-\contentsline {subsubsection}{Variational Bayes:}{20}{subsubsection*.12}
-\contentsline {subsection}{\numberline {3.1.3}Inference:}{20}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Markov Models:}{20}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Architecture:}{20}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Learning:}{20}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Inference:}{20}{subsection.3.2.3}
-\contentsline {chapter}{\numberline {4}Scattering hidden Markov tree:}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}SCHMT model and related works:}{22}{section.4.1}
-\contentsline {section}{\numberline {4.2}Hypothesis:}{24}{section.4.2}
-\contentsline {section}{\numberline {4.3}Learning the tree structure:}{27}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}E-Step:}{27}{subsection.4.3.1}
-\contentsline {subsubsection}{Upward recursion:}{28}{subsubsection*.20}
-\contentsline {subsubsection}{Downward recursion:}{30}{subsubsection*.22}
-\contentsline {subsubsection}{Conditional properties:}{30}{subsubsection*.24}
-\contentsline {subsection}{\numberline {4.3.2}M-Step:}{31}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}EM algorithm:}{31}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Classification:}{31}{section.4.4}
-\contentsline {chapter}{\numberline {5}Experimental results:}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Shapes:}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Sonar Imagery:}{34}{section.5.2}
-\contentsline {section}{\numberline {5.3}Segmentation:}{36}{section.5.3}
-\contentsline {chapter}{\numberline {6}Conclusion:}{37}{chapter.6}
-\contentsline {paragraph}{Scattering hidden Markov tree:}{37}{paragraph*.35}
-\contentsline {paragraph}{Next steps:}{37}{paragraph*.36}
-\contentsline {chapter}{\numberline {7}Acknowledgements:}{38}{chapter.7}
+\contentsline {section}{\numberline {1.2}Need for a signal representation:}{6}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Intuition of a ``good'' signal representation:}{6}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}Formalization of a ``good'' signal representation:}{7}{subsection.1.2.2}
+\contentsline {subsection}{\numberline {1.2.3}State of the art in signal representation:}{10}{subsection.1.2.3}
+\contentsline {section}{\numberline {1.3}Discriminative versus generative models:}{10}{section.1.3}
+\contentsline {section}{\numberline {1.4}Outline of the report:}{11}{section.1.4}
+\contentsline {section}{\numberline {1.5}Contribution:}{11}{section.1.5}
+\contentsline {chapter}{\numberline {2}The Scattering transform:}{12}{chapter.2}
+\contentsline {section}{\numberline {2.1}Scattering wavelets:}{12}{section.2.1}
+\contentsline {section}{\numberline {2.2}Scattering Convolution Network:}{15}{section.2.2}
+\contentsline {section}{\numberline {2.3}Properties of the scattering transform:}{16}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Non-expansivity:}{16}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}Energy preservation:}{17}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Translation invariance:}{18}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}Lipschitz continuity to the action of diffeomorphisms:}{18}{subsection.2.3.4}
+\contentsline {section}{\numberline {2.4}Application to classification:}{19}{section.2.4}
+\contentsline {chapter}{\numberline {3}Probabilistic graphical models:}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Bayesian Network:}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Architecture:}{21}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Inference:}{22}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Learning:}{23}{subsection.3.1.3}
+\contentsline {subsubsection}{Complete data:}{24}{subsubsection*.12}
+\contentsline {subsubsection}{Incomplete data:}{24}{subsubsection*.13}
+\contentsline {section}{\numberline {3.2}Markov Models:}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Architecture:}{25}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Inference:}{25}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Learning:}{26}{subsection.3.2.3}
+\contentsline {chapter}{\numberline {4}Scattering convolutional hidden Markov tree:}{27}{chapter.4}
+\contentsline {section}{\numberline {4.1}SCHMT model and related works:}{28}{section.4.1}
+\contentsline {section}{\numberline {4.2}Hypothesis:}{30}{section.4.2}
+\contentsline {section}{\numberline {4.3}Learning the tree structure:}{32}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}E-Step:}{33}{subsection.4.3.1}
+\contentsline {subsubsection}{Upward recursion:}{34}{subsubsection*.20}
+\contentsline {subsubsection}{Downward recursion:}{35}{subsubsection*.22}
+\contentsline {subsubsection}{Conditional properties:}{37}{subsubsection*.24}
+\contentsline {subsection}{\numberline {4.3.2}M-Step:}{37}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}EM algorithm:}{38}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Classification:}{38}{section.4.4}
+\contentsline {chapter}{\numberline {5}Experimental results:}{40}{chapter.5}
+\contentsline {section}{\numberline {5.1}Sonar Imagery:}{40}{section.5.1}
+\contentsline {section}{\numberline {5.2}Segmentation:}{41}{section.5.2}
+\contentsline {chapter}{\numberline {6}Conclusion:}{43}{chapter.6}
+\contentsline {section}{\numberline {6.1}Scattering convolutional hidden Markov tree:}{43}{section.6.1}
+\contentsline {section}{\numberline {6.2}Future work:}{43}{section.6.2}
+\contentsline {chapter}{\numberline {7}Acknowledgements:}{45}{chapter.7}

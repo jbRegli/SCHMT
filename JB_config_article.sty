@@ -68,6 +68,10 @@
 \usepackage{url}
 \usepackage{microtype}
 
+% Natbib:
+\usepackage{natbib}
+\setcitestyle{square}
+
 %----------------------------------------------------------------------------------------
 %	PERSONAL DEFINITIONS & COMMANDS:
 %----------------------------------------------------------------------------------------
@@ -170,6 +174,10 @@
 \def\dsQ{{\mathds{Q}}}
 \def\dsC{{\mathds{C}}}
 
+%%% Indicatrice:
+\def\ds1{{\mathds{1}}}
+
+
 
 %%% Properties, Definitions...:
 \newtheorem{thm}{Theorem}[section]
@@ -212,7 +220,7 @@
 \newcommand{\Dixit}[2]{\og~#1~\fg (#2)}
 
 %%% Idem est:
-\def\ie{{\bf{\i.e.} }}
+\def\ie{{\i.e.}}
 
 %%% Miscalaneous/unknown:
 \newcommand{\bmat}{\left[\!\!\begin{array}}
@@ -229,7 +237,7 @@
   {0.5em}% space between # and title
   {}% formatting applied just to title
 
-
+  
 % Finally, we'll use \endinput to indicate that LaTeX can stop reading this file. LaTeX will ignore anything after this line.
 \endinput
 

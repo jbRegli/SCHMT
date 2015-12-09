@@ -12,4 +12,4 @@ colormap(map)
 % Turn the axes off
 axis off
 
-print(im_mandrill, 'im_mandrill', '-deps')
+saveas(im_mandrill, 'im_mandrill', 'epsc')

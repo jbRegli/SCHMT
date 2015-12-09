@@ -1,6 +1,6 @@
 close all
 
-% Load Mnist
+%% ==== Load Mnist: ====
 addpath('/home/jeanbaptiste/Datasets/Mnist')
 
 % Change the filenames if you've saved the files under different names
@@ -18,10 +18,13 @@ nine_ori = reshape(images(:,5),28,28);
 
 im_nine_ori = figure;
 imagesc(nine_ori)
+axis off
 colormap gray
-print(im_nine_ori, 'im_nine_ori', '-deps')
+saveas(im_nine_ori, 'im_nine_ori', 'epsc')
 
-% Translation:
+clear('images','labels');
+
+%% ==== Translation: ====
 xmax = 7;
 ymax = 7;
 xTrans = -7;%randi([-xmax,xmax]);
@@ -30,10 +33,11 @@ nine_trl =  circshift(nine_ori,[xTrans, yTrans]);
 
 im_nine_trl = figure;
 imagesc(nine_trl)
+axis off
 colormap gray
-print(im_nine_trl, 'im_nine_trl', '-deps')
+saveas(im_nine_trl, 'im_nine_trl', 'epsc')
 
-% Rotation:
+%% ==== Rotation: ====
 degRot15 = -15;
 degRot90 = 90;
 
@@ -42,18 +46,60 @@ nine_rot90 =  imrotate(nine_ori, degRot90);
 
 im_nine_rot15 = figure;
 imagesc(nine_rot15)
+axis off
 colormap gray
-print(im_nine_rot15, 'im_nine_rot15', '-deps')
+saveas(im_nine_rot15, 'im_nine_rot15', 'epsc')
 
 im_nine_rot90 = figure;
 imagesc(nine_rot90)
+axis off
 colormap gray
-print(im_nine_rot90, 'im_nine_rot90', '-deps')
+saveas(im_nine_rot90, 'im_nine_rot90', 'epsc')
 
-% Deformation:
-nine_def = sin(nine_ori);
+%% ==== Deformation: ====
+% Very small:
+r = @(x) sqrt(x(:,1).^2 + x(:,2).^2);
+f = @(x) [r(x).^2 .* cos(w(x)), r(x).^2 .* sin(w(x))];
+g = @(x, unused) f(x);
 
-im_nine_def = figure;
-imagesc(nine_def)
+tform3 = maketform('custom', 2, 2, [], g, []);
+nine_def_Vsmall = imtransform(nine_ori, tform3, 'UData', [-1 1], 'VData', [-1 1], ...
+    'XData', [-1 1], 'YData', [-1 1]);
+
+im_nine_def_Vsmall = figure;
+imagesc(nine_def_Vsmall)
+axis off
 colormap gray
-print(im_nine_def, 'im_nine_def', '-deps')
+saveas(im_nine_def_Vsmall, 'im_nine_def_Vsmall', 'epsc')
+
+% Small:
+r = @(x) sqrt(x(:,1).^2 + x(:,2).^2);
+w = @(x) atan2(x(:,2), x(:,1));
+f = @(x) [sqrt(r(x)) .* cos(w(x)), sqrt(r(x)) .* sin(w(x))];
+g = @(x, unused) f(x);
+
+tform2 = maketform('custom', 2, 2, [], g, []);
+nine_def_small= imtransform(nine_ori, tform2, 'UData', [-1 1], 'VData', [-1 1], ...
+    'XData', [-1 1], 'YData', [-1 1]);
+
+im_nine_def_small = figure;
+imagesc(nine_def_small)
+axis off
+colormap gray
+saveas(im_nine_def_small, 'im_nine_def_small', 'epsc')
+
+% Big:
+f = @(x) complex(x(:,1), x(:,2));
+g = @(z) z.^2;
+h = @(w) [real(w), imag(w)];
+q = @(x, unused) h(g(f(x)));
+
+tform4 = maketform('custom', 2, 2, [], q, []);
+nine_def_big = imtransform(nine_ori, tform4, 'UData', [-1 1], 'VData', [-1 1], ...
+    'XData', [-1 1], 'YData', [-1 1]);
+
+im_nine_def_big = figure;
+imagesc(nine_def_big)
+axis off
+colormap gray
+saveas(im_nine_def_big, 'im_nine_def_big', 'epsc')
