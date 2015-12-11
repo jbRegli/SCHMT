@@ -106,14 +106,14 @@
 	
 	Nowadays statistical signal processing and machine learning methods are applied to a wide range of problems from prediction to optimal control. While some of those applications involves low-dimensional data, full branches of those fields are dedicated to studying high-dimensional inputs. Such problems have been made very popular lately firstly because, over the couple last decades data got cheaper to collect. This is mainly due to the progresses made on digital cameras, microphones and other sensors for signal acquisition. Second the cost of data storage massively decrease during that time. And finally the computational power available today allows to try more computationally intensive methods on always bigger datasets. Hence methods to leverage those data have been developed across the range of applications in machine learning and statistical signal processing.\\
 	
-	The standard approach when working with high dimensional signals is to project the data in a feature space where the task at hand (classification, regression...) is simplified and can be handle with a simple predictor. The projection used can either be hand built or learned. Common hand-build projections for statistical signal processing are the Fourier transform or the wavelet transform. In the last decade learning the projection have drastically improved under the impulsion of the so called deep learning methods. Using deep neural network (sometime enriched by convolutional architecture), systems have been able to learn very effective representations for a given dataset and a given task. Such method have achieved state of the art on many standard problem and real world applications despite using a very simple prediction mechanism ---on top of a very clever projection method.\\
+	The standard approach when working with high dimensional signals can be expressed as a two step procedure. First the data are projected in a feature space where the task at hand (classification, regression...) is simplified. Then prediction is done using a simple predictor in this new representational space. Predictors such as logistic regression or linear Support vector Machine are common choices. The projection can either be hand-build ---\eg Fourier transform, wavelet transform--- or learned. In the last decade methods for learning the projection have drastically improved under the impulsion of the so called deep learning methods. Using deep neural network (sometime enriched by convolutional architecture), systems have been able to learn very effective representations for a given dataset and a given task. Such method have achieved state of the art on many standard problems as well as real world applications. And this despite using a very simple prediction mechanism ---on top of a very clever projection method.\\
 	
-	This document proposes a method combining a new deterministic transformation able to compete with deep architecture to a probabilistic graphical model in order to create a more powerful tool to handle high dimensional prediction problems. In a similar fashion as the work done by Crouse on wavelet trees~\citep{crouse1998wavelet}, we propose to describe Mallat's scattering convolutional scattering transform~\citep{bruna2010classification} using a hidden Markov tree. Doing so we develop a framework to model high-dimensional inputs. As opposed to the usually used simple classification method, our model can then be used on prediction problems but also to tackle any  other inference task.
-		   
-	\section{Need for a better signal representation:}
+	This document proposes a method combining a new deterministic analytically tractable transformation able to compete with deep architecture in terms of representational power to a probabilistic graphical model in order to create a powerful probabilistic tool to handle high dimensional prediction problems. In a similar fashion to the work done by Crouse on wavelet trees~\citep{crouse1998wavelet}, we propose to describe Mallat's scattering convolutional scattering transform~\citep{bruna2010classification} using a hidden Markov tree. Doing so we develop a new framework to model high-dimensional inputs. As opposed to the commonly used simple classification method, our model can tackle prediction problems as well as any inference task.
+	
+	\section{Signal representation:}
 		\label{sec:Intro/Need}
 		
-		Consider the problem of learning the labelling function $f$, say, given $N$ sampled training values $\{\bfx_{i}, y_{i}=f(\bfx_{i})\}_{i\leq N}$ where  for all $i \in \llbracket 1 , N \rrbracket$, $\bfx_{i} =\{ x[1] \, \dots \, x[d] \}$ with $d \sim 10^{6}$, $x[.] \in \dsR$ and $y_{i} \in \dsN$. Such signals are, for example, speech waveforms, digital photographies but also electrocardiograms, sonar imagery and many others.  
+		Consider the problem of learning the labelling function $f$, say, given $N$ sampled training values $\{\bfx_{i}, y_{i}=f(\bfx_{i})\}_{i\leq N}$ where  for all $i \in \llbracket 1 , N \rrbracket$, $\bfx_{i} =\{ x[1] \, \dots \, x[d] \}$ with $d \sim 10^{6}$, $x[.] \in \dsR$ and $y_{i} \in \dsN$. Such signals are, for example, speech waveforms, digital photographies but also electrocardiograms, sonar imagery and many others.\\
 
 		\begin{figure}[h]
 			\centering
@@ -134,13 +134,10 @@
 		
 		A naive solution to this problem would be to infer the class of a new realization $\bfx^{new}$ by looking at its neighbours in a similar fashion to K-Nearest Neighbours (KNN), for example. This approach is sound for low-dimensional problems~\citep{cover1967nearest}. However it shows limitations in high dimensional cases~\citep{beyer1999nearest} because the number of samples required to find a neighbour of a new realization $\bfx^{new}$ grows exponentially with the number of dimensions. This issue is known in the statistical learning community as the curse of dimensionality.\\
 			
-		One can make the assumption that the signal $\bfx$ belongs to a manifold $\Omega$ of $\dsR^{d}$ and this leads to two cases. The subset $\Omega$ can be low dimensional and the curse of dimensionality is avoided once the manifold has been isolated. The task at hand is thus a manifold learning problem~\citep{lin2008riemannian} \citep{zhang2012adaptive} or sparse dictionary representation problem~\citep{kreutz2003dictionary}. However for complex signals the manifold $\Omega$ is also high dimensional. And in this case one has to reduce the volume of the signal space without loosing crucial information required to characterize signals. Hence one has to reduce the volume of $\Omega$ according to the property of the classification function $f$.
-		
-	\section{Need for a signal representation:}
-		\label{sec:Intro/Signal rep}
+		One can make the assumption that the signal $\bfx$ belongs to a manifold $\Omega$ of $\dsR^{d}$ and this leads to two cases. The subset $\Omega$ can be low dimensional and the curse of dimensionality is avoided once the manifold has been isolated. The task at hand is thus a manifold learning problem~\citep{lin2008riemannian} \citep{zhang2012adaptive} or a sparse dictionary representation problem~\citep{kreutz2003dictionary}. However for complex signals the manifold $\Omega$ is also high dimensional. And in this case one has to reduce the volume of the signal space without loosing crucial information required to characterize signals. Hence one has to reduce the volume of $\Omega$ according to the properties of the classification function $f$.\\
 		
 		A mapping $\Phi$ is sought which represents the signal in a new space such that the classification task is simpler. The space should not only capture the main information and discriminatory content in the data but it should also remain stable with respect to appropriate transformations and deformations. Before providing a formal mathematical description of this mapping, it is instructive to consider the following intuitive example.
-%     
+    
 		\subsection{Intuition of a ``good'' signal representation:}
       \label{sec:Intro/Signal rep/Intuition}
       
@@ -149,7 +146,7 @@
 			\begin{itemize}
 				\item The projection has to be informative enough to permit classification. This means ensuring that $\Phi$ preserves separability between the different classes.\\
 
-				\item The mapping also has to be invariant to translations. Indeed to a human eye there is no difference in the information carried by a signal if it is shifted. This means that the $\Phi$ has to provide similar, if not equal, outputs for shifted versions of the same signal.\\
+				\item The mapping also has to be invariant to translations. Indeed to a human eye there is no difference in the information carried by a signal if it is shifted. This means that the transformation $\Phi$ has to provide close, if not equal, outputs for shifted versions of the same signal.\\
 		
 				\begin{figure}[h]
 					\centering
@@ -166,7 +163,7 @@
 					\label{fig:Illustration translation invariance}
 				\end{figure}
 	
-				\item To some extend the mapping has to be stable under deformations. Once again to a human eye, it is still possible to recognize a signal if it has undergone ---small--- deformations. Yet if the deformations are too important the information content of the signal can be lost. This means that to a certain degree the answer of the projection to morphed realizations of the same signal should be similar. However one need to define a limit to this invariance to ensure that the representation created is still informative enough.\\
+				\item To some extend the mapping has to be stable under deformations. Once again to a human eye, it is still possible to recognize a signal if it has undergone ---small--- deformations. Yet if the deformations are too important the information content of the signal can be lost (see Figure~\ref{fig:Illustration stability deformations}). This means that to a certain degree the projections of morphed realizations of the same signal should be mapped to a same region of the representational space. However one need to define a limit to this invariance to ensure that the representation created is still informative enough.\\
 				
 				\begin{figure}[h]
 					\centering
@@ -232,17 +229,18 @@
 		\subsection{Formalization of a ``good'' signal representation:}
       \label{sec:Intro/Signal rep/Formalization}
       
-			Throughout, attention is restricted to signal represented by square-integrable $d$-dimensional functions over the real, namely $\bfx \in \mcalL^{2}(\dsR^{d})$. For more accuracy, the classification function is split in two stages. $f$ now denote the soft classification function, \ie $f(\bfx) \in \dsR^{K}$ where $K$ is the dimension of the mapping space, and represents the distance to the separating surface. $h$ is the labelling function such that $y=h \circ f(\bfx)$ is now the label associated to a signal $\bfx$. To be informative enough, a representation must preserve separability between elements of different classes. This is encapsulated by the following definition.
+			Throughout, attention is restricted to signal represented by square-integrable $d$-dimensional functions over the real, namely $\bfx \in \mcalL^{2}(\dsR^{d})$. For more accuracy, the classification function is split in two stages. $f$ now denotes the soft classification function, \ie $f(\bfx) \in \dsR^{K}$ where $K$ is the dimension of the mapping space, and represents the distance to the separating surface. $h$ is the labelling function such that $y=h \circ f(\bfx)$ is now the label associated to a signal $\bfx$. To be informative enough, a representation must preserve separability between elements of different classes. This is encapsulated by the following definition.
       
 			\begin{defn} \textbf{(Separability preservation)}\\
 				A representation $\Phi$ preserves separability if all elements of two different classes are distant of at least a margin $C$ in the representation space,
 				\begin{equation*}
-					\forall x,x' \in \dsR^{d} \;\;\; \exists C \in \dsR \;\;\; \st \;\;\; h \circ f(x) \neq h \circ f(x') \;\; \Rightarrow \;\; \norm{\Phi(x)-\Phi(x')} \geq C^{-1}
+					\forall x,x' \in \dsR^{d} \;\;\; \exists C \in \dsR^{K} \;\;\; \st \;\;\; h \circ f(x) \neq h \circ f(x') \;\; \Rightarrow \;\; \norm{\Phi(x)-\Phi(x')} \geq C^{-1}
 				\end{equation*}
+				where $K$  is the dimension of the mapping space.
 				\label{def:Separability}
 			\end{defn}
 			
-      Translations in the input space should not affect the representation. In this document let $L_{(.)}$ be the translation operator for the function in $\mcalL^{2}(\dsR^{d})$, \ie for $\bfx \in \mcalL^{2}(\dsR^{d}) \;\; \text{and} \;\; u,c \in \dsR^{d} \times \dsR^{d} \;\;\;\; L_{c}\bfx(u) = \bfx(u-c)$. A mapping $\Phi$ is translation invariant ---respectively canonical translation invariant--- if it maps a translated signal to the same point as its original version.
+      Translations in the input space should not affect the representation. In this document let $L_{(.)}$ denote the translation operator for the function in $\mcalL^{2}(\dsR^{d})$, \ie for $\bfx \in \mcalL^{2}(\dsR^{d}) \;\; \text{and} \;\; u,c \in \dsR^{d} \times \dsR^{d} \;\;\;\; L_{c}\bfx(u) = \bfx(u-c)$. A mapping $\Phi$ is translation invariant ---respectively canonical translation invariant ---if it maps a translated signal to the same point as its original version.
 
       \begin{defn} \textbf{(Translation invariance)}\\ 
 				An operator $\Phi: \mcalL^{2}(\dsR^{d}) \rightarrow \mcalH$ where $\mcalH$ is a Hilbert space is translation invariant if:
@@ -277,7 +275,7 @@
 				\label{def:Non-expansivity - intuition}
       \end{defn}
       
-      The local stability to deformations of a non-expansive operator can be expressed as its Lipschitz continuity to the action of deformations close to translations~\citep{mallat2012gis}. Such a diffeormorphism transform can be expressed as,
+      The local stability to deformations of a non-expansive operator can be expressed as its Lipschitz continuity to the action of deformations close to translations~\citep{mallat2012gis}. Such a diffeormorphism can be expressed as,
       \begin{equation*}
       		\begin{split}
       			L_{\tau}	: \; & \mcalL^{2}(\dsR^{d}) \rightarrow \mcalL^{2}(\dsR^{d})\\
@@ -288,7 +286,7 @@
 			where $\tau(u) \in \dsR^{d}$ is a displacement field.
 			
 			\begin{defn} \textbf{(Lipschitz continuous)}\\
-				A non expansive operator $\Phi$ is said to be Lipschitz continuous to the action of $\mcalC^{2}$ diffeomorphisms if for any compact $\Omega \in \dsR^{d}$ there exists $C$ such that for all $f \in \mcalL^{2}(\dsR^{d})$ supported in $\Omega$ and all $\tau \in \mcalC^{2}(\dsR^{d})$,
+				A non expansive operator $\Phi$ is said to be Lipschitz continuous to the action of $\mcalC^{2}$ diffeomorphisms if for any compact $\Omega \subset \dsR^{d}$ there exists $C$ such that for all $f \in \mcalL^{2}(\dsR^{d})$ supported in $\Omega$ and all $\tau \in \mcalC^{2}(\dsR^{d})$,
 				\begin{equation}
 					\norm{\Phi(\bfx) - \Phi(L_{\tau}\bfx)}_{\mathit{H}} \leq 
 					C \norm{\bfx} \left(\sup_{u \in \dsR^{d}} \abs{\nabla \tau(u)} + \sup_{u \in \dsR^{d}} \abs{\mathit{H}\tau(u)}\right)
@@ -296,19 +294,19 @@
 				\end{equation}
 				\label{pty:Lipschitz continuity - intuition}
 							
-				where $\nabla \tau(u)$ is a matrix whose norm $\abs{\nabla \tau(u)}$ measure the deformation amplitude at $u$ and  $\mathit{H}\tau(u)$ is the Hessian matrix of the deformation and $\abs{\mathit{H}\tau(u)}$ its sup-norm which measure the smoothness of the deformation.\\
+				where $\nabla \tau(u)$ is a matrix whose norm $\abs{\nabla \tau(u)}$ measure the deformation amplitude at point $u$, $\mathit{H}\tau(u)$ is the Hessian matrix of the deformation and its sup-norm $\abs{\mathit{H}\tau(u)}$ measures the smoothness of the deformation.\\
       \end{defn}
 
-      Hence a Lipschitz continuous operator $\Phi$ is almost invariant to deformations by $\tau(.)$, up to the first and second order deformations terms. The Equation~\ref{eq:Lipschitz continuity} also implies that $\Phi$ is invariant to global translations but this is already enforced by the translation invariance requirement.\\ 
+      Hence a Lipschitz continuous operator $\Phi$ is almost invariant to deformations by $\tau(.)$, up to the first and second order deformation terms. The Equation~\ref{eq:Lipschitz continuity} also implies that $\Phi$ is invariant to global translations but this is already enforced by the translation invariance requirement.\\ 
       
 %       This document and more precisely Section~\ref{chap:ST} introduces an analytically tractable, deterministic wavelet based transformation fulfilling all the properties mentioned in this section.
 
     \subsection{State of the art in signal representation:}
       \label{sec:Intro/Signal rep/State of the art}      
           
-			A common representational method is the modulus of the Fourier transform. This operator is informative enough to allow ---to a certain extent--- discrimination between different type of signal~\citep{baker2014using}. It is also translation invariant~\citep{bracewell1965fourier}. However it is well known that those operators present instabilities to deformation at high frequencies~\citep{hormander1971fourier} and thus are not Lipschitz continuous to the action of diffeomorphisms.
+			A common representational method is the modulus of the Fourier transform. This operator is informative enough to allow ---to a certain extent--- discrimination between different types of signals~\citep{baker2014using}. It is also translation invariant~\citep{bracewell1965fourier}. However it is well known that those operators present instabilities to deformation at high frequencies~\citep{hormander1971fourier} and thus are not Lipschitz continuous to the action of diffeomorphisms.\\
       
-			Wavelet transform is another popular representation method. Again they provide a representation suitable for classification of different signals~\citep{de2000using}. Plus by grouping high frequencies into dyadic packet in $\dsR^{d}$, wavelet operators are stable to ---small--- deformations~\citep{bruna2013invariant}.  %TODO: what does it mean? To be confirm
+			Wavelet transform is another popular representation method. Again it provides a representation suitable for classification of different signals~\citep{de2000using}. Plus by grouping high frequencies into dyadic packet in $\dsR^{d}$, wavelet operators are stable to ---small--- deformations~\citep{bruna2013invariant}.  %TODO: what does it mean? To be confirm
 			
 			\begin{equation}
 				\begin{matrix}
@@ -326,33 +324,41 @@
 				\end{matrix}
 			\end{equation}
 		
-
 			However only the averaging part of a wavelet is invariant to translation ans thus wavelets themselves are known to be non-invariant to translations.\\
 			
-			Another signal representation method popular are the convolutional neural networks~\citep{lecun1995convolutional}. As opposed to the two previously mentioned methods, those operators are not fixed but learned from the data~\citep{simard2003best}. Over the past few year they have provided state of the art results on many standard classification tasks, on images datasets such as \textit{MNIST}, \textit{CIFAR}~\citep{hinton2012improving} and \textit{ImageNet}~\citep{krizhevsky2012imagenet} as well as on speech processing problem such as \textit{TIMIT}~\citep{abdel2012applying}. Those good results are used to advocate that those networks are learning ``good'' representations. However it seems that in certain cases they learn representation of the data that are, for example, not invariant to deformations~\citep{szegedy2013intriguing}.\\
+			Another popular signal representation method are the convolutional neural networks~\citep{lecun1995convolutional}. As opposed to the two previously mentioned methods, those operators are not fixed but learned from the data~\citep{simard2003best}. Over the past few years they have provided state of the art results on many standard classification tasks, on images datasets such as \textit{MNIST}, \textit{CIFAR}~\citep{hinton2012improving} and \textit{ImageNet}~\citep{krizhevsky2012imagenet} as well as on speech processing problems such as \textit{TIMIT}~\citep{abdel2012applying}. Those good results are used to advocate that those networks are learning ``good'' representations. However there is no mathematical formalisation of this intuition and it seems that in certain cases they learn representation of the data that are, for example, not invariant to deformations~\citep{szegedy2013intriguing}.\\
+			
+			\begin{figure}[h]
+				\begin{center}
+					\includegraphics[width=5in]{CNN.png}
+					\caption[Convolutional neural network.]{\centering  Convolutional neural network with $3$ convolution/sub-sampling layers and $3$ fully connected layers. }
+					\label{fig:SNN}
+				\end{center}	
+      \end{figure}
+			
 			         
 	\section{Discriminative versus generative models:}
 		\label{sec:Intro/Discr vs gen}
 		
-		When facing a prediction task for an unobserved random variable $y$ --- or random vector $\bfy$--- given a new observation $\bfx^{new}$, one can choose between two different type of models.\\
+		When facing a prediction task for an unobserved random variable $y$ --- or random vector $\bfy$--- given a new observation $\bfx^{new}$, one can choose between two different types of model.\\
 		
-		A discriminative model express the dependencies between the unobserved variable and the observed ones. Which can be seen in a probabilistic framework as modelling the conditional probability distribution $P(\bfy|\bfx)$. The prediction can then be done directly from the learned function. Examples of such models are the Support Vector Machines (SVMs), the Neural Networks (NNs) or the Conditional Random Fields (CRFs).\\
+		A discriminative model directly expresses the dependencies between the unobserved variable and the observed ones. Which can be seen in a probabilistic framework as model the conditional probability distribution $P(\bfy|\bfx)$. The prediction can then be done directly from the learned function. Examples of such models are the Support Vector Machines (SVMs), the Neural Networks (NNs) or the Conditional Random Fields (CRFs).\\
 		
-		On the other hand one use a generative model and specifies the joint probability distribution $P\bfx,\bfy)$. This means that the prediction task, \ie the conditional probability distribution, is not straight forward using the model but require computation via Bayes' rule. However this also means that those models can be used for more than simply prediction and can for example be use to generate the ``most likely input'' given an output, \ie generation. Examples of such models are the Naive Bayes classifier, the Restricted Boltzmann Machines (RBMs) or the Probabilistic Graphical Models.\\
+		On the other hand one can use a generative model and specify the joint probability distribution $P(\bfx,\bfy)$. This means that the prediction task ---\ie the conditional probability distribution--- is not straight forward using the model but requires computation via Bayes' rule and specification of a prior $P(\bfx)$. However this also means that those models can be used for more than simply prediction and can for example be use to generate the ``most likely input'' given an output. Examples of such models are the Naive Bayes classifier, the Restricted Boltzmann Machines (RBMs) or the Probabilistic Graphical Models.\\
 		
-		Generative models are considered ---maybe wrongly--- as less efficient for classification than the discriminative ones~\citep{ulusoy2005generative}~\citep{jordan2002discriminative}. However because they model the full joint probability distribution they can be use on a much wider class of tasks. They also have a readily available method for handling missing data, and often better performance when training sets size are small.
+		Because they require extra computation generative models are usually considered as less efficient for classification than the discriminative ones~\citep{ulusoy2005generative} \citep{jordan2002discriminative}. However because they model the full joint probability distribution they can be use on a much broader range of tasks. They also have a readily available method for handling missing data, and often better performance when trained on small size training sets.
 		
 	\section{Outline of the report:}
     \label{sec:Intro/Outline of the report}    
     
-    The remainder of this document is organized as follow. Section~\ref{chap:ST} summarizes and explains recent work from St\'ephane Mallat and his group on the Scattering Transform (ST), a wavelet-based operator fulfilling all the properties of what has been defined as a ``good'' representation for signal classification. Section~\ref{chap:PGMs} introduces the concept of Probabilistic Graphical Models (PGMs) as generative models that can be used ---among other tasks--- for classification. Section~\ref{chap:SCHMT} describes how the representation produced by the scattering transform can be modelled by a hidden Markov tree, using what we have named Scattering Convolutional Hidden Markov Trees (SCHMTs). Finally Section~\ref{chap:Exp} provides some examples of applications.
+    The remainder of this document is organized as follow. Section~\ref{chap:ST} summarizes and explains recent work from St\'ephane Mallat and his group on the Scattering Transform (ST), a wavelet-based operator fulfilling all the properties of what has been defined as a ``good'' representation for signal classification. Section~\ref{chap:PGMs} introduces the concept of Probabilistic Graphical Models (PGMs) as generative models that can be used ---among other tasks--- for classification. Section~\ref{chap:SCHMT} describes how the representation produced by the scattering transform can be modelled by a hidden Markov tree, using what we have named Scattering Convolutional Hidden Markov Trees (SCHMTs). Finally Section~\ref{chap:Exp} provides some examples of application.
         
 	\section{Contribution:}
     \label{sec:Intro/Contrib}    
     
-    The first two sections of this documents are mostly dedicated at introducing pre-existing notions and concepts that are useful to later construct the scattering convolutional hidden Markov trees. Readers already familiar with Scattering Transforms or Probabilistic Graphical Models can respectively skip Section~\ref{chap:ST} or~\ref{chap:PGMs} and focus on the novelties introduced in Section~\ref{chap:SCHMT} and onward where a framework to model a scattering convolutional network as a hidden Markov tree ---\ie a generative model--- is presented. This new tool is then tested on classifications and segmentation tasks.\\
+    The first two sections of this documents are mostly dedicated at introducing pre-existing notions and concepts that are useful to later construct the scattering convolutional hidden Markov trees. Readers already familiar with Scattering Transforms or Probabilistic Graphical Models can respectively skip Section~\ref{chap:ST} or~\ref{chap:PGMs} and focus on the novelties introduced in Section~\ref{chap:SCHMT} and onward where a framework to model a scattering convolutional network as a hidden Markov tree is presented. This new tool is then tested on classification and segmentation tasks.\\
     
-    Note also that even if this document is mainly written using images ---\ie 2-D signals--- as examples, the framework presented is valid in any number of dimension with minor adjustments.
+    Note also that even if this document is mainly written using images ---\ie 2-D signals--- as examples, the framework presented is valid in any number of dimensions with minor adjustments.
 
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -361,14 +367,10 @@
 \chapter{The Scattering transform:}
   \label{chap:ST}
  
-	This section describes the construction of a mathematical operator ---the scattering transform (ST)--- designed to generate what has been defined earlier as an interesting representation of signal (see Section~\ref{sec:Intro/Signal rep}). This operator delocalizes signal informative content into scattering decomposition paths, computed by cascading wavelet/modulus operators through an architecture similar to a Convolutional Neural Network (CNN) where the synaptic weights would be given by a wavelet operator instead of learned.\\ 
+	This section describes the construction of a mathematical operator ---the scattering transform (ST)--- designed to generate what has been defined earlier as an interesting representation of signal (see Section~\ref{sec:Intro/Need}). This operator delocalizes signal's informative content into scattering decomposition paths, computed by cascading wavelet/modulus operators through an architecture similar to a Convolutional Neural Network (CNN) where the synaptic weights would be given by a wavelet operator instead of learned.\\ 
 	
 	The remainder of the chapter is organized as follow. First, Section~\ref{sec:ST/Scattering wavelets} defines the scattering operators. Second, Section~\ref{sec:ST/SCN} describes how those operators can be stacked to create a Scattering Convolutional Network (SCN), an architecture comparable to CNNs. Then Section~\ref{sec:ST/Pties} reviews some of the SCNs' important properties. And finally, Section~\ref{sec:ST/Applications to clf} presents how the scattering transform is usually used in classification tasks.
-	
-% 
-% 	    
-%     In this section we first introduce a wavelet-based scattering transform built to have interesting properties for classification tasks, meaning being translation invariant and stable to $\mathbf{\mcalL^{2}}$ deformations, while preserving the separability between classes. Then we explained how those operators can be stacked to create a ``deep'' scattering transform using a convolutional architecture.
-      
+	      
 		\section{Scattering wavelets:}
 			\label{sec:ST/Scattering wavelets}
 
@@ -417,7 +419,7 @@
 
       As opposed to the Fourier sinusoidal waves, wavelets are operators stable to local $\mathbf{\mcalL^{2}}$ deformations as they can be expressed as localized waveforms~\citep{mallat1999wavelet}. However, as wavelet transform computes a convolutions with a wavelet basis, the resulting transform is a translation covariant operator~\citep{bruna2013invariant}.\\
         
-      To ensure a translation invariant behaviour for an operator initially commuting with translations, one has to introduce a non-linearity in the processing pipeline. Integration is an example of such a non-linearity. For example, let $R$ be a linear or non-linear operator commuting with translations $L_{c}$, \ie $R(L_{c}\bfx) = L_{c}R(\bfx)$), then the integral $\int R(\bfx(u))du$ is  translation invariant. Applying such a non-linearity to a wavelet transform is equivalent to setting $R(\bfx) = \bfx \ast \psi_{\lambda}$ and one gets the trivial invariant, 
+      To ensure a translation invariant behaviour for an operator initially commuting with translations, one has to introduce a non-linearity in the processing pipeline. Integration is an example of such a non-linearity. For example, let $R$ be an operator linear or not commuting with translations $L_{c}$, \ie $R(L_{c}\bfx) = L_{c}R(\bfx)$), then the integral $\int R(\bfx(u))du$ is  translation invariant. Applying such a non-linearity to a wavelet transform is equivalent to setting $R(\bfx) = \bfx \ast \psi_{\lambda}$ and one gets the trivial invariant, 
       
       \begin{equation*}
 				\label{eq:Trivial invariant}
@@ -426,9 +428,9 @@
       
       for all signal $\bfx$ as $\int \psi_{\lambda}(u)du = 0$.\\
       
-      However for the scattering operator to preserve its informative character, one has to ensure a non-vanishing integral. To do so a second operator $M$ has to be introduced such that $M \circ R(\bfx) = M(\bfx \ast \psi_{\lambda})$. If $M$ was a linear  transformation commuting with translation then the integral still vanishes. Hence one has to choose $M$ among the non-linear operators.\\
+      However to preserve the informative character of the scattering operator, one has to ensure a non-vanishing integral. To do so a second operator $M$ has to be introduced such that $M \circ R(\bfx) = M(\bfx \ast \psi_{\lambda})$. If $M$ was a linear transformation commuting with translation then the integral would still vanish. Hence one has to choose $M$ among the non-linear operator family.\\
       
-      Keeping in mind that the scattering transform has to be stable to deformations and taking advantages of the wavelet transform stability to small deformations in the input space, one also imposes that $M$ commutes with deformations, 
+      Keeping in mind that the scattering transform has to be stable to deformations, one also imposes on $M$ to commute with deformations, 
       
       \begin{equation*}
 				\label{eq:Commute with deformations}
@@ -437,7 +439,7 @@
       
       If a weak differentiability condition is added, one can prove~\citep{bruna2012commute} that $M$ must necessarily be a point-wise operator, \ie $M \circ R(\bfx(u))$ only depends on the value of $\bfx(u)$.\\
       
-      Finally, by adding an $\mathbf{\mcalL^{2}}(\dsR^{2})$ stability constraint,
+      Finally, by adding the $\mathbf{\mcalL^{2}}(\dsR^{2})$ stability constraint,
       
       \begin{equation*}
 				\label{eq:L2 stability}
@@ -447,7 +449,14 @@
 				\norm{M \circ R(\bfx) - M \circ R(\bfx')} \leq \norm{\bfx-\bfx'},
       \end{equation*}     
       
-      one can also show~\citep{bruna2012commute} that necessarily $M(R(\bfx))= e^{i\alpha}\abs{R(\bfx)}$. For the scattering transform, the simplest solution $\alpha = 0$ is chosen and therefore the resulting coefficients are the $\mathbf{\mcalL^{1}}(\dsR^{2})$ norms:
+      one can also show~\citep{bruna2012commute} that necessarily,
+      
+      \begin{equation*}
+				M(R(\bfx))= e^{i\alpha}\abs{R(\bfx)}.
+				\label{eq:Non-linearity general form}
+      \end{equation*}
+
+      For the scattering transform, the simplest solution $\alpha = 0$ is chosen and therefore the resulting coefficients are the $\mathbf{\mcalL^{1}}(\dsR^{2})$ norms,
        
       \begin{equation*}
 				\label{eq:L1 norm}
@@ -1246,14 +1255,14 @@
 						\hline
 						\multicolumn{3}{|c|}{Classification results} \\
 						\hline
-						 Signal:				&	Correlation mean	& Correlation variance	\\
+						Signal:					&	Correlation mean	& Correlation variance	\\
 						\hline
-						diagonal:						& 0.909					& 0.260								\\
-						Square:							& 0.811					& 0.300								\\
-						Circle:							& 0.876					& 0.164								\\
-						uiuc brick:					& 0.647					& 0.241								\\
-						Mandrill:						& 0.503					& 0.255								\\
-						Lena:								& 0.727					& 0.236								\\
+						diagonal:				& 0.909							& 0.260									\\
+						Square:					& 0.811							& 0.300									\\
+						Circle:					& 0.876							& 0.164									\\
+						uiuc brick:			& 0.647							& 0.241									\\
+						Mandrill:				& 0.503							& 0.255									\\
+						Lena:						& 0.727							& 0.236									\\
 
 						\hline
 					\end{tabular}

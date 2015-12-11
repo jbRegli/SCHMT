@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  9 DEC 2015 17:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.1.16)  11 DEC 2015 18:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,13 +1212,13 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-<Images/ucl.jpg, id=175, 755.82375pt x 223.58531pt>
+<Images/ucl.jpg, id=171, 755.82375pt x 223.58531pt>
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
 Package pdftex.def Info: Images/ucl.jpg used on input line 43.
 (pdftex.def)             Requested size: 256.0771pt x 85.35904pt.
 
-<Images/dstl.png, id=176, 1606.0pt x 745.78625pt>
+<Images/dstl.png, id=172, 1606.0pt x 745.78625pt>
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
 Package pdftex.def Info: Images/dstl.png used on input line 45.
@@ -1302,6 +1302,10 @@ LaTeX Font Info:    Try loading font information for U+dsrom on input line 116.
 (/usr/share/texlive/texmf-dist/tex/latex/doublestroke/Udsrom.fd
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 )
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
 Package epstopdf Info: Source file: <Images/waveform_flute.eps>
 (epstopdf)                    date: 2015-12-09 17:43:57
 (epstopdf)                    size: 115370 bytes
@@ -1313,8 +1317,7 @@ Package epstopdf Info: Source file: <Images/waveform_flute.eps>
 converted-to.pdf Images/waveform_flute.eps>
 (epstopdf)             \includegraphics on input line 122.
 Package epstopdf Info: Output file is already uptodate.
-
-<Images/waveform_flute-eps-converted-to.pdf, id=289, 481.8pt x 375.4025pt>
+<Images/waveform_flute-eps-converted-to.pdf, id=286, 481.8pt x 375.4025pt>
 File: Images/waveform_flute-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/waveform_flute-eps-converted-to.pdf>
@@ -1332,7 +1335,7 @@ verted-to.pdf Images/im_mandrill.eps>
 (epstopdf)             \includegraphics on input line 128.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/im_mandrill-eps-converted-to.pdf, id=290, 452.69125pt x 357.335pt>
+<Images/im_mandrill-eps-converted-to.pdf, id=287, 452.69125pt x 357.335pt>
 File: Images/im_mandrill-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/im_mandrill-eps-converted-to.pdf>
@@ -1351,17 +1354,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 [5
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 147--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 150--151
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--153
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
@@ -1373,14 +1381,14 @@ Package epstopdf Info: Source file: <Images/im_nine_ori.eps>
 (epstopdf)                    size: 3076 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_ori-eps-con
 verted-to.pdf Images/im_nine_ori.eps>
-(epstopdf)             \includegraphics on input line 158.
+(epstopdf)             \includegraphics on input line 155.
 Package epstopdf Info: Output file is already uptodate.
-<Images/im_nine_ori-eps-converted-to.pdf, id=315, 452.69125pt x 357.335pt>
+<Images/im_nine_ori-eps-converted-to.pdf, id=310, 452.69125pt x 357.335pt>
 File: Images/im_nine_ori-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/im_nine_ori-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_ori-eps-converted-to.pdf used on input 
-line 158.
+line 155.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/im_nine_trl.eps>
 (epstopdf)                    date: 2015-11-05 12:26:44
@@ -1390,32 +1398,32 @@ Package epstopdf Info: Source file: <Images/im_nine_trl.eps>
 (epstopdf)                    size: 3079 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_trl-eps-con
 verted-to.pdf Images/im_nine_trl.eps>
-(epstopdf)             \includegraphics on input line 163.
+(epstopdf)             \includegraphics on input line 160.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/im_nine_trl-eps-converted-to.pdf, id=316, 452.69125pt x 357.335pt>
+<Images/im_nine_trl-eps-converted-to.pdf, id=311, 452.69125pt x 357.335pt>
 File: Images/im_nine_trl-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/im_nine_trl-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_trl-eps-converted-to.pdf used on input 
-line 163.
+line 160.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 170.
+Package pdftex.def Info: Images/ucl.jpg used on input line 167.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 170.
+Package pdftex.def Info: Images/dstl.png used on input line 167.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [6 <./Images/waveform_flute-eps-converted-to.pdf> <./Images/im_mandrill-eps-co
 nverted-to.pdf>]
@@ -1427,13 +1435,13 @@ Package epstopdf Info: Source file: <Images/im_nine_ori.eps>
 (epstopdf)                    size: 3076 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_ori-eps-con
 verted-to.pdf Images/im_nine_ori.eps>
-(epstopdf)             \includegraphics on input line 175.
+(epstopdf)             \includegraphics on input line 172.
 Package epstopdf Info: Output file is already uptodate.
 File: Images/im_nine_ori-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/im_nine_ori-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_ori-eps-converted-to.pdf used on input 
-line 175.
+line 172.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/im_nine_def_Vsmall.eps>
 (epstopdf)                    date: 2015-11-05 12:26:45
@@ -1444,15 +1452,15 @@ Package epstopdf Info: Source file: <Images/im_nine_def_Vsmall.eps>
 (epstopdf)                    size: 3277 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_def_Vsmall-
 eps-converted-to.pdf Images/im_nine_def_Vsmall.eps>
-(epstopdf)             \includegraphics on input line 181.
+(epstopdf)             \includegraphics on input line 178.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/im_nine_def_Vsmall-eps-converted-to.pdf, id=336, 452.69125pt x 357.335p
+<Images/im_nine_def_Vsmall-eps-converted-to.pdf, id=332, 452.69125pt x 357.335p
 t>
 File: Images/im_nine_def_Vsmall-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/im_nine_def_Vsmall-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_def_Vsmall-eps-converted-to.pdf used on
- input line 181.
+ input line 178.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/im_nine_def_small.eps>
 (epstopdf)                    date: 2015-11-05 12:26:45
@@ -1463,15 +1471,15 @@ pdf>
 (epstopdf)                    size: 3028 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_def_small-e
 ps-converted-to.pdf Images/im_nine_def_small.eps>
-(epstopdf)             \includegraphics on input line 188.
+(epstopdf)             \includegraphics on input line 185.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/im_nine_def_small-eps-converted-to.pdf, id=337, 452.69125pt x 357.335pt
+<Images/im_nine_def_small-eps-converted-to.pdf, id=333, 452.69125pt x 357.335pt
 >
 File: Images/im_nine_def_small-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/im_nine_def_small-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_def_small-eps-converted-to.pdf used on 
-input line 188.
+input line 185.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/im_nine_def_big.eps>
 (epstopdf)                    date: 2015-11-05 12:26:45
@@ -1482,15 +1490,15 @@ f>
 (epstopdf)                    size: 3288 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_def_big-eps
 -converted-to.pdf Images/im_nine_def_big.eps>
-(epstopdf)             \includegraphics on input line 194.
+(epstopdf)             \includegraphics on input line 191.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/im_nine_def_big-eps-converted-to.pdf, id=338, 452.69125pt x 357.335pt>
+<Images/im_nine_def_big-eps-converted-to.pdf, id=334, 452.69125pt x 357.335pt>
 File: Images/im_nine_def_big-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/im_nine_def_big-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_def_big-eps-converted-to.pdf used on in
-put line 194.
+put line 191.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 
 
@@ -1504,12 +1512,12 @@ Package epstopdf Info: Source file: <Images/im_nine_ori.eps>
 (epstopdf)                    size: 3076 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_ori-eps-con
 verted-to.pdf Images/im_nine_ori.eps>
-(epstopdf)             \includegraphics on input line 208.
+(epstopdf)             \includegraphics on input line 205.
 Package epstopdf Info: Output file is already uptodate.
 File: Images/im_nine_ori-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/im_nine_ori-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_ori-eps-converted-to.pdf used on input 
-line 208.
+line 205.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/im_nine_rot15.eps>
 (epstopdf)                    date: 2015-11-05 12:26:44
@@ -1520,15 +1528,15 @@ Package epstopdf Info: Source file: <Images/im_nine_rot15.eps>
 (epstopdf)                    size: 3096 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_rot15-eps-c
 onverted-to.pdf Images/im_nine_rot15.eps>
-(epstopdf)             \includegraphics on input line 214.
+(epstopdf)             \includegraphics on input line 211.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/im_nine_rot15-eps-converted-to.pdf, id=344, 452.69125pt x 357.335pt>
+<Images/im_nine_rot15-eps-converted-to.pdf, id=340, 452.69125pt x 357.335pt>
 File: Images/im_nine_rot15-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/im_nine_rot15-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_rot15-eps-converted-to.pdf used on inpu
-t line 214.
+t line 211.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/im_nine_rot90.eps>
 (epstopdf)                    date: 2015-11-05 12:26:44
@@ -1539,15 +1547,15 @@ Package epstopdf Info: Source file: <Images/im_nine_rot90.eps>
 (epstopdf)                    size: 3074 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/im_nine_rot90-eps-c
 onverted-to.pdf Images/im_nine_rot90.eps>
-(epstopdf)             \includegraphics on input line 221.
+(epstopdf)             \includegraphics on input line 218.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/im_nine_rot90-eps-converted-to.pdf, id=345, 452.69125pt x 357.335pt>
+<Images/im_nine_rot90-eps-converted-to.pdf, id=341, 452.69125pt x 357.335pt>
 File: Images/im_nine_rot90-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/im_nine_rot90-eps-converted-to.pdf>
 Package pdftex.def Info: Images/im_nine_rot90-eps-converted-to.pdf used on inpu
-t line 221.
+t line 218.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 
 
@@ -1555,98 +1563,103 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 254.
+Package pdftex.def Info: Images/ucl.jpg used on input line 252.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 254.
+Package pdftex.def Info: Images/dstl.png used on input line 252.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [7 <./Images/im_nine_ori-eps-converted-to.pdf> <./Images/im_nine_trl-eps-conve
 rted-to.pdf>]
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 286.
+Package pdftex.def Info: Images/ucl.jpg used on input line 284.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
 
 <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 286.
+Package pdftex.def Info: Images/dstl.png used on input line 284.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [8 <./Images/im_nine_def_Vsmall-eps-converted-to.pdf> <./Images/im_nine_def_sm
 all-eps-converted-to.pdf> <./Images/im_nine_def_big-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 303.
+Package pdftex.def Info: Images/ucl.jpg used on input line 301.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 303.
+Package pdftex.def Info: Images/dstl.png used on input line 301.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [9 <./Images/im_nine_rot15-eps-converted-to.pdf> <./Images/im_nine_rot90-eps-c
 onverted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 330--331
+Underfull \hbox (badness 10000) in paragraph at lines 307--308
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 332--333
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--338
+Underfull \hbox (badness 10000) in paragraph at lines 329--330
 
  []
 
+<Images/CNN.png, id=410, 633.86812pt x 185.19188pt>
+File: Images/CNN.png Graphic file (type png)
+ <use Images/CNN.png>
+Package pdftex.def Info: Images/CNN.png used on input line 333.
+(pdftex.def)             Requested size: 361.34999pt x 105.57458pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--340
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 341--342
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 343.
+Package pdftex.def Info: Images/ucl.jpg used on input line 344.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 343.
+Package pdftex.def Info: Images/dstl.png used on input line 344.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
- [10]
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+ [10 <./Images/CNN.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--360
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 361.
+Package pdftex.def Info: Images/ucl.jpg used on input line 367.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 361.
+Package pdftex.def Info: Images/dstl.png used on input line 367.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [11]
 Chapitre 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
@@ -1656,7 +1669,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 384--385
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--394
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
@@ -1668,14 +1686,14 @@ Package epstopdf Info: Source file: <Images/morlet_real.eps>
 (epstopdf)                    size: 3576 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/morlet_real-eps-con
 verted-to.pdf Images/morlet_real.eps>
-(epstopdf)             \includegraphics on input line 399.
+(epstopdf)             \includegraphics on input line 401.
 Package epstopdf Info: Output file is already uptodate.
-<Images/morlet_real-eps-converted-to.pdf, id=454, 360.34625pt x 357.335pt>
+<Images/morlet_real-eps-converted-to.pdf, id=451, 360.34625pt x 357.335pt>
 File: Images/morlet_real-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/morlet_real-eps-converted-to.pdf>
 Package pdftex.def Info: Images/morlet_real-eps-converted-to.pdf used on input 
-line 399.
+line 401.
 (pdftex.def)             Requested size: 131.18163pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/morlet_ima.eps>
 (epstopdf)                    date: 2015-11-09 17:54:02
@@ -1685,15 +1703,15 @@ Package epstopdf Info: Source file: <Images/morlet_ima.eps>
 (epstopdf)                    size: 4286 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/morlet_ima-eps-conv
 erted-to.pdf Images/morlet_ima.eps>
-(epstopdf)             \includegraphics on input line 405.
+(epstopdf)             \includegraphics on input line 407.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/morlet_ima-eps-converted-to.pdf, id=455, 360.34625pt x 357.335pt>
+<Images/morlet_ima-eps-converted-to.pdf, id=452, 360.34625pt x 357.335pt>
 File: Images/morlet_ima-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/morlet_ima-eps-converted-to.pdf>
 Package pdftex.def Info: Images/morlet_ima-eps-converted-to.pdf used on input l
-ine 405.
+ine 407.
 (pdftex.def)             Requested size: 131.18163pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/morlet_fourier.eps>
 (epstopdf)                    date: 2015-11-09 17:54:02
@@ -1704,167 +1722,168 @@ Package epstopdf Info: Source file: <Images/morlet_fourier.eps>
 (epstopdf)                    size: 17982 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/morlet_fourier-eps-
 converted-to.pdf Images/morlet_fourier.eps>
-(epstopdf)             \includegraphics on input line 411.
+(epstopdf)             \includegraphics on input line 413.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/morlet_fourier-eps-converted-to.pdf, id=456, 358.33875pt x 357.335pt>
+<Images/morlet_fourier-eps-converted-to.pdf, id=453, 358.33875pt x 357.335pt>
 File: Images/morlet_fourier-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/morlet_fourier-eps-converted-to.pdf>
 Package pdftex.def Info: Images/morlet_fourier-eps-converted-to.pdf used on inp
-ut line 411.
+ut line 413.
 (pdftex.def)             Requested size: 130.45082pt x 130.08621pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 418--419
+Underfull \hbox (badness 10000) in paragraph at lines 420--421
 
  []
 
 [12
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 429--430
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 440--441
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 458.
+Package pdftex.def Info: Images/ucl.jpg used on input line 467.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 458.
+Package pdftex.def Info: Images/dstl.png used on input line 467.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [13 <./Images/morlet_real-eps-converted-to.pdf> <./Images/morlet_ima-eps-conve
 rted-to.pdf> <./Images/morlet_fourier-eps-converted-to.pdf>]
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 530.
+Package pdftex.def Info: Images/ucl.jpg used on input line 535.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 530.
+Package pdftex.def Info: Images/dstl.png used on input line 535.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [14]
-Underfull \hbox (badness 10000) in paragraph at lines 535--536
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 565--566
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--564
+Underfull \hbox (badness 10000) in paragraph at lines 572--573
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 573--574
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
-File: Images/ucl.jpg Graphic file (type jpg)
-<use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 577.
-(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
-File: Images/dstl.png Graphic file (type png)
- <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 577.
-(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
- [15]
-<Images/ST_crop.pdf, id=521, 469.755pt x 145.54375pt>
+<Images/ST_crop.pdf, id=506, 469.755pt x 145.54375pt>
 File: Images/ST_crop.pdf Graphic file (type pdf)
  <use Images/ST_crop.pdf>
-Package pdftex.def Info: Images/ST_crop.pdf used on input line 580.
+Package pdftex.def Info: Images/ST_crop.pdf used on input line 589.
 (pdftex.def)             Requested size: 361.34999pt x 111.95575pt.
+File: Images/ucl.jpg Graphic file (type jpg)
 
-Underfull \hbox (badness 10000) in paragraph at lines 591--592
+<use Images/ucl.jpg>
+Package pdftex.def Info: Images/ucl.jpg used on input line 593.
+(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
+File: Images/dstl.png Graphic file (type png)
+ <use Images/dstl.png>
+Package pdftex.def Info: Images/dstl.png used on input line 593.
+(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
+ [15]
+Underfull \hbox (badness 10000) in paragraph at lines 600--601
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--620
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 620.
+Package pdftex.def Info: Images/ucl.jpg used on input line 629.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 620.
+Package pdftex.def Info: Images/dstl.png used on input line 629.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [16 <./Images/ST_crop.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 658--659
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 660--661
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 662--663
-
- []
-
-File: Images/ucl.jpg Graphic file (type jpg)
-<use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 667.
-(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
-File: Images/dstl.png Graphic file (type png)
- <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 667.
-(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
- [17]
 Underfull \hbox (badness 10000) in paragraph at lines 667--668
 
  []
 
-<Images/ST_freqDec_crop.pdf, id=585, 547.04375pt x 145.54375pt>
-File: Images/ST_freqDec_crop.pdf Graphic file (type pdf)
 
-<use Images/ST_freqDec_crop.pdf>
-Package pdftex.def Info: Images/ST_freqDec_crop.pdf used on input line 681.
-(pdftex.def)             Requested size: 361.34999pt x 96.1391pt.
-File: Images/ucl.jpg Graphic file (type jpg)
- <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 705.
-(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
-File: Images/dstl.png Graphic file (type png)
- <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 705.
-(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
-
-[18 <./Images/ST_freqDec_crop.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 738--739
+Underfull \hbox (badness 10000) in paragraph at lines 669--670
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 740--741
+Underfull \hbox (badness 10000) in paragraph at lines 671--672
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
+
+ []
+
+File: Images/ucl.jpg Graphic file (type jpg)
+<use Images/ucl.jpg>
+Package pdftex.def Info: Images/ucl.jpg used on input line 677.
+(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
+File: Images/dstl.png Graphic file (type png)
+ <use Images/dstl.png>
+Package pdftex.def Info: Images/dstl.png used on input line 677.
+(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
+ [17]
+<Images/ST_freqDec_crop.pdf, id=582, 547.04375pt x 145.54375pt>
+File: Images/ST_freqDec_crop.pdf Graphic file (type pdf)
+
+<use Images/ST_freqDec_crop.pdf>
+Package pdftex.def Info: Images/ST_freqDec_crop.pdf used on input line 690.
+(pdftex.def)             Requested size: 361.34999pt x 96.1391pt.
+File: Images/ucl.jpg Graphic file (type jpg)
+ <use Images/ucl.jpg>
+Package pdftex.def Info: Images/ucl.jpg used on input line 717.
+(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
+File: Images/dstl.png Graphic file (type png)
+ <use Images/dstl.png>
+Package pdftex.def Info: Images/dstl.png used on input line 717.
+(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
+
+[18 <./Images/ST_freqDec_crop.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 747--748
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 749--750
 
  []
 
@@ -1876,17 +1895,17 @@ Package epstopdf Info: Source file: <Images/mnist_1.eps>
 (epstopdf)                    size: 3394 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_1-eps-convert
 ed-to.pdf Images/mnist_1.eps>
-(epstopdf)             \includegraphics on input line 746.
+(epstopdf)             \includegraphics on input line 755.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_1-eps-converted-to.pdf, id=648, 452.69125pt x 357.335pt>
+<Images/mnist_1-eps-converted-to.pdf, id=645, 452.69125pt x 357.335pt>
 File: Images/mnist_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_1-eps-converted-to.pdf used on input line
- 746.
+ 755.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 746--747
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 755--756
  [][] 
  []
 
@@ -1898,17 +1917,17 @@ Package epstopdf Info: Source file: <Images/mnist_2.eps>
 (epstopdf)                    size: 3412 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_2-eps-convert
 ed-to.pdf Images/mnist_2.eps>
-(epstopdf)             \includegraphics on input line 751.
+(epstopdf)             \includegraphics on input line 760.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_2-eps-converted-to.pdf, id=649, 452.69125pt x 357.335pt>
+<Images/mnist_2-eps-converted-to.pdf, id=646, 452.69125pt x 357.335pt>
 File: Images/mnist_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_2-eps-converted-to.pdf used on input line
- 751.
+ 760.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 751--752
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 760--761
  [][] 
  []
 
@@ -1920,17 +1939,17 @@ Package epstopdf Info: Source file: <Images/mnist_3.eps>
 (epstopdf)                    size: 3295 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_3-eps-convert
 ed-to.pdf Images/mnist_3.eps>
-(epstopdf)             \includegraphics on input line 756.
+(epstopdf)             \includegraphics on input line 765.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_3-eps-converted-to.pdf, id=650, 452.69125pt x 357.335pt>
+<Images/mnist_3-eps-converted-to.pdf, id=647, 452.69125pt x 357.335pt>
 File: Images/mnist_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_3-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_3-eps-converted-to.pdf used on input line
- 756.
+ 765.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 756--757
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 765--766
  [][] 
  []
 
@@ -1942,17 +1961,17 @@ Package epstopdf Info: Source file: <Images/mnist_4.eps>
 (epstopdf)                    size: 3233 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_4-eps-convert
 ed-to.pdf Images/mnist_4.eps>
-(epstopdf)             \includegraphics on input line 761.
+(epstopdf)             \includegraphics on input line 770.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_4-eps-converted-to.pdf, id=651, 452.69125pt x 357.335pt>
+<Images/mnist_4-eps-converted-to.pdf, id=648, 452.69125pt x 357.335pt>
 File: Images/mnist_4-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_4-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_4-eps-converted-to.pdf used on input line
- 761.
+ 770.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 761--762
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 770--771
  [][] 
  []
 
@@ -1964,17 +1983,17 @@ Package epstopdf Info: Source file: <Images/mnist_5.eps>
 (epstopdf)                    size: 3341 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_5-eps-convert
 ed-to.pdf Images/mnist_5.eps>
-(epstopdf)             \includegraphics on input line 766.
+(epstopdf)             \includegraphics on input line 775.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_5-eps-converted-to.pdf, id=652, 452.69125pt x 357.335pt>
+<Images/mnist_5-eps-converted-to.pdf, id=649, 452.69125pt x 357.335pt>
 File: Images/mnist_5-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_5-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_5-eps-converted-to.pdf used on input line
- 766.
+ 775.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 766--767
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 775--776
  [][] 
  []
 
@@ -1986,17 +2005,17 @@ Package epstopdf Info: Source file: <Images/mnist_6.eps>
 (epstopdf)                    size: 3413 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_6-eps-convert
 ed-to.pdf Images/mnist_6.eps>
-(epstopdf)             \includegraphics on input line 772.
+(epstopdf)             \includegraphics on input line 781.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_6-eps-converted-to.pdf, id=653, 452.69125pt x 357.335pt>
+<Images/mnist_6-eps-converted-to.pdf, id=650, 452.69125pt x 357.335pt>
 File: Images/mnist_6-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_6-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_6-eps-converted-to.pdf used on input line
- 772.
+ 781.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 772--773
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 781--782
  [][] 
  []
 
@@ -2008,17 +2027,17 @@ Package epstopdf Info: Source file: <Images/mnist_7.eps>
 (epstopdf)                    size: 3075 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_7-eps-convert
 ed-to.pdf Images/mnist_7.eps>
-(epstopdf)             \includegraphics on input line 777.
+(epstopdf)             \includegraphics on input line 786.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_7-eps-converted-to.pdf, id=654, 452.69125pt x 357.335pt>
+<Images/mnist_7-eps-converted-to.pdf, id=651, 452.69125pt x 357.335pt>
 File: Images/mnist_7-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_7-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_7-eps-converted-to.pdf used on input line
- 777.
+ 786.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 777--778
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 786--787
  [][] 
  []
 
@@ -2030,17 +2049,17 @@ Package epstopdf Info: Source file: <Images/mnist_8.eps>
 (epstopdf)                    size: 3331 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_8-eps-convert
 ed-to.pdf Images/mnist_8.eps>
-(epstopdf)             \includegraphics on input line 782.
+(epstopdf)             \includegraphics on input line 791.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_8-eps-converted-to.pdf, id=655, 452.69125pt x 357.335pt>
+<Images/mnist_8-eps-converted-to.pdf, id=652, 452.69125pt x 357.335pt>
 File: Images/mnist_8-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_8-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_8-eps-converted-to.pdf used on input line
- 782.
+ 791.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 782--783
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 791--792
  [][] 
  []
 
@@ -2052,17 +2071,17 @@ Package epstopdf Info: Source file: <Images/mnist_9.eps>
 (epstopdf)                    size: 3095 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_9-eps-convert
 ed-to.pdf Images/mnist_9.eps>
-(epstopdf)             \includegraphics on input line 787.
+(epstopdf)             \includegraphics on input line 796.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_9-eps-converted-to.pdf, id=656, 452.69125pt x 357.335pt>
+<Images/mnist_9-eps-converted-to.pdf, id=653, 452.69125pt x 357.335pt>
 File: Images/mnist_9-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_9-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_9-eps-converted-to.pdf used on input line
- 787.
+ 796.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 787--788
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 796--797
  [][] 
  []
 
@@ -2074,17 +2093,17 @@ Package epstopdf Info: Source file: <Images/mnist_10.eps>
 (epstopdf)                    size: 3379 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/mnist_10-eps-conver
 ted-to.pdf Images/mnist_10.eps>
-(epstopdf)             \includegraphics on input line 792.
+(epstopdf)             \includegraphics on input line 801.
 Package epstopdf Info: Output file is already uptodate.
-<Images/mnist_10-eps-converted-to.pdf, id=657, 452.69125pt x 357.335pt>
+<Images/mnist_10-eps-converted-to.pdf, id=654, 452.69125pt x 357.335pt>
 File: Images/mnist_10-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/mnist_10-eps-converted-to.pdf>
 Package pdftex.def Info: Images/mnist_10-eps-converted-to.pdf used on input lin
-e 792.
+e 801.
 (pdftex.def)             Requested size: 82.3996pt x 65.04256pt.
 
-Overfull \hbox (6.94368pt too wide) in paragraph at lines 792--793
+Overfull \hbox (6.94368pt too wide) in paragraph at lines 801--802
  [][] 
  []
 
@@ -2092,30 +2111,32 @@ Overfull \hbox (6.94368pt too wide) in paragraph at lines 792--793
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 799--800
+Underfull \hbox (badness 10000) in paragraph at lines 808--809
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 810--811
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 801.
+Package pdftex.def Info: Images/ucl.jpg used on input line 812.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 801.
+Package pdftex.def Info: Images/dstl.png used on input line 812.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [19]
-Underfull \hbox (badness 10000) in paragraph at lines 801--802
-
- []
-
 File: Images/ucl.jpg Graphic file (type jpg)
-<use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 809.
+ <use Images/ucl.jpg>
+Package pdftex.def Info: Images/ucl.jpg used on input line 818.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
- <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 809.
+
+<use Images/dstl.png>
+Package pdftex.def Info: Images/dstl.png used on input line 818.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [20 <./Images/mnist_1-eps-converted-to.pdf> <./Images/mnist_2-eps-converted-to
 .pdf> <./Images/mnist_3-eps-converted-to.pdf> <./Images/mnist_4-eps-converted-t
@@ -2125,20 +2146,20 @@ to.pdf> <./Images/mnist_7-eps-converted-to.pdf> <./Images/mnist_8-eps-converted
 ed-to.pdf>]
 Chapitre 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 812--813
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 814--815
+Underfull \hbox (badness 10000) in paragraph at lines 823--824
 
  []
 
-<Images/bn_simple_crop.pdf, id=719, 80.3pt x 162.6075pt>
+<Images/bn_simple_crop.pdf, id=716, 80.3pt x 162.6075pt>
 File: Images/bn_simple_crop.pdf Graphic file (type pdf)
 
 <use Images/bn_simple_crop.pdf>
-Package pdftex.def Info: Images/bn_simple_crop.pdf used on input line 835.
+Package pdftex.def Info: Images/bn_simple_crop.pdf used on input line 844.
 (pdftex.def)             Requested size: 144.54pt x 292.7032pt.
 
 
@@ -2147,248 +2168,248 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [21
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 855--856
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
 
  []
 
 
-Overfull \hbox (8.67833pt too wide) in paragraph at lines 867--867
+Overfull \hbox (8.67833pt too wide) in paragraph at lines 876--876
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 875--877
+Underfull \hbox (badness 10000) in paragraph at lines 884--886
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 877.
+Package pdftex.def Info: Images/ucl.jpg used on input line 886.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 877.
+Package pdftex.def Info: Images/dstl.png used on input line 886.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [22 <./Images/bn_simple_crop.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-LaTeX Warning: Command \O invalid in math mode on input line 888.
-
-Missing character: There is no Ø in font cmr10!
-
 Underfull \hbox (badness 10000) in paragraph at lines 895--896
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 921--922
+LaTeX Warning: Command \O invalid in math mode on input line 897.
+
+Missing character: There is no Ø in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--905
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 924--925
+Underfull \hbox (badness 10000) in paragraph at lines 930--931
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 926--927
+Underfull \hbox (badness 10000) in paragraph at lines 933--934
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 935--936
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 927.
+Package pdftex.def Info: Images/ucl.jpg used on input line 936.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 927.
+Package pdftex.def Info: Images/dstl.png used on input line 936.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [23]
-Underfull \hbox (badness 10000) in paragraph at lines 967--968
-
- []
-
-File: Images/ucl.jpg Graphic file (type jpg)
-<use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 970.
-(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
-File: Images/dstl.png Graphic file (type png)
- <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 970.
-(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
- [24]
-Underfull \hbox (badness 10000) in paragraph at lines 974--975
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 976--977
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 979--980
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 980--981
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 990--991
+File: Images/ucl.jpg Graphic file (type jpg)
+<use Images/ucl.jpg>
+Package pdftex.def Info: Images/ucl.jpg used on input line 979.
+(pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
+File: Images/dstl.png Graphic file (type png)
+ <use Images/dstl.png>
+Package pdftex.def Info: Images/dstl.png used on input line 979.
+(pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
+ [24]
+Underfull \hbox (badness 10000) in paragraph at lines 983--984
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 998--999
+Underfull \hbox (badness 10000) in paragraph at lines 985--986
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1001--1002
+Underfull \hbox (badness 10000) in paragraph at lines 988--989
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1009--1010
+Underfull \hbox (badness 10000) in paragraph at lines 989--990
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 999--1000
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1007--1008
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1010--1011
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1018--1019
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1010.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1019.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1010.
+Package pdftex.def Info: Images/dstl.png used on input line 1019.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [25]
-Underfull \hbox (badness 10000) in paragraph at lines 1024--1025
+Underfull \hbox (badness 10000) in paragraph at lines 1033--1034
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1026--1027
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1036
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1034.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1043.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1034.
+Package pdftex.def Info: Images/dstl.png used on input line 1043.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [26]
 Chapitre 4.
 
-Overfull \hbox (28.49484pt too wide) in paragraph at lines 1034--1034
+Overfull \hbox (28.49484pt too wide) in paragraph at lines 1043--1043
  |[]\T1/aer/bx/n/24.88 Scattering convo-lu-tio-nal hid-den Mar-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1036--1037
+Underfull \hbox (badness 10000) in paragraph at lines 1045--1046
 
  []
 
-<Images/scat_tree_crop.pdf, id=831, 456.70625pt x 153.57375pt>
+<Images/scat_tree_crop.pdf, id=828, 456.70625pt x 153.57375pt>
 File: Images/scat_tree_crop.pdf Graphic file (type pdf)
 
 <use Images/scat_tree_crop.pdf>
-Package pdftex.def Info: Images/scat_tree_crop.pdf used on input line 1040.
+Package pdftex.def Info: Images/scat_tree_crop.pdf used on input line 1049.
 (pdftex.def)             Requested size: 361.34999pt x 121.51173pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1046--1047
+Underfull \hbox (badness 10000) in paragraph at lines 1055--1056
 
  []
 
 [27
 
  <./Images/scat_tree_crop.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
+Underfull \hbox (badness 10000) in paragraph at lines 1068--1069
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1061--1062
+Underfull \hbox (badness 10000) in paragraph at lines 1070--1071
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1072--1073
+Underfull \hbox (badness 10000) in paragraph at lines 1081--1082
 
  []
 
-<Images/scat_HMT_crop.pdf, id=876, 516.93124pt x 151.56625pt>
+<Images/scat_HMT_crop.pdf, id=873, 516.93124pt x 151.56625pt>
 File: Images/scat_HMT_crop.pdf Graphic file (type pdf)
 
 <use Images/scat_HMT_crop.pdf>
-Package pdftex.def Info: Images/scat_HMT_crop.pdf used on input line 1076.
+Package pdftex.def Info: Images/scat_HMT_crop.pdf used on input line 1085.
 (pdftex.def)             Requested size: 361.34999pt x 105.95226pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1082--1083
+Underfull \hbox (badness 10000) in paragraph at lines 1091--1092
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1083.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1092.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1083.
+Package pdftex.def Info: Images/dstl.png used on input line 1092.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [28 <./Images/scat_HMT_crop.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1084--1085
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1087--1088
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1093--1094
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1106--1108
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1097
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1120--1122
+Underfull \hbox (badness 10000) in paragraph at lines 1102--1103
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1131--1132
+Underfull \hbox (badness 10000) in paragraph at lines 1115--1117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1129--1131
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1140--1141
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1132.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1141.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1132.
+Package pdftex.def Info: Images/dstl.png used on input line 1141.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [29]
-Underfull \hbox (badness 10000) in paragraph at lines 1139--1140
+Underfull \hbox (badness 10000) in paragraph at lines 1148--1149
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1146--1147
+Underfull \hbox (badness 10000) in paragraph at lines 1155--1156
 
  []
 
@@ -2401,15 +2422,15 @@ to.pdf>
 (epstopdf)                    size: 208218 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_square_origina
 l-eps-converted-to.pdf Images/2pop_square_original.eps>
-(epstopdf)             \includegraphics on input line 1152.
+(epstopdf)             \includegraphics on input line 1161.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_square_original-eps-converted-to.pdf, id=952, 452.69125pt x 357.33
+<Images/2pop_square_original-eps-converted-to.pdf, id=949, 452.69125pt x 357.33
 5pt>
 File: Images/2pop_square_original-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/2pop_square_original-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_square_original-eps-converted-to.pdf used 
-on input line 1152.
+on input line 1161.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/2pop_square_layer0.eps>
 (epstopdf)                    date: 2015-11-06 18:33:38
@@ -2420,15 +2441,15 @@ Package epstopdf Info: Source file: <Images/2pop_square_layer0.eps>
 (epstopdf)                    size: 7255 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_square_layer0-
 eps-converted-to.pdf Images/2pop_square_layer0.eps>
-(epstopdf)             \includegraphics on input line 1158.
+(epstopdf)             \includegraphics on input line 1167.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_square_layer0-eps-converted-to.pdf, id=953, 452.69125pt x 357.335p
+<Images/2pop_square_layer0-eps-converted-to.pdf, id=950, 452.69125pt x 357.335p
 t>
 File: Images/2pop_square_layer0-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/2pop_square_layer0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_square_layer0-eps-converted-to.pdf used on
- input line 1158.
+ input line 1167.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/2pop_square_layer1.eps>
 (epstopdf)                    date: 2015-11-06 18:33:38
@@ -2439,15 +2460,15 @@ Package epstopdf Info: Source file: <Images/2pop_square_layer1.eps>
 (epstopdf)                    size: 168659 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_square_layer1-
 eps-converted-to.pdf Images/2pop_square_layer1.eps>
-(epstopdf)             \includegraphics on input line 1165.
+(epstopdf)             \includegraphics on input line 1174.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_square_layer1-eps-converted-to.pdf, id=954, 452.69125pt x 357.335p
+<Images/2pop_square_layer1-eps-converted-to.pdf, id=951, 452.69125pt x 357.335p
 t>
 File: Images/2pop_square_layer1-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/2pop_square_layer1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_square_layer1-eps-converted-to.pdf used on
- input line 1165.
+ input line 1174.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/2pop_square_layer2.eps>
 (epstopdf)                    date: 2015-11-06 18:33:39
@@ -2458,15 +2479,15 @@ Package epstopdf Info: Source file: <Images/2pop_square_layer2.eps>
 (epstopdf)                    size: 348001 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_square_layer2-
 eps-converted-to.pdf Images/2pop_square_layer2.eps>
-(epstopdf)             \includegraphics on input line 1171.
+(epstopdf)             \includegraphics on input line 1180.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_square_layer2-eps-converted-to.pdf, id=955, 452.69125pt x 357.335p
+<Images/2pop_square_layer2-eps-converted-to.pdf, id=952, 452.69125pt x 357.335p
 t>
 File: Images/2pop_square_layer2-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/2pop_square_layer2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_square_layer2-eps-converted-to.pdf used on
- input line 1171.
+ input line 1180.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 
 
@@ -2481,15 +2502,15 @@ Package epstopdf Info: Source file: <Images/2pop_uiuc_original.eps>
 (epstopdf)                    size: 162853 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_uiuc_original-
 eps-converted-to.pdf Images/2pop_uiuc_original.eps>
-(epstopdf)             \includegraphics on input line 1184.
+(epstopdf)             \includegraphics on input line 1193.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_uiuc_original-eps-converted-to.pdf, id=956, 452.69125pt x 357.335p
+<Images/2pop_uiuc_original-eps-converted-to.pdf, id=953, 452.69125pt x 357.335p
 t>
 File: Images/2pop_uiuc_original-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/2pop_uiuc_original-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_uiuc_original-eps-converted-to.pdf used on
- input line 1184.
+ input line 1193.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/2pop_uiuc_layer0.eps>
 (epstopdf)                    date: 2015-11-06 18:32:57
@@ -2500,14 +2521,14 @@ df>
 (epstopdf)                    size: 29937 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_uiuc_layer0-ep
 s-converted-to.pdf Images/2pop_uiuc_layer0.eps>
-(epstopdf)             \includegraphics on input line 1190.
+(epstopdf)             \includegraphics on input line 1199.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_uiuc_layer0-eps-converted-to.pdf, id=957, 452.69125pt x 357.335pt>
+<Images/2pop_uiuc_layer0-eps-converted-to.pdf, id=954, 452.69125pt x 357.335pt>
 File: Images/2pop_uiuc_layer0-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/2pop_uiuc_layer0-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_uiuc_layer0-eps-converted-to.pdf used on i
-nput line 1190.
+nput line 1199.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/2pop_uiuc_layer1.eps>
 (epstopdf)                    date: 2015-11-06 18:32:58
@@ -2518,14 +2539,14 @@ df>
 (epstopdf)                    size: 184060 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_uiuc_layer1-ep
 s-converted-to.pdf Images/2pop_uiuc_layer1.eps>
-(epstopdf)             \includegraphics on input line 1197.
+(epstopdf)             \includegraphics on input line 1206.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_uiuc_layer1-eps-converted-to.pdf, id=958, 452.69125pt x 357.335pt>
+<Images/2pop_uiuc_layer1-eps-converted-to.pdf, id=955, 452.69125pt x 357.335pt>
 File: Images/2pop_uiuc_layer1-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/2pop_uiuc_layer1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_uiuc_layer1-eps-converted-to.pdf used on i
-nput line 1197.
+nput line 1206.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 Package epstopdf Info: Source file: <Images/2pop_uiuc_layer2.eps>
 (epstopdf)                    date: 2015-11-06 18:32:58
@@ -2536,36 +2557,36 @@ df>
 (epstopdf)                    size: 365929 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/2pop_uiuc_layer2-ep
 s-converted-to.pdf Images/2pop_uiuc_layer2.eps>
-(epstopdf)             \includegraphics on input line 1203.
+(epstopdf)             \includegraphics on input line 1212.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/2pop_uiuc_layer2-eps-converted-to.pdf, id=959, 452.69125pt x 357.335pt>
+<Images/2pop_uiuc_layer2-eps-converted-to.pdf, id=956, 452.69125pt x 357.335pt>
 File: Images/2pop_uiuc_layer2-eps-converted-to.pdf Graphic file (type pdf)
 <use Images/2pop_uiuc_layer2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/2pop_uiuc_layer2-eps-converted-to.pdf used on i
-nput line 1203.
+nput line 1212.
 (pdftex.def)             Requested size: 210.57523pt x 166.2212pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1211--1212
+Underfull \hbox (badness 10000) in paragraph at lines 1220--1221
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1213--1214
+Underfull \hbox (badness 10000) in paragraph at lines 1222--1223
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1218.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1227.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1218.
+Package pdftex.def Info: Images/dstl.png used on input line 1227.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [30]
 Package epstopdf Info: Source file: <Images/persist_uiuc_layer2-3_highCor.eps>
@@ -2577,20 +2598,20 @@ onverted-to.pdf>
 (epstopdf)                    size: 1000368 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/persist_uiuc_layer2
 -3_highCor-eps-converted-to.pdf Images/persist_uiuc_layer2-3_highCor.eps>
-(epstopdf)             \includegraphics on input line 1226.
+(epstopdf)             \includegraphics on input line 1235.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/persist_uiuc_layer2-3_highCor-eps-converted-to.pdf, id=981, 508.90125pt
+<Images/persist_uiuc_layer2-3_highCor-eps-converted-to.pdf, id=978, 508.90125pt
  x 404.51125pt>
 File: Images/persist_uiuc_layer2-3_highCor-eps-converted-to.pdf Graphic file (t
 ype pdf)
 
 <use Images/persist_uiuc_layer2-3_highCor-eps-converted-to.pdf>
 Package pdftex.def Info: Images/persist_uiuc_layer2-3_highCor-eps-converted-to.
-pdf used on input line 1226.
+pdf used on input line 1235.
 (pdftex.def)             Requested size: 272.76033pt x 216.81pt.
 
-Overfull \hbox (59.7079pt too wide) in paragraph at lines 1226--1227
+Overfull \hbox (59.7079pt too wide) in paragraph at lines 1235--1236
  [][] 
  []
 
@@ -2603,29 +2624,29 @@ nverted-to.pdf>
 (epstopdf)                    size: 1027706 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/persist_uiuc_layer2
 -3_lowCor-eps-converted-to.pdf Images/persist_uiuc_layer2-3_lowCor.eps>
-(epstopdf)             \includegraphics on input line 1233.
+(epstopdf)             \includegraphics on input line 1242.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/persist_uiuc_layer2-3_lowCor-eps-converted-to.pdf, id=982, 498.86375pt 
+<Images/persist_uiuc_layer2-3_lowCor-eps-converted-to.pdf, id=979, 498.86375pt 
 x 404.51125pt>
 File: Images/persist_uiuc_layer2-3_lowCor-eps-converted-to.pdf Graphic file (ty
 pe pdf)
  <use Images/persist_uiuc_layer2-3_lowCor-eps-converted-to.pdf>
 Package pdftex.def Info: Images/persist_uiuc_layer2-3_lowCor-eps-converted-to.p
-df used on input line 1233.
+df used on input line 1242.
 (pdftex.def)             Requested size: 267.38045pt x 216.81pt.
 
-Overfull \hbox (54.32802pt too wide) in paragraph at lines 1233--1234
+Overfull \hbox (54.32802pt too wide) in paragraph at lines 1242--1243
  [][] 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1240.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1249.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1240.
+Package pdftex.def Info: Images/dstl.png used on input line 1249.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [31 <./Images/2pop_square_original-eps-converted-to.pdf> <./Images/2pop_square
 _layer0-eps-converted-to.pdf> <./Images/2pop_square_layer1-eps-converted-to.pdf
@@ -2637,149 +2658,149 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (5.3541pt too wide) in paragraph at lines 1270--1271
+Overfull \hbox (5.3541pt too wide) in paragraph at lines 1279--1280
 []\T1/aer/m/n/10.95 (-20) As seen in Sec-tion []3.2.3[], trai-ning Mar-kov mo-d
 els can be done using Expectation-Maximization
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1270--1271
+Underfull \hbox (badness 10000) in paragraph at lines 1279--1280
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1272--1273
+Underfull \hbox (badness 10000) in paragraph at lines 1281--1282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1274--1275
+Underfull \hbox (badness 10000) in paragraph at lines 1283--1284
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1275--1276
+Underfull \hbox (badness 10000) in paragraph at lines 1284--1285
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1276.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1285.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1276.
+Package pdftex.def Info: Images/dstl.png used on input line 1285.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [32 <./Images/2pop_uiuc_original-eps-converted-to.pdf> <./Images/2pop_uiuc_lay
 er0-eps-converted-to.pdf> <./Images/2pop_uiuc_layer1-eps-converted-to.pdf> <./I
 mages/2pop_uiuc_layer2-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1276--1277
+Underfull \hbox (badness 10000) in paragraph at lines 1285--1286
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1277--1278
+Underfull \hbox (badness 10000) in paragraph at lines 1286--1287
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1278--1279
+Underfull \hbox (badness 10000) in paragraph at lines 1287--1288
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1280--1281
+Underfull \hbox (badness 10000) in paragraph at lines 1289--1290
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1299.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1308.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1299.
+Package pdftex.def Info: Images/dstl.png used on input line 1308.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [33 <./Images/persist_uiuc_layer2-3_highCor-eps-converted-to.pdf> <./Images/pe
 rsist_uiuc_layer2-3_lowCor-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1307--1308
+Underfull \hbox (badness 10000) in paragraph at lines 1316--1317
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1342.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1351.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1342.
+Package pdftex.def Info: Images/dstl.png used on input line 1351.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [34]
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1424.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1433.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
 
 <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1424.
+Package pdftex.def Info: Images/dstl.png used on input line 1433.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [35]
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1424.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1433.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1424.
+Package pdftex.def Info: Images/dstl.png used on input line 1433.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [36]
 File: Images/ucl.jpg Graphic file (type jpg)
 
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1502.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1511.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1502.
+Package pdftex.def Info: Images/dstl.png used on input line 1511.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1528--1529
+Underfull \hbox (badness 10000) in paragraph at lines 1537--1538
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1530--1531
+Underfull \hbox (badness 10000) in paragraph at lines 1539--1540
 
  []
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1531.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1540.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1531.
+Package pdftex.def Info: Images/dstl.png used on input line 1540.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [38]
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1591.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1600.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
 
 <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1591.
+Package pdftex.def Info: Images/dstl.png used on input line 1600.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [39]
 Chapitre 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1620--1621
+Underfull \hbox (badness 10000) in paragraph at lines 1629--1630
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1622--1623
+Underfull \hbox (badness 10000) in paragraph at lines 1631--1632
 
  []
 
@@ -2792,14 +2813,14 @@ Package epstopdf Info: Source file: <Images/patch_seabed_1.eps>
 (epstopdf)                    size: 14084 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/patch_seabed_1-eps-
 converted-to.pdf Images/patch_seabed_1.eps>
-(epstopdf)             \includegraphics on input line 1628.
+(epstopdf)             \includegraphics on input line 1637.
 Package epstopdf Info: Output file is already uptodate.
-<Images/patch_seabed_1-eps-converted-to.pdf, id=1120, 357.335pt x 357.335pt>
+<Images/patch_seabed_1-eps-converted-to.pdf, id=1117, 357.335pt x 357.335pt>
 File: Images/patch_seabed_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/patch_seabed_1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/patch_seabed_1-eps-converted-to.pdf used on inp
-ut line 1628.
+ut line 1637.
 (pdftex.def)             Requested size: 130.0854pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/patch_seabed_2.eps>
 (epstopdf)                    date: 2015-11-09 17:41:54
@@ -2810,15 +2831,15 @@ Package epstopdf Info: Source file: <Images/patch_seabed_2.eps>
 (epstopdf)                    size: 14301 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/patch_seabed_2-eps-
 converted-to.pdf Images/patch_seabed_2.eps>
-(epstopdf)             \includegraphics on input line 1633.
+(epstopdf)             \includegraphics on input line 1642.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/patch_seabed_2-eps-converted-to.pdf, id=1121, 357.335pt x 357.335pt>
+<Images/patch_seabed_2-eps-converted-to.pdf, id=1118, 357.335pt x 357.335pt>
 File: Images/patch_seabed_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/patch_seabed_2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/patch_seabed_2-eps-converted-to.pdf used on inp
-ut line 1633.
+ut line 1642.
 (pdftex.def)             Requested size: 130.0854pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/patch_seabed_3.eps>
 (epstopdf)                    date: 2015-11-09 17:41:55
@@ -2829,15 +2850,15 @@ Package epstopdf Info: Source file: <Images/patch_seabed_3.eps>
 (epstopdf)                    size: 24063 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/patch_seabed_3-eps-
 converted-to.pdf Images/patch_seabed_3.eps>
-(epstopdf)             \includegraphics on input line 1638.
+(epstopdf)             \includegraphics on input line 1647.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/patch_seabed_3-eps-converted-to.pdf, id=1122, 357.335pt x 357.335pt>
+<Images/patch_seabed_3-eps-converted-to.pdf, id=1119, 357.335pt x 357.335pt>
 File: Images/patch_seabed_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/patch_seabed_3-eps-converted-to.pdf>
 Package pdftex.def Info: Images/patch_seabed_3-eps-converted-to.pdf used on inp
-ut line 1638.
+ut line 1647.
 (pdftex.def)             Requested size: 130.0854pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/patch_ripple_1.eps>
 (epstopdf)                    date: 2015-11-09 17:41:52
@@ -2848,15 +2869,15 @@ Package epstopdf Info: Source file: <Images/patch_ripple_1.eps>
 (epstopdf)                    size: 24035 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/patch_ripple_1-eps-
 converted-to.pdf Images/patch_ripple_1.eps>
-(epstopdf)             \includegraphics on input line 1649.
+(epstopdf)             \includegraphics on input line 1658.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/patch_ripple_1-eps-converted-to.pdf, id=1123, 357.335pt x 357.335pt>
+<Images/patch_ripple_1-eps-converted-to.pdf, id=1120, 357.335pt x 357.335pt>
 File: Images/patch_ripple_1-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/patch_ripple_1-eps-converted-to.pdf>
 Package pdftex.def Info: Images/patch_ripple_1-eps-converted-to.pdf used on inp
-ut line 1649.
+ut line 1658.
 (pdftex.def)             Requested size: 130.0854pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/patch_ripple_2.eps>
 (epstopdf)                    date: 2015-11-09 17:41:53
@@ -2867,15 +2888,15 @@ Package epstopdf Info: Source file: <Images/patch_ripple_2.eps>
 (epstopdf)                    size: 23100 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/patch_ripple_2-eps-
 converted-to.pdf Images/patch_ripple_2.eps>
-(epstopdf)             \includegraphics on input line 1654.
+(epstopdf)             \includegraphics on input line 1663.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/patch_ripple_2-eps-converted-to.pdf, id=1124, 357.335pt x 357.335pt>
+<Images/patch_ripple_2-eps-converted-to.pdf, id=1121, 357.335pt x 357.335pt>
 File: Images/patch_ripple_2-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/patch_ripple_2-eps-converted-to.pdf>
 Package pdftex.def Info: Images/patch_ripple_2-eps-converted-to.pdf used on inp
-ut line 1654.
+ut line 1663.
 (pdftex.def)             Requested size: 130.0854pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/patch_ripple_3.eps>
 (epstopdf)                    date: 2015-11-09 17:41:53
@@ -2886,22 +2907,22 @@ Package epstopdf Info: Source file: <Images/patch_ripple_3.eps>
 (epstopdf)                    size: 13871 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/patch_ripple_3-eps-
 converted-to.pdf Images/patch_ripple_3.eps>
-(epstopdf)             \includegraphics on input line 1659.
+(epstopdf)             \includegraphics on input line 1668.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/patch_ripple_3-eps-converted-to.pdf, id=1125, 357.335pt x 357.335pt>
+<Images/patch_ripple_3-eps-converted-to.pdf, id=1122, 357.335pt x 357.335pt>
 File: Images/patch_ripple_3-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/patch_ripple_3-eps-converted-to.pdf>
 Package pdftex.def Info: Images/patch_ripple_3-eps-converted-to.pdf used on inp
-ut line 1659.
+ut line 1668.
 (pdftex.def)             Requested size: 130.0854pt x 130.08621pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1665--1666
+Underfull \hbox (badness 10000) in paragraph at lines 1674--1675
 
  []
 
@@ -2909,22 +2930,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 1665--1666
 
  <./Images/patch_seabed_1-eps-converted-to.pdf> <./Images/patch_seabed_2-eps-co
 nverted-to.pdf> <./Images/patch_seabed_3-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 1674--1674
+Underfull \hbox (badness 10000) in paragraph at lines 1683--1683
 []|\T1/aer/m/n/10.95 (+20) Classification
  []
 
 
-Overfull \hbox (3.22253pt too wide) in paragraph at lines 1670--1681
+Overfull \hbox (3.22253pt too wide) in paragraph at lines 1679--1690
  [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1692--1693
+Underfull \hbox (badness 10000) in paragraph at lines 1701--1702
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1694--1695
+Underfull \hbox (badness 10000) in paragraph at lines 1703--1704
 
  []
 
@@ -2936,15 +2957,15 @@ Package epstopdf Info: Source file: <Images/seg_original.eps>
 (epstopdf)                    size: 2866125 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/seg_original-eps-co
 nverted-to.pdf Images/seg_original.eps>
-(epstopdf)             \includegraphics on input line 1700.
+(epstopdf)             \includegraphics on input line 1709.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/seg_original-eps-converted-to.pdf, id=1144, 452.69125pt x 376.40625pt>
+<Images/seg_original-eps-converted-to.pdf, id=1141, 452.69125pt x 376.40625pt>
 File: Images/seg_original-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/seg_original-eps-converted-to.pdf>
 Package pdftex.def Info: Images/seg_original-eps-converted-to.pdf used on input
- line 1700.
+ line 1709.
 (pdftex.def)             Requested size: 156.45494pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/seg_result.eps>
 (epstopdf)                    date: 2015-12-09 14:47:20
@@ -2954,15 +2975,15 @@ Package epstopdf Info: Source file: <Images/seg_result.eps>
 (epstopdf)                    size: 27683 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/seg_result-eps-conv
 erted-to.pdf Images/seg_result.eps>
-(epstopdf)             \includegraphics on input line 1706.
+(epstopdf)             \includegraphics on input line 1715.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/seg_result-eps-converted-to.pdf, id=1145, 452.69125pt x 376.40625pt>
+<Images/seg_result-eps-converted-to.pdf, id=1142, 452.69125pt x 376.40625pt>
 File: Images/seg_result-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Images/seg_result-eps-converted-to.pdf>
 Package pdftex.def Info: Images/seg_result-eps-converted-to.pdf used on input l
-ine 1706.
+ine 1715.
 (pdftex.def)             Requested size: 156.45494pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/seg_pmap_seabed.eps>
 (epstopdf)                    date: 2015-12-09 14:45:43
@@ -2973,15 +2994,15 @@ f>
 (epstopdf)                    size: 61433 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/seg_pmap_seabed-eps
 -converted-to.pdf Images/seg_pmap_seabed.eps>
-(epstopdf)             \includegraphics on input line 1713.
+(epstopdf)             \includegraphics on input line 1722.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/seg_pmap_seabed-eps-converted-to.pdf, id=1146, 452.69125pt x 376.40625p
+<Images/seg_pmap_seabed-eps-converted-to.pdf, id=1143, 452.69125pt x 376.40625p
 t>
 File: Images/seg_pmap_seabed-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/seg_pmap_seabed-eps-converted-to.pdf>
 Package pdftex.def Info: Images/seg_pmap_seabed-eps-converted-to.pdf used on in
-put line 1713.
+put line 1722.
 (pdftex.def)             Requested size: 156.45494pt x 130.08621pt.
 Package epstopdf Info: Source file: <Images/seg_pmap_ripple.eps>
 (epstopdf)                    date: 2015-12-09 14:45:43
@@ -2992,15 +3013,15 @@ f>
 (epstopdf)                    size: 61263 bytes
 (epstopdf)             Command: <repstopdf --outfile=Images/seg_pmap_ripple-eps
 -converted-to.pdf Images/seg_pmap_ripple.eps>
-(epstopdf)             \includegraphics on input line 1720.
+(epstopdf)             \includegraphics on input line 1729.
 Package epstopdf Info: Output file is already uptodate.
 
-<Images/seg_pmap_ripple-eps-converted-to.pdf, id=1147, 452.69125pt x 376.40625p
+<Images/seg_pmap_ripple-eps-converted-to.pdf, id=1144, 452.69125pt x 376.40625p
 t>
 File: Images/seg_pmap_ripple-eps-converted-to.pdf Graphic file (type pdf)
  <use Images/seg_pmap_ripple-eps-converted-to.pdf>
 Package pdftex.def Info: Images/seg_pmap_ripple-eps-converted-to.pdf used on in
-put line 1720.
+put line 1729.
 (pdftex.def)             Requested size: 156.45494pt x 130.08621pt.
 
 
@@ -3008,21 +3029,21 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: Images/ucl.jpg Graphic file (type jpg)
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1730.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1739.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1730.
+Package pdftex.def Info: Images/dstl.png used on input line 1739.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [41 <./Images/patch_ripple_1-eps-converted-to.pdf> <./Images/patch_ripple_2-ep
 s-converted-to.pdf> <./Images/patch_ripple_3-eps-converted-to.pdf>]
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1735.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1744.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1735.
+Package pdftex.def Info: Images/dstl.png used on input line 1744.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
 
 [42 <./Images/seg_original-eps-converted-to.pdf> <./Images/seg_result-eps-conve
@@ -3030,22 +3051,22 @@ rted-to.pdf> <./Images/seg_pmap_seabed-eps-converted-to.pdf> <./Images/seg_pmap
 _ripple-eps-converted-to.pdf>]
 Chapitre 6.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1739--1740
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1746--1747
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 1748--1749
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1750--1751
+Underfull \hbox (badness 10000) in paragraph at lines 1755--1756
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1757--1758
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1759--1760
 
  []
 
@@ -3054,16 +3075,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 1750--1751
 ]
 File: Images/ucl.jpg Graphic file (type jpg)
  <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1757.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1766.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1757.
+Package pdftex.def Info: Images/dstl.png used on input line 1766.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [44]
 Chapitre 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1758--1759
+Underfull \hbox (badness 10000) in paragraph at lines 1767--1768
 
  []
 
@@ -3111,32 +3132,36 @@ LaTeX Font Info:    Font shape `OMS/aer/m/it' in size <10.95> not available
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 353.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1779.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1788.
 File: Images/ucl.jpg Graphic file (type jpg)
 
 <use Images/ucl.jpg>
-Package pdftex.def Info: Images/ucl.jpg used on input line 1779.
+Package pdftex.def Info: Images/ucl.jpg used on input line 1788.
 (pdftex.def)             Requested size: 42.67912pt x 12.62303pt.
 File: Images/dstl.png Graphic file (type png)
  <use Images/dstl.png>
-Package pdftex.def Info: Images/dstl.png used on input line 1779.
+Package pdftex.def Info: Images/dstl.png used on input line 1788.
 (pdftex.def)             Requested size: 42.67912pt x 19.81216pt.
  [49]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1779.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1788.
  (./SCHMT.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1779.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1779.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1788.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1788.
 
 Package rerunfilecheck Info: File `SCHMT.out' has not changed.
-(rerunfilecheck)             Checksum: 30F723B926D04A6F29CD72FD3C8D1953;2970.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1779.
+(rerunfilecheck)             Checksum: 07CC2958760023F541922EC8D177E31F;2872.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1788.
  ) 
 Here is how much of TeX's memory you used:
- 24100 strings out of 493304
- 407140 string characters out of 6139871
- 546236 words of memory out of 5000000
- 26089 multiletter control sequences out of 15000+600000
- 109594 words of font info for 596 fonts, out of 8000000 for 9000
+ 24108 strings out of 493304
+ 407251 string characters out of 6139871
+ 545260 words of memory out of 5000000
+ 26093 multiletter control sequences out of 15000+600000
+ 109169 words of font info for 595 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  63i,21n,57p,1673b,615s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
@@ -3163,10 +3188,10 @@ oublestroke/dsrom10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/doubl
 estroke/dsrom8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/s
 tmary10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/stmaryrd/stmary8.
 pfb>
-Output written on SCHMT.pdf (50 pages, 9336259 bytes).
+Output written on SCHMT.pdf (50 pages, 9388604 bytes).
 PDF statistics:
- 1387 PDF objects out of 1440 (max. 8388607)
- 1180 compressed objects within 12 object streams
+ 1384 PDF objects out of 1440 (max. 8388607)
+ 1176 compressed objects within 12 object streams
  277 named destinations out of 1000 (max. 500000)
- 71762 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 71759 words of extra memory for PDF output out of 74296 (max. 10000000)
 
