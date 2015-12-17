@@ -52,7 +52,7 @@
 				\huge SCATTERING CONVOLUTIONAL HIDDEN MARKOV TREES
 				\vspace*{0.2cm}
 				%%% Subtitle:
-				\\ \large IMAGE REPRESENTATION AND SCATTERING TRANSFORM MODELLING
+				\\ \large IMAGE REPRESENTATION AND SCATTERING TRANSFORM MODELING
 				\vspace*{2cm}
 			\end{sc}
 			%%% Author:
@@ -70,7 +70,7 @@
 			\Large RESEARCH REPORT
 			\vspace*{0.5cm}
 			\\ \large Academic supervisor: James Nelson 
-			\\ \large Sponsor: Dstl/UCL Impact studentship
+			\\ \large Sponsor: DSTL/UCL Impact studentship
 			
 			\vspace*{1cm}
 			\Large UCL
@@ -86,7 +86,14 @@
 	\newpage
 	\thispagestyle{empty}
 	\mbox{}
- 
+	
+\renewcommand{\abstractname}{Abstract:}
+  \begin{abstract}
+    A scattering convolutional hidden Markov tree proposes a new method to perform inference on an high-dimensional signal. It combines the interesting signal representation created by the scattering transform to a powerful probabilistic graphical model.  
+    %It expresses the signal representation created by a scattering convolutional network as a hidden Markov tree.
+    A wavelet scattering network computes a signal representation which is translation invariant, stable to deformations while preserving the informative content of the signal by cascading wavelet transform convolutions with nonlinear modulus and averaging operators. The network's structure and its distribution are described using a hidden Markov tree. This tree offers a mean of performing several inference tasks among which are predictions. The scattering convolutional hidden Markov tree displays promising results on both classification and segmentation tasks of complex images.
+  \end{abstract}
+	 
 	% Table of contents
 	\renewcommand{\contentsname}{Contents:}
 	\setcounter{tocdepth}{2}% Allow only \chapter \section \subsection and \subsubsection in ToC
@@ -104,7 +111,7 @@
 \chapter{Introduction:}
 	\label{chap:Intro}
 	
-	Nowadays statistical signal processing and machine learning methods are applied to a wide range of problems from prediction to optimal control. While some of those applications involves low-dimensional data, full branches of those fields are dedicated to studying high-dimensional inputs. Such problems are focused on studying data living in a complex input space and can be found in field such as image or speach processing, DNA decoding or text document mining. This field has known a regain in popularity lately firstly because, over the couple last decades data got cheaper to collect. This is mainly due to the progresses made on digital cameras, microphones and other sensors for signal acquisition. Second the cost of data storage massively decrease during that time. And finally the computational power available today allows to use more computationally intensive methods on larger datasets. Hence methods to leverage those data have been developed across the range of applications in machine learning and statistical signal processing.\\
+	Nowadays statistical signal processing and machine learning methods are applied to a wide range of problems from prediction to optimal control. While some of those applications involves low-dimensional data, full branches of those fields are dedicated to studying high-dimensional inputs. Such problems are focused on studying data living in a complex input space and can be found in field such as image or speech processing, DNA decoding or text document mining. This field has known a regain in popularity lately firstly because, over the couple last decades data got cheaper to collect. This is mainly due to the progresses made on digital cameras, microphones and other sensors for signal acquisition. Second the cost of data storage massively decrease during that time. And finally the computational power available today allows to use more computationally intensive methods on larger datasets. Hence methods to leverage those data have been developed across the range of applications in machine learning and statistical signal processing.\\
 	
 	The standard approach when working with high dimensional signals can be expressed as a two step procedure. First the data are projected in a feature space where the task at hand (classification, regression...) is simplified. Then prediction is done using a simple predictor in this new representational space. Predictors such as logistic regression or linear Support vector Machine are common choices. The mapping can either be hand-build ---\eg Fourier transform, wavelet transform--- or learned. In the last decade methods for learning the projection have drastically improved under the impulsion of the so called deep learning methods. Deep neural networks (sometime enriched by convolutional architecture) have been able to learn very effective representations for a given dataset and a given task. Such method have achieved state of the art on many standard problems as well as real world applications. And this despite using a very simple prediction mechanism ---on top of a very clever projection method.\\
 	
@@ -113,7 +120,7 @@
 	\section{Signal representation:}
 		\label{sec:Intro/Need}
 				
-		Consider the problem of learning the labelling function, say, $f$ given $N$ sampled training values $\{\bfx_{i}, y_{i}=f(\bfx_{i})\}_{i\leq N}$ where  for all $i \in \llbracket 1 , N \rrbracket$, $\bfx_{i} =\{ x[1] \, \dots \, x[d] \}$ with $d \sim 10^{6}$, $x[.] \in \dsR$ and $y_{i} \in \dsN$. Such signals are, for example, speech waveforms, digital photographies but also electrocardiograms, sonar imagery and many others.\\
+		Consider the problem of learning the labeling function, say, $f$ given $N$ sampled training values $\{\bfx_{i}, y_{i}=f(\bfx_{i})\}_{i\leq N}$ where  for all $i \in \llbracket 1 , N \rrbracket$, $\bfx_{i} =\{ x[1] \, \dots \, x[d] \}$ with $d \sim 10^{6}$, $x[.] \in \dsR$ and $y_{i} \in \dsN$. Such signals are, for example, speech waveforms, digital photographies but also electrocardiograms, sonar imagery and many others.\\
 
 		\begin{figure}[h]
 			\centering
@@ -132,16 +139,16 @@
 			\label{fig:highDim signals}
 		\end{figure}
 		
-		A naive solution to this problem would be to infer the class of a new realization $\bfx^{new}$ by looking at its neighbours in a similar fashion to K-Nearest Neighbours (KNN), for example. This approach is sound for low-dimensional problems~\citep{cover1967nearest}. However it shows limitations in high dimensional cases~\citep{beyer1999nearest} as the number of samples required to find a neighbour of a new realization $\bfx^{new}$ grows exponentially with the number of dimensions. This issue is known in the statistical learning community as the curse of dimensionality.\\
+		A naive solution to this problem would be to infer the class of a new realization $\bfx^{new}$ by looking at its neighbors in a similar fashion to K-Nearest Neighbors (KNN), for example. This approach is sound for low-dimensional problems~\citep{cover1967nearest}. However it shows limitations in high dimensional cases~\citep{beyer1999nearest} as the number of samples required to find a neighbor of a new realization $\bfx^{new}$ grows exponentially with the number of dimensions. This issue is known in the statistical learning community as the curse of dimensionality.\\
 			
-		One can make the assumption that the signal $\bfx$ belongs to a manifold $\Omega$ of $\dsR^{d}$ and this leads to two types of problems. The subset $\Omega$ can be low dimensional and the curse of dimensionality is avoided once the manifold has been isolated. The task at hand is thus a manifold learning problem~\citep{lin2008riemannian} \citep{zhang2012adaptive} or a sparse dictionary representation problem~\citep{kreutz2003dictionary}. However for complex signals, the manifold $\Omega$ is also expected to be high dimensional. In this case, in order to simplify the prediction task, one has to reduce the volume of the signal space without loosing crucial information required to characterize those signals. Hence one has to reduce the volume of $\Omega$ according to the properties of the classification function $f$.\\
+		One can make the assumption that the signal $\bfx$ belongs to a manifold $\Omega$ of $\dsR^{d}$ and this leads to two types of problems. The subset $\Omega$ can be low dimensional and the curse of dimensionality is avoided once the manifold has been isolated. The task at hand is thus a manifold learning problem~\citep{lin2008riemannian} \citep{zhang2012adaptive} or a sparse dictionary representation problem~\citep{kreutz2003dictionary}. However for complex signals, the manifold $\Omega$ is also expected to be high dimensional. In this case, in order to simplify the prediction task, one has to reduce the volume of the signal space without loosing crucial information required to characterize those signals. Hence one has to reduce the volume of $\Omega$ according along the invariant in the input space.\\
 		
-		A mapping $\Phi$ is sought which represents the signal in a new space such that the classification task is simpler. The space should not only capture the main information and discriminatory content in the data but it should also remain stable with respect to appropriate transformations and deformations. Before providing a formal mathematical description of this mapping, it is instructive to consider the following intuitive example.
+		A mapping $\Phi$ is sought which represents the signal in a new space such that the prediction task is simpler. The space should not only capture the main information and discriminatory content in the data but it should also remain stable with respect to appropriate transformations and deformations. Before providing a formal mathematical description of this mapping, it is instructive to consider the following intuitive example.
     
 		\subsection{Intuition:}
       \label{sec:Intro/Signal rep/Intuition}
       
-      Properties of a ``good'' representation for classification can be intuited by looking how humans handle the classification/labelling of visual stimulus and what the elements ensuring good generalization capacities are. Following this approach, one can intuit the following properties:\\
+      Properties of a ``good'' representation for prediction can be intuited by looking how humans handle the classification/labeling of visual stimulus and what the elements ensuring good generalization capacities are. Using this approach, one can intuit the following properties:\\
             
 			\begin{itemize}
 				\item The projection has to be informative enough to permit classification. This means ensuring that $\Phi$ preserves separability between the different classes.\\
@@ -159,7 +166,7 @@
 						\centering
 						\includegraphics[height=2.3in]{im_nine_trl.eps}
 					\end{subfigure}
-					\caption[Translation invariance.]{\centering Translation invariance: Huamns can easily tell that those two images are from the same class.}
+					\caption[Translation invariance.]{\centering Translation invariance: Humans can easily tell that those two images are from the same class.}
 					\label{fig:Illustration translation invariance}
 				\end{figure}
 	
@@ -192,7 +199,7 @@
 						\caption{\centering Loss of information}
 					\end{subfigure}
 					
-					\caption[Stability to deformations.]{\centering Stability to deformations: Huamns can easily tell that (a) and (b) are from the same class. (c) can still be recognized even though it is slightly more challenging. For (d) the informative content is lost.}
+					\caption[Stability to deformations.]{\centering Stability to deformations: Humans can easily tell that (a) and (b) are from the same class. (c) can still be recognized even though it is slightly more challenging. For (d) the informative content is lost.}
 					\label{fig:Illustration stability deformations}
 				\end{figure}
 				
@@ -219,7 +226,7 @@
 						\caption{\centering Important rotation}
 					\end{subfigure}
 					
-					\caption[Rotation invariance.]{\centering Rotation invariance: Huamns can easily tell that (a) and (b) are from the same class. (c) could be either a  `6' or a `9'.}
+					\caption[Rotation invariance.]{\centering Rotation invariance: Humans can easily tell that (a) and (b) are from the same class. (c) could be either a  `6' or a `9'.}
 					\label{fig:Illustration rotation invariance}
 				\end{figure}
 			
@@ -229,7 +236,7 @@
 		\subsection{Formalization:}
       \label{sec:Intro/Signal rep/Formalization}
       
-			Throughout, attention is restricted to signal represented by square-integrable $d$-dimensional functions over the real, namely $\bfx \in \mcalL^{2}(\dsR^{d})$. For more accuracy, the classification function is split in two stages. $f$ now denotes the soft classification function, \ie $f(\bfx) \in \dsR^{K}$ where $K$ is the dimension of the mapping space, and represents the distance to the separating surface. $h$ is the labelling function such that $y=h \circ f(\bfx)$ is now the label associated to a signal $\bfx$. To be informative enough, a representation must preserve separability between elements of different classes. This is encapsulated by the following definition.
+			Throughout, attention is restricted to signal represented by square-integrable $d$-dimensional functions over the real, namely $\bfx \in \mcalL^{2}(\dsR^{d})$. For more accuracy, the classification function is split in two stages. $f$ now denotes the soft classification function, \ie $f(\bfx) \in \dsR^{K}$ where $K$ is the dimension of the mapping space, and represents the distance to the separating surface. $h$ is the labeling function such that $y=h \circ f(\bfx)$ is now the label associated to a signal $\bfx$. To be informative enough, a representation must preserve separability between elements of different classes. This is encapsulated by the following definition.
       
 			\begin{defn} \textbf{(Separability preservation)}\\
 				A representation $\Phi$ preserves separability if all elements of two different classes are distant of at least a margin $C$ in the representation space,
@@ -326,7 +333,7 @@
 		
 			However only the averaging part of a wavelet is invariant to translation ans thus wavelets themselves are known to be non-invariant to translations.\\
 			
-			Another popular signal representation method are the convolutional neural networks~\citep{lecun1995convolutional}. As opposed to the two methods mentioned previously, those operators are not fixed but learned from the data~\citep{simard2003best}. Over the past decade they have provided state of the art results on many standard classification tasks, on image datasets such as \textit{MNIST}, \textit{CIFAR}~\citep{hinton2012improving} and \textit{ImageNet}~\citep{krizhevsky2012imagenet} as well as on speech processing problems such as \textit{TIMIT}~\citep{abdel2012applying}. Those good results are used to advocate that those networks are learning ``good'' representations. However there is no mathematical formalisation of this intuition and it seems that in certain cases they learn representation of the data that are, for example, not invariant to deformations~\citep{szegedy2013intriguing}.\\
+			Another popular signal representation method are the convolutional neural networks~\citep{lecun1995convolutional}. As opposed to the two methods mentioned previously, those operators are not fixed but learned from the data~\citep{simard2003best}. Over the past decade they have provided state of the art results on many standard classification tasks, on image datasets such as \textit{MNIST}, \textit{CIFAR}~\citep{hinton2012improving} and \textit{ImageNet}~\citep{krizhevsky2012imagenet} as well as on speech processing problems such as \textit{TIMIT}~\citep{abdel2012applying}. Those good results are used to advocate that those networks are learning ``good'' representations. However there is no mathematical formalization of this intuition and it seems that in certain cases they learn representation of the data that are, for example, not invariant to deformations~\citep{szegedy2013intriguing}.\\
 			
 			\begin{figure}[h]
 				\begin{center}
@@ -351,7 +358,7 @@
 	\section{Outline of the report:}
     \label{sec:Intro/Outline of the report}    
     
-    The remainder of this document is organized as follow. Section~\ref{chap:ST} summarizes and explains recent work from St\'ephane Mallat and his group on the Scattering Transform (ST), a wavelet-based operator fulfilling all the properties of what has been defined as a ``good'' representation for signal classification. Section~\ref{chap:PGMs} introduces the concept of Probabilistic Graphical Models (PGMs) as generative models that can be used ---among other tasks--- for classification. Section~\ref{chap:SCHMT} describes how the representation produced by the scattering transform can be modelled by a hidden Markov tree, using what we have named Scattering Convolutional Hidden Markov Trees (SCHMTs). Finally Section~\ref{chap:Exp} provides some examples of application.
+    The remainder of this document is organized as follow. Section~\ref{chap:ST} summarizes and explains recent work from St\'ephane Mallat and his group on the Scattering Transform (ST), a wavelet-based operator fulfilling all the properties of what has been defined as a ``good'' representation for signal classification. Section~\ref{chap:PGMs} introduces the concept of Probabilistic Graphical Models (PGMs) as generative models that can be used ---among other tasks--- for classification. Section~\ref{chap:SCHMT} describes how the representation produced by the scattering transform can be modeled by a hidden Markov tree, using what we have named Scattering Convolutional Hidden Markov Trees (SCHMTs). Finally Section~\ref{chap:Exp} provides some examples of application.
         
 	\section{Contributions:}
     \label{sec:Intro/Contrib}    
@@ -419,7 +426,7 @@
 
       As opposed to the Fourier sinusoidal waves, wavelets are operators stable to local $\mathbf{\mcalL^{2}}$ deformations as they can be expressed as localized waveforms~\citep{mallat1999wavelet}. However, as wavelet transform computes a convolutions with a wavelet basis, the resulting transform is a translation covariant operator~\citep{bruna2013invariant}.\\
         
-      To ensure a translation invariant behaviour for an operator initially commuting with translations, one has to introduce a non-linearity in the processing pipeline. Integration is an example of such a non-linearity. Let $R$ be an operator linear or not commuting with translations $L_{c}$, \ie $R(L_{c}\bfx) = L_{c}R(\bfx)$), then the integral $\int R(\bfx(u))du$ is  translation invariant. Applying such a non-linearity to a wavelet transform is equivalent to setting $R(\bfx) = \bfx \ast \psi_{\lambda}$ and one gets the trivial invariant, 
+      To ensure a translation invariant behavior for an operator initially commuting with translations, one has to introduce a non-linearity in the processing pipeline. Integration is an example of such a non-linearity. Let $R$ be an operator linear or not commuting with translations $L_{c}$, \ie $R(L_{c}\bfx) = L_{c}R(\bfx)$), then the integral $\int R(\bfx(u))du$ is  translation invariant. Applying such a non-linearity to a wavelet transform is equivalent to setting $R(\bfx) = \bfx \ast \psi_{\lambda}$ and one gets the trivial invariant, 
       
       \begin{equation*}
 				\label{eq:Trivial invariant}
@@ -753,7 +760,7 @@
     
     The scattering transform has been successfully applied in classification of a wild variety of signals such as audio signals~\citep{anden2011multiscale}, images~\citep{oyallon2014deep} or electrocardiograms~\citep{chudacek2014low} and in the vast majority ---if not all--- the classification task has been done using the features generated by the transform of the dataset as inputs for a discriminative classifier, e.g. Support Vector Machine classifier. The new input vector is obtained by concatenating the scattering coefficients of all orders, scale and orientations into a unique $1$-D vector -for 2-D signal the scattering coefficients are also flattened. Leveraging the richness of the representation generated the scattering transform combined to an SVM classifier provides performance comparable to those of a -small- deep convolutional neural network~\citep{oyallon2013generic}. This section proposes to test this framework on the handwritten digit dataset \textit{MNIST}.\\
     
-    \textit{MNIST} is composed of $28 \times 28$ binary and centred images of handwritten digits. The dataset is split into a training set of $50000$ images and a testing set of $10000$ images and the task at hand is a $10$ classes classification problem.\\
+    \textit{MNIST} is composed of $28 \times 28$ binary and centered images of handwritten digits. The dataset is split into a training set of $50000$ images and a testing set of $10000$ images and the task at hand is a $10$ classes classification problem.\\
     
 		\begin{figure}[h]
 			\centering
@@ -889,7 +896,7 @@
     \subsection{Inference:}
       \label{subsec:PGMs/BN/Inference}
       
-			A Bayesian network encodes the full joint distribution of the studied random variables. This knowledge can be used to perform several interesting inference taks among which are:\\
+			A Bayesian network encodes the full joint distribution of the studied random variables. This knowledge can be used to perform several interesting inference tasks among which are:\\
      % see http://www.ee.columbia.edu/~vittorio/lecture12.pdf
 				
      \begin{itemize}
@@ -900,7 +907,7 @@
 					\label{eq:BN inference BEL}
 				\end{equation}
 				
-				Selecting the $R_{i}$ maximising this probability is the prediction for this node. The advantages of belief updating over other prediction method as it can provide a probabilistic prediction even when given incomplete observations ---\ie a set $\{R_{j}\}_{j \in J}$ such that $J \cup \{i\} \neq \bfR$. Belief updating can be extended to the prediction of a set of unobserved variables.\\
+				Selecting the $R_{i}$ maximizing this probability is the prediction for this node. The advantages of belief updating over other prediction method as it can provide a probabilistic prediction even when given incomplete observations ---\ie a set $\{R_{j}\}_{j \in J}$ such that $J \cup \{i\} \neq \bfR$. Belief updating can be extended to the prediction of a set of unobserved variables.\\
 				
 				\item Optimal decision: A probabilistic graphical model can be used to express actions taken by an agent to modify the state of an uncertain world. In this case given some evidences $\{R_{j}\}_{j \in J}$ where $J$ is a subset of the graph $\mcalG$ one is interested in finding the set of action $\{A_{i}\}_{i \in \mcalA}$ where $\mcalA$ is the set of all possible actions. To do so one also needs a reward function $O_{i}(A_{i})$ expressing the outcome of the action $A_{i}$,  maximizing the probability of the outcome $\O$,
 
@@ -961,7 +968,7 @@
       
       \subsubsection{Incomplete data:}
 
-				In this case each training example of the set $\bfX$  only contains the value of some random variable $\{R_{i}\}$ of the graph. In such a case one has to use a two steps iterative algorithm named the Expectation-Maximisation (EM) algorithm. The first step (Expectation) aims at estimating the values of the unobserved random variables given the current estimate of the parameters $\Theta$, while the Maximisation step aims at providing a ML estimate of $\Theta$ once all the variable are known or estimated. This procedure is described in more details in Section~\ref{sec:SCHMT/Learning}.
+				In this case each training example of the set $\bfX$  only contains the value of some random variable $\{R_{i}\}$ of the graph. In such a case one has to use a two steps iterative algorithm named the Expectation-Maximization (EM) algorithm. The first step (Expectation) aims at estimating the values of the unobserved random variables given the current estimate of the parameters $\Theta$, while the Maximization step aims at providing a ML estimate of $\Theta$ once all the variable are known or estimated. This procedure is described in more details in Section~\ref{sec:SCHMT/Learning}.
 				
   \section{Markov Models:}
     \label{sec:PGMs/MM}
@@ -981,7 +988,7 @@
     
     Maybe the most famous class of Markov model is the Markov chain. It has applications in finance (Brownian motion~\citep{duncan2000stochastic}), in Internet page ranking (Google page rank~\citep{haveliwala2003second}) or as a sampling procedure (Markov Chain Monte-Carlo (MCMC)~\citep{gilks2005markov}). Those models are not covered in this document but~\citep{kemeny1960finite} provides a good entry point to the field for reader with further interests for Markov chains.\\
     
-    Another flavour of Markov models are the Hidden Markov Models (HMMs). The remainder of this section is dedicated to providing a general introduction to those models. While Subsection~\ref{subsec:PGMs/MM/Architecture} formalizes the HMM modelling, Subsection~\ref{subsec:PGMs/MM/Inference} and~\ref{subsec:PGMs/MM/Learning} respectively describes the inference mechanism and the learning method for HMMs.    
+    Another flavor of Markov models are the Hidden Markov Models (HMMs). The remainder of this section is dedicated to providing a general introduction to those models. While Subsection~\ref{subsec:PGMs/MM/Architecture} formalizes the HMM modeling, Subsection~\ref{subsec:PGMs/MM/Inference} and~\ref{subsec:PGMs/MM/Learning} respectively describes the inference mechanism and the learning method for HMMs.    
     
     \subsection{Architecture:}
       \label{subsec:PGMs/MM/Architecture}
@@ -1042,7 +1049,7 @@
       
       and $\ds1(\text{event})$ is the binary indicator of occurrence of a event. The initial distribution and the observation model could be estimated in a similar fashion.\\
       
-      However since $H_{[0:T]}^{n}$ is hidden, one have to estimate the hidden states prior to performing the ML update. The rough idea of the EM-algorithm is to estimate the hidden states given the observations using a the Maximum A Posteriori approached described in the previous section with the current set of parameters. This is the Expectation (E) step. Those estimated sequences of hidden state are then used to update the parameters' estimate. This is the Maximisation (M) step.\\
+      However since $H_{[0:T]}^{n}$ is hidden, one have to estimate the hidden states prior to performing the ML update. The rough idea of the EM-algorithm is to estimate the hidden states given the observations using a the Maximum A Posteriori approached described in the previous section with the current set of parameters. This is the Expectation (E) step. Those estimated sequences of hidden state are then used to update the parameters' estimate. This is the Maximization (M) step.\\
       
       One can prove~\citep{baum1970maximization}~\citep{dempster1977maximum} the convergence of this procedure toward a ---local--- maximum of the the likelihood.
       
@@ -1070,15 +1077,14 @@
   \section{SCHMT model and related works:}
     \label{sec:SCHMT/Rel work}
       
-    The idea behind the SCHMT model is to assume that the more detailed representation of the signal is somehow correlated to the less detailed one from which it is generated. More formally this means that for a signal $\bfx$, $s_{i}$ is somehow correlated to $s_{\rho(i)}$. This assumption yields a modelling of the scattering network by a Markov tree and assumes,
+    The idea behind the SCHMT model is to assume that the more detailed representation of the signal is somehow correlated to the less detailed one from which it is generated. More formally this means that for a signal $\bfx$, $s_{i}$ is somehow correlated to $s_{\rho(i)}$. This assumption yields a modeling of the scattering network by a Markov tree and assumes,
     
     \begin{equation}
       P(S_{i} |\mcalT) = P(S_{i} | S_{\rho(i)}).
       \label{eq:SMT - false hypo}
     \end{equation}\\
 
-    Those independence properties are encoded in the graph displayed in Figure~\ref{fig:ST tree}. M
-odels trying to describe directly the correlation across coefficients at different scales have been studied for traditional wavelet transforms~\citep{lee1996new} but are in conflict with the compression property of the wavelet ---\ie the fact that most wavelet representations are sparse~\citep{crouse1998wavelet}. Thus it seems that a simple one-step Markovian assumption across scale is not satisfying to describe the complex relationship between wavelet or scattering coefficients.\\
+    Those independence properties are encoded in the graph displayed in Figure~\ref{fig:ST tree}. Models trying to describe directly the correlation across coefficients at different scales have been studied for traditional wavelet transforms~\citep{lee1996new} but are in conflict with the compression property of the wavelet ---\ie the fact that most wavelet representations are sparse~\citep{crouse1998wavelet}. Thus it seems that a simple one-step Markovian assumption across scale is not satisfying to describe the complex relationship between wavelet or scattering coefficients.\\
     
     A common approach when a direct Markovian model does not hold is to introduce hidden states and assume the Markovian property across those unobserved states. The observed nodes being then only dependent on their respective state. This architecture has been adopted to create the SCHMT. This model is represented by Figure~\ref{fig:SCHMT 1} and it induces the following independence properties,
     
@@ -1157,7 +1163,7 @@ odels trying to describe directly the correlation across coefficients at differe
   \section{Hypothesis:}
     \label{sec:SCHMT/Hypos}
     
-    Expressing the dependencies between the scattering coefficients as a Hidden Markov Tree implies two modelling assumptions. The first one reflects the fact that the scattering coefficients can effectively be expressed by two hidden states,\\
+    Expressing the dependencies between the scattering coefficients as a Hidden Markov Tree implies two modeling assumptions. The first one reflects the fact that the scattering coefficients can effectively be expressed by two hidden states,\\
     
     \begin{assumption}\textbf{$K$ populations:}\\
 			A signal's scattering coefficients can be described by $K$ clusters. The smooth regions are represented by small scattering coefficients, while edges, ridges, and other singularities are represented by large coefficients.\\
@@ -1645,9 +1651,16 @@ odels trying to describe directly the correlation across coefficients at differe
   \section{Sonar Imagery:}
 		\label{sec:Exp/Sonar:}
 		
-		In underwater mine detection recovering a large proportion of the true positives is crucial since missing one of them could be very costly. However, recovering a large proportion of the true positives may incur many false positives. Reducing these to a manageable number is an open problem in marine sciences. Indeed by its design an underwater mine can be mistaken with some natural features of the seabed. One of those natural features generating many false alarm are called ``ripple''. Those regular patterns drawn in the sand by currents can vary greatly in shape and orientation. To reduce the number of false positive it is thus interesting to be able to tell apart flat seabed from ripply one. This is the task proposed for the SCHMT.\\
+		In underwater mine detection recovering the largest proportion of the true positives is crucial since missing a target could be very costly. However, recovering a large proportion of the true positives may incur many false positives. Reducing these to a manageable number is an open problem in marine sciences. Indeed by its design an underwater mine can be mistaken with some natural features of the seabed. One of those natural features generating many false alarms is called ``ripple''. Those regular patterns drawn in the sand by currents can vary greatly in shape and orientation as displayed on the right half of Figure~\ref{fig:Ripple patch}. To reduce the number of false positives, it is thus interesting to be able to tell apart flat seabed from ripply one. This is the task proposed for the SCHMT.\\
 		
-		The data used are extracted from the \textit{UDRC MCM} sonar imagery dataset~\citep{udrc2015sonar}. This dataset comprises Synthetic Aperture RADAR (SAS imagery) and hyperspectral data ---not used in this experiment. From those very high dimensional images, $100$ by $100$ patches have been extracted and labelled as either seabed or ripple (see respectively Figure~\ref{fig:Seabed patch} and Figure~\ref{fig:Ripple patch}). The classification task at hand is very challenging due to the low informative content of each images and the high intra-class variability.\\
+		\begin{figure}[h]
+			\centering
+			\includegraphics[height=3.0in]{seg_original.eps}
+			\caption[SAS sonar raw image.]{SAS sonar raw image: Ripples can be observed on the right half of the image}
+			\label{fir:SAS raw}
+		\end{figure}		
+		
+		The data used are extracted from the \textit{UDRC MCM} sonar imagery dataset~\citep{udrc2015sonar}. This dataset comprises Synthetic Aperture RADAR ($7300 \times 2000$ pixels SAS imageries) and hyperspectral data ---not used in this experiment. From those images, easier to handle $100$ by $100$ patches have been extracted and labeled as either seabed or ripple (see respectively Figure~\ref{fig:Seabed patch} and Figure~\ref{fig:Ripple patch}). The classification task at hand is very challenging due to the low informative content of each images and the high intra-class variability.\\
 
 		\begin{figure}[h]
 			\centering
@@ -1690,7 +1703,7 @@ odels trying to describe directly the correlation across coefficients at differe
 			\label{fig:Ripple patch}
 		\end{figure}
 		
-		The scattering transform used has $M=3$ orders, $J=5$ scales, $L=3$ orientations and uses a Morlet wavelet and the hidden Markov tree has $K=2$ states and is using a mixture of Gaussian to describe the relationship between the scattering coefficients and the hidden states. Two models ---one for each class considered--- $\Theta_{ripple}$ and $\Theta_{seabed}$ are trained on $200$ realizations of their class signal. The testing is then realized on $80$ images ---$40$ of each classes. The performance of the SCHMT are assessed on $100$ instances of this experiment and the results are displayed in Table~\ref{table:Clf_ripple}.\\
+		The scattering transform used has $M=3$ orders, $J=5$ scales, $L=3$ orientations and uses a Morlet wavelet. The hidden Markov tree has $K=2$ states and is using a mixture of Gaussian to describe the relationship between the scattering coefficients and the hidden states. Two models ---one for each class considered--- $\Theta_{ripple}$ and $\Theta_{seabed}$ are trained on $200$ realizations of their class signal. The testing is then realized on $80$ images ---$40$ of each classes. The performance of the SCHMT are assessed on $100$ instances of this experiment and the results are displayed in Table~\ref{table:Clf_ripple}.\\
 		
 		\begin{center}
 			\begin{table}[h]
@@ -1712,12 +1725,12 @@ odels trying to describe directly the correlation across coefficients at differe
 			\end{table}
 		\end{center}
 		
-		The first line of Table~\ref{table:Clf_ripple} displays the results obtained on the all $100$ experiments run. Despite a slightly unsatisfying average  classification score of $74\%$, the best models reach a good accuracy of $90\%$. The lowest score is $50\%$ accuracy and is obtained because all the testing examples are associated with to one class. This can be explained by one class's model having reached a local maxima way less interesting than the other. Those results highly a weakness of the current learning method. At the moment the convergence is not properly tested during the learning phase. However this experiment and its very satisfying best model also validate the assumptions made since when the convergence occurs correctly the discriminative performance are good. The other lines in Table~\ref{table:Clf_ripple} simulates the results if a validation criterion based on an imposed accuracy score on a validation set was imposed. This validation set would be a way to address the problem of occasional convergence to a local minima. Another leads would be to work on the EM algorithm itself to make it more robust by adding information based convergence test.  
+		The first row of Table~\ref{table:Clf_ripple} displays the results obtained on $100$ experiments run. Despite a slightly unsatisfying average  classification score of $74\%$, the best models reach a good accuracy of $90\%$. The lowest score is $50\%$ accuracy and is obtained because all the testing examples are all associated to the same class. This can be explained by one class's model having converged to a local maximum less interesting than the other. Those cases highly a weakness of the current learning method. At the moment the convergence is tested using simple improvement rule which can lead to local maxima. The design of a smarter convergence test based on information criterion could be a way to overcome this issue. Overall, this experiment and its very satisfying best model validate the assumptions made since when convergence occurs correctly the discriminative performance are good. The second and third rows in Table~\ref{table:Clf_ripple} simulates the results if a validation criterion based on an imposed accuracy score on a validation set was imposed. This validation set would be another way to address the problem of occasional convergence to local maxima. 
 		
   \section{Segmentation:}
 		\label{sec:Exp/Segmentation:}
 		
-		On its simplest form  a segmentation task can be seen as a set of independent classification tasks on subpart of an image. Hence one can use the models trained in the previous section to realize the segmentation of a full sonar imagery.\\
+		On its simplest form segmentation can be seen as a set of independent classification tasks on subpart of an image. Hence one can use the models trained in the previous section to realize the segmentation of a full sonar imagery.\\
 		
 		One of the  $2000 \times 7300$ image from the \textit{UDRC MCM} is cut into a set $100 \times 100$ patches ---some regions of the original image are not considered. And each of those patches is presented to the classifier. Results of this procedure can be seen in Figure~\ref{fig:Segmentation}.\\
 
@@ -1739,14 +1752,14 @@ odels trying to describe directly the correlation across coefficients at differe
 			\begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[height=1.8in]{seg_pmap_seabed.eps}
-        \caption{Probability map for the class ''seabed''}
+        \caption{Probability map for the class ``seabed''}
         \label{subfig:seg_pmap_seabed}
 			\end{subfigure}
 			~
 			\begin{subfigure}[t]{0.48\textwidth}
         \centering
         \includegraphics[height=1.8in]{seg_pmap_ripple.eps}
-        \caption{Probability map for the class ''ripple''}
+        \caption{Probability map for the class ``ripple''}
         \label{subfig:seg_pmap_ripple}
 			\end{subfigure}
 			~
@@ -1754,7 +1767,7 @@ odels trying to describe directly the correlation across coefficients at differe
 			\label{fig:Segmentation}
 		\end{figure}
 		
-		Even though this approach to segmentation is very naive and does not introduce any form of spatial smoothing or correlation between nearby patches to improve accuracy, the SCHMT model provides satisfying segmentation of the seabed. Furthermore, as displayed by the Figure~\ref{subfig:seg_pmap_ripple} and~\ref{subfig:seg_pmap_seabed}, it provides a probability map for the confidence in our segmentation decision. Those probability maps are very interesting as they show that the misclassified patches do not have a high probability of belonging to the wrong class. It just appears that given the learned model their probability to belong to their own class is very low. %Such maps are interesting as they could easily be exploited by a human operator to help in a decision taking process.
+		Even though this approach to segmentation is very naive and does not introduce any form of spatial smoothing or correlation between nearby patches to improve accuracy, the SCHMT model provides satisfying segmentation of the seabed. Furthermore, as displayed by the Figure~\ref{subfig:seg_pmap_ripple} and~\ref{subfig:seg_pmap_seabed}, it provides a probability map for the confidence in our segmentation decision. Those probability maps are very interesting as they show that the misclassified patches do not have a high probability of belonging to the wrong class. It just appears that given the learned model their probability to belong to their own class is low. One could leverage this information by introducing an ``uncertain'' category for patches where all prediction probabilities are low. One could then decide to do further investigation on those patches. %Such maps are interesting as they could easily be exploited by a human operator to help in a decision taking process.
 		
 		
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1764,26 +1777,28 @@ odels trying to describe directly the correlation across coefficients at differe
 	\label{chap:ccl}
 
   \section{Scattering convolutional hidden Markov tree:}
-		This document introduces a framework to process a high-dimensional signal from the raw data to the prediction task. First SCHMTs project the data into a representational space of even higher dimensionality but of reduced volume along the invariants in the data. Then a probabilistic graphical model ---hidden Markov tree--- is used to create a generative model of the distribution of the data in this space. This model can then be used for inference tasks such as prediction.\\
+		This document introduces a new framework to process a high-dimensional signal from the raw data to the prediction task. First SCHMTs project the data into a representational space of even higher dimensionality but of reduced volume along the invariants in the data. Then a probabilistic graphical model ---hidden Markov tree--- is used to fit a generative model to the distribution of the representation of the data. When tested on complex classification and segmentation tasks this model shows that it is able to accurately discriminate the classes.\\
   
-		SCHMT appears to be a powerful tool combining the interesting properties of the scattering transform for signal representation and the representational power of the hidden Markov models. As seen in Section~\ref{chap:Exp}, the modelled distribution can be used to perform efficient discrimination/classification tasks on images with low informative content. Even though this document considers only classification, a generative model is much more versatile than a simple ---yet efficient--- discriminative counterpart. Because they model the full distribution of the data they can express more complex relationships between the observed and the unknown variables than simple discrimination (see Sub-section~\ref{subsec:PGMs/BN/Inference} for more details).
+		SCHMT is a powerful tool combining the interesting properties of the scattering transform for signal representation and the representational power of the hidden Markov models. As seen in Section~\ref{chap:Exp}, the modeled distribution can be used to perform efficient discrimination/classification tasks on images with low informative content. Even though this document considers only classification, a generative model is much more versatile than a simple ---yet efficient--- discriminative counterpart. Because they model the full distribution of the data they can express more complex relationships between the observed and the unknown variables than simple discrimination (see Sub-section~\ref{subsec:PGMs/BN/Inference} for more details).
   
   %It provides with an analytically tractable interesting representation of high-dimensional signals as well as method to model the distribution of this representation. 
     
   \section{Future work:}
-		Despite showing good performance when the learning phase has converged properly, SCHMT's performance is still undermined by occasional convergence issues which have drastic effects on learning quality. This observation is one of the main drivers for the upcoming work. The other main focuses are to keep a well define probabilistic framework in order to be able to express the uncertainty of our model and of our predictions.\\
+		Despite showing good performance when the learning phase has converged properly, SCHMT is still undermined by occasional convergence issues which have drastic effects on learning quality. This observation is one of the main drivers for the upcoming work. We are also interested in extending the inference tasks performed beyond ``simple'' predictions. Finally we want to keep a well define probabilistic framework in order to be able to express the uncertainty of our model and of our predictions.\\
+		
+		Even though theoretically SCHMTs are much more versatile, this document only reports classification task. We would like to test the other inference options offered by our model. An interesting direction would be to use sensitivity analysis (see Sub-section~\ref{subsec:PGMs/MM/Inference}) to prune the tree and remove the least informative branch of the scattering convolutional network.\\ 
 		
 		The version of the EM algorithm considered in this report uses full Bayesian inference. However this methods is computationally expensive and sometimes yields a poor learning. Furthermore this version of the EM algorithm provides only a point-wise estimate of the model's parameters. It would be interesting to apply variational methods the this problem~\citep{wainwright2008graphical}. Beside a potential improvement of the learning /performance, variational inference would also provide an estimated distribution for the model's parameters, allowing us to have access to a measure of uncertainty for the learned model and thus discard models according to the uncertainty on their parameters.\\
 		
 		Another interesting direction to follow for future works is to integrate the scattering convolutional hidden Markov tree into a hierarchical graphical models~\citep{fine1998hierarchical}. This framework would allow the use the SCHMT model as a node of a wider probabilistic graphical model. Using such an architecture yields a tremendous number of possibilities. The performance in the segmentation task could be improved by adding a layer of graphical model encoding the spatial dependencies between the different labels in the scene. One could also use hierarchical models to describe a network of sensors each providing information on a targeted scene or integrate multiple source of information into the final prediction.\\
 		
-		Finally another interesting lead would be to consider other architectures for the graphical model and even make it includes the representation learning step. This would be possible using Bayesian neural networks and probabilistic back-propagation~\citep{hernandez2015probabilistic} or a Bayesian flavour of back-propagation~\citep{blundell2015weight}.
+		Finally another interesting lead would be to consider other architectures for the graphical model and even make it includes the representation learning step. This would be possible using Bayesian neural networks and probabilistic back-propagation~\citep{hernandez2015probabilistic} or a Bayesian flavor of back-propagation~\citep{blundell2015weight}.
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Acknowledgements:}
-	We would like to thanks Dstl and UCL for their support on this project. Jean-Baptiste Regli is funded by a Dstl/UCL Impact studentship. Members from DSTL also provided useful insights on the weakness of the actual classification and segmentation tools as well as a fresh look to the work done.\\
+	We would like to thanks DSTL and UCL for their support on this project. Jean-Baptiste Regli is funded by a DSTL/UCL Impact studentship. Members from DSTL also provided useful insights on the weakness of the actual classification and segmentation tools as well as a fresh look to the work done.\\
 
 	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

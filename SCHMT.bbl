@@ -17,6 +17,12 @@ And{\'e}n, J. and Mallat, S. (2011).
 \newblock Multiscale scattering for audio classification.
 \newblock In {\em ISMIR}, pages 657--662.
 
+\bibitem[Attias, 2000]{attias2000variational}
+Attias, H. (2000).
+\newblock A variational bayesian framework for graphical models.
+\newblock {\em Advances in neural information processing systems},
+  12(1-2):209--215.
+
 \bibitem[Baker et~al., 2014]{baker2014using}
 Baker, M.~J., Trevisan, J., Bassan, P., Bhargava, R., Butler, H.~J., Dorling,
   K.~M., Fielden, P.~R., Fogarty, S.~W., Fullwood, N.~J., Heys, K.~A., et~al.
@@ -72,6 +78,11 @@ Bruna, J. and Mallat, S. (2013).
 \newblock {\em Pattern Analysis and Machine Intelligence, IEEE Transactions
   on}, 35(8):1872--1886.
 
+\bibitem[Cheng et~al., 2015]{cheng2015deep}
+Cheng, X., Chen, X., and Mallat, S. (2015).
+\newblock Deep haar scattering networks.
+\newblock {\em arXiv preprint arXiv:1509.09187}.
+
 \bibitem[Chudacek et~al., 2014]{chudacek2014low}
 Chudacek, V., Talmon, R., Anden, J., Mallat, S., Coifman, R., Abry, P., and
   Doret, M. (2014).
@@ -90,6 +101,11 @@ Crouse, M.~S., Nowak, R.~D., and Baraniuk, R.~G. (1998).
 \newblock Wavelet-based statistical signal processing using hidden markov
   models.
 \newblock {\em Signal Processing, IEEE Transactions on}, 46(4):886--902.
+
+\bibitem[Dasgupta and Carin, 2006]{dasgupta2006texture}
+Dasgupta, N. and Carin, L. (2006).
+\newblock Texture analysis with variational hidden markov trees.
+\newblock {\em IEEE transactions on signal processing}, 54(6):2352--2356.
 
 \bibitem[De~Chazal et~al., 2000]{de2000using}
 De~Chazal, P., Celler, B., and Reilly, R. (2000).
@@ -153,6 +169,13 @@ Fine, S., Singer, Y., and Tishby, N. (1998).
 Forney~Jr, G.~D. (1973).
 \newblock The viterbi algorithm.
 \newblock {\em Proceedings of the IEEE}, 61(3):268--278.
+
+\bibitem[Foti et~al., 2014]{NIPS2014_5560}
+Foti, N., Xu, J., Laird, D., and Fox, E. (2014).
+\newblock Stochastic variational inference for hidden markov models.
+\newblock In Ghahramani, Z., Welling, M., Cortes, C., Lawrence, N., and
+  Weinberger, K., editors, {\em Advances in Neural Information Processing
+  Systems 27}, pages 3599--3607. Curran Associates, Inc.
 
 \bibitem[Gilks, 2005]{gilks2005markov}
 Gilks, W.~R. (2005).
@@ -283,6 +306,13 @@ Nelson, J. and Kingsbury, N. (2010).
 Nilsson, N.~J. (1998).
 \newblock {\em Artificial intelligence: a new synthesis}.
 \newblock Morgan Kaufmann.
+
+\bibitem[Olariu et~al., 2009]{olariu2009modified}
+Olariu, V., Coca, D., Billings, S.~A., Tonge, P., Gokhale, P., Andrews, P.~W.,
+  and Kadirkamanathan, V. (2009).
+\newblock Modified variational bayes em estimation of hidden markov tree model
+  of cell lineages.
+\newblock {\em Bioinformatics}, 25(21):2824--2830.
 
 \bibitem[Oyallon and Mallat, 2014]{oyallon2014deep}
 Oyallon, E. and Mallat, S. (2014).

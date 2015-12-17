@@ -38,48 +38,51 @@
 \begin{document}
 
 \chapter{Conclusion:}
-	\label{chap:ccl}
+  \label{chap:ccl}
 
   \section{Future work:}
   
-		Despite showing good performances when the learning phase has converged properly, SCHMT's performances are still undermined by a sometime poor learning quality. This observation is one of the main drivers for the upcoming work. The other main focus is to keep a well define probabilistic framework in order to be able to express the uncertainty of our model and of our predictions. Those concerns yields to considering two main lines of research for upcoming work both articulated around the variational Bayes approximation to inference.\\
-		
-		\subsection{Variational Bayes for hidden Markov trees:}
-		
-			The version of the EM algorithm considered in this report uses full Bayesian inference. Despite providing interesting results this methods is computationally expensive and only provide with a point-wise estimate of the model's parameters. A way around those issues is to use the Variational Bayes (VB) approximation for inference~\cite{wainwright2008graphical}.\\
-			
-			The idea behind variational Bayes is to substitute the -most of the time- intractable posterior inference evaluation by an easier to solve optimization problem. This is done by approximating the target posterior by a variational distribution from a simpler parametric family. Meaning that, given a set of data $\bfX$ and the corresponding targets $\bfY$ as well as the model's parameters $\Theta$, the task at end is now the minimization of the Kullback-Leibler divergence between the true target posterior $P(\bfY | \bfX, \Theta)$ and the variational distribution $q(\Theta, \bfY)$. This trick has been applied successfully to a variety of Bayesian models~\textbf{\textit{TODO-1}}, and even to Hidden Markov Trees~\textbf{\textit{TODO-2}}.\\
-			%TODO-1: variational bayes in PGM, in HMM and in Neural networks ---- Warning: No stochastic VB
-			%TODO-2: cite VB HMT 1 and 2
-			
-			Recently Variational Bayes has been improved by leveraging methods borrowed to the optimisation community. ~\textbf{\textit{TODO-3}} developed a scalable modification to VB using stochastic gradients for optimisation -Stochastic Variational Bayes (SVB). Even more recently,~\textbf{\textit{TODO-4}} developed a method to apply SVI to hidden Markov Models. \\
-			%TODO-3: cite [9, 10] of SVI for HMM
-			%TODO-4: cite SVI for HMM
-			
-			We propose over the next few months to develop a stochastic variational Bayes version of the EM algorithm for hidden Markov trees and apply it to scattering convolutional hidden Markov trees. This project can be breakdown into two major steps:\\
-			
-			\begin{itemize}
-			  \item First we first plan to implement a variational version of the EM algorithm for SCHMTs following~\cite{biology smoothed VB HMT}. Here again the algorithm has been developed for binary regular trees, but can simply be adapted to the non-binary non-regular trees we are interested in. We thus plan a month for the implementation and at least another month for testing and experiments. Hopefully the VB version of SCHMTs will provide good enough results for a conference paper.\\
-			  
-			  \item The logical next step is to develop a stochastic version of the variational Bayes expectation maximization algorithm for hidden Markov trees, leading to the development of SVB-SCHMTs.  This step is expected to require more work than the previous one as the SVB framework as not yet been developed for HMTs. However we can follow the framework defined by JB. Durand~\cite{durand2004computational} when adapting ~\cite{devijver1985baum} smoothed-EM for HMM to HMTs to inspire us. We plan to spend about a month on developing the algorithm -can be done in parallel of coding VB-SCHMTS, another month for coding it and then a couple months for experiments. Hopefully the SVB-SCHMTs would provide enough material to lead to both a conference and a journal paper.\\
-			\end{itemize}
+  Despite showing good performance when the learning phase has converged properly, SCHMT is still undermined by occasional convergence issues which have drastic effects on learning quality. This observation is one of the main drivers for the upcoming work. The other main focus is to keep a well define probabilistic framework in order to be able to express the uncertainty of our model and of our predictions. Finally we also want to extend the inference tasks considered from ``simple'' predictions to more complex ones.\\
+  
+  Those observations yields considering three main lines of research for upcoming work both articulated around the variational Bayes approximation to inference.\\
 
-		\subsection{Hierarchical variational models:}
+  \subsection{Inference:}
+  
+    Even though theoretically SCHMTs are much more versatile, this document only reports classification task. We would like to test other inference options offered by our model.\\
+  
+    An interesting direction would be to use sensitivity analysis (see Sub-section~\ref{subsec:PGMs/MM/Inference}) to prune the tree and remove the least informative branch of the scattering convolutional network. Reducing the complexity of the tree would have several advantages. First a smaller tree would reduce the computational time required to perform inference. Second a smaller tree is expected to perform better when used for discrimination as the pruning will transform the over-complete representation generated by the SCHMT into a simpler, less redundant representation.\\
+		  
+    Another interesting task would be generation. This means generating the most likely image associated to a given class. This is a two steps process. First one needs to infer the most likely scattering tree given a class. This can be done fairly easily by using the SCHMT model's learned parameters. This done one is left with the most likely scattering convolutional network. Thus the second step is to invert the scattering transform to generate an image. Unfortunately, the invertibility of the scattering transform is still an open question~\citep{cheng2015deep}.\\
+		  
+    All the building blocs for implementing the sensitivity analysis are ready, we just need to define the cleverest way to implement it. Hence we estimate at about two weeks the time require to do it. Then testing should take at least a month as the experiment to run will be fairly long (training HMTs for all possible pruning). Regarding data generation we will wait until S\'ephane Mallat has properly define the invertibility of the scattering transform before taking any action on this. Good results in pruning would provide sufficient material for a conference article, especially since it can be combine with other improvements (see 
+		   
+  \subsection{Variational Bayes for hidden Markov trees:}
 
-			Variational Bayes approximation quality is highly correlated to the choice made 
-			The quality of approximation made in the variational Bayes framework is highly correlated to the choice made for the variational distribution family. 
-			
-			
+    The version of the EM algorithm considered in this report uses full Bayesian inference. Despite providing interesting results this methods is computationally expensive and only provides with a point-wise estimate of the model's parameters. A way around those issues is to use the Variational Bayes (VB) approximation for inference~\cite{wainwright2008graphical}.\\
+    
+    The idea behind variational Bayes is to substitute the -most of the time- intractable posterior inference evaluation by an easier to solve optimization problem. This is done by approximating the target posterior by a variational distribution from a simpler parametric family. Meaning that, given a set of data $\bfX$ and the corresponding targets $\bfY$ as well as the model's parameters $\Theta$, the task at end is now the minimization of the Kullback-Leibler divergence between the true target posterior $P(\bfY | \bfX, \Theta)$ and the variational distribution $q(\Theta, \bfY)$. This trick has been applied successfully to a variety of Bayesian models~\citep{attias2000variational}~\citep{wainwright2008graphical}, and even to Hidden Markov Trees~\citep{dasgupta2006texture}~\citep{olariu2009modified}.\\
 
+    Recently Variational Bayes has been improved by leveraging methods borrowed to the optimisation community. ~\textbf{\textit{TODO-3}} developed a scalable modification to VB using stochastic gradients for optimisation -Stochastic Variational Bayes (SVB). Even more recently,~\citep{NIPS2014_5560} developed a method to apply SVB to hidden Markov Models. \\
+    %TODO-3: cite [9, 10] of SVI for HMM
 
-			
-			
-			
-			Beside a potential improvement of the performance, variational inference would also provide a estimated distribution for the model's parameter, thus allowing us to have access to a measure of uncertainty for the learned model and thus discard models according to the uncertainty on their parameters.\\
-		
-		Another interesting direction to follow for future works is to integrate the scattering convolutional hidden Markov tree into a hierarchical graphical models~\cite{fine1998hierarchical}. This framework would allow the use the SCHMT model as a node of a wider probabilistic graphical model. Using such an architecture yields to a tremendous number of possibilities. The performance in the segmentation task could be improved by adding a layer of graphical model encoding the spatial dependencies between the different labels in the scene. One could also use hierarchical models to describe a network of sensors each providing information on a targeted scene or integrate multiple source of information into the final prediction.\\
-		
-		Finally another interesting lead would be to consider other architectures for the graphical model and even make it includes the representation learning step. This would be possible using Bayesian neural networks and probabilistic back-propagation~\cite{hernandez2015probabilistic} or a Bayesian flavour of back-propagation~\cite{blundell2015weight}.
+    We propose over the next few months to develop a stochastic variational Bayes version of the EM algorithm for hidden Markov trees and apply it to scattering convolutional hidden Markov trees. This project can be broken down into two major steps:\\
+
+    \begin{itemize}
+      \item First we first plan to implement a variational version of the EM algorithm for SCHMTs following~\citep{olariu2009modified}. Here again the algorithm has been developed for binary regular trees, but can simply be adapted to the non-binary non-regular trees we are interested in. We thus plan a month for the implementation and at least another month for testing and experiments. Hopefully the VB version of SCHMTs will provide good enough results for a conference paper.\\
+      
+      \item The logical next step is to develop a stochastic version of the variational Bayes expectation maximization algorithm for hidden Markov trees, leading to the development of SVB-SCHMTs.  This step is expected to require more work than the previous one as the SVB framework as not yet been developed for HMTs. However we can follow the framework defined by JB. Durand~\citep{durand2004computational} when adapting ~\citep{devijver1985baum} smoothed-EM for HMM to HMTs to inspire us. We plan to spend about a month on developing the algorithm -can be done in parallel of coding VB-SCHMTS, another month for coding it and then a couple months for experiments. Hopefully the SVB-SCHMTs will provide enough material to lead to both a conference and a journal paper.\\
+    \end{itemize}
+
+  \subsection{Hierarchical variational models:}
+  
+    Variational Bayes provide a powerful framework to simplify and improve the quality of the parameters learned for our graphical model. However the quality of approximation made in the variational Bayes framework is highly correlated to the chosen variational distribution family.\\
+    
+    Hence once finished with the another interesting direction to follow for future works is to integrate the scattering convolutional hidden Markov tree into a hierarchical graphical models~\cite{fine1998hierarchical}. This framework would allow the use the SCHMT model as a node of a wider probabilistic graphical model. Using such an architecture yields to a tremendous number of possibilities. The performance in the segmentation task could be improved by adding a layer of graphical model encoding the spatial dependencies between the different labels in the scene. One could also use hierarchical models to describe a network of sensors each providing information on a targeted scene or integrate multiple source of information into the final prediction.\\
+  
+  
+  \subsection{Bayesian neural network:}
+  
+    Finally another interesting lead would be to consider other architectures for the graphical model and even make it includes the representation learning step. This would be possible using Bayesian neural networks and probabilistic back-propagation~\cite{hernandez2015probabilistic} or a Bayesian flavour of back-propagation~\cite{blundell2015weight}.
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

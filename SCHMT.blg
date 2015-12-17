@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: SCHMT.aux
 The style file: apalike.bst
@@ -29,45 +29,45 @@ Warning--entry type for "lecun2015web" isn't style-file defined
 Warning--entry type for "udrc2015sonar" isn't style-file defined
 --line 653 of file bib_SCHMT.bib
 Warning--empty journal in smolensky1986information
-You've used 64 entries,
+You've used 69 entries,
             1935 wiz_defined-function locations,
-            825 strings with 14339 characters,
-and the built_in function-call counts, 26093 in all, are:
-= -- 2615
-> -- 1003
-< -- 55
-+ -- 348
-- -- 332
-* -- 2121
-:= -- 4439
-add.period$ -- 201
-call.type$ -- 64
-change.case$ -- 477
-chr.to.int$ -- 64
-cite$ -- 65
-duplicate$ -- 1047
-empty$ -- 1839
-format.name$ -- 431
-if$ -- 5193
+            857 strings with 15363 characters,
+and the built_in function-call counts, 28501 in all, are:
+= -- 2849
+> -- 1119
+< -- 58
++ -- 389
+- -- 371
+* -- 2335
+:= -- 4847
+add.period$ -- 217
+call.type$ -- 69
+change.case$ -- 519
+chr.to.int$ -- 69
+cite$ -- 70
+duplicate$ -- 1131
+empty$ -- 2001
+format.name$ -- 477
+if$ -- 5668
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 65
-newline$ -- 322
-num.names$ -- 192
-pop$ -- 449
+missing$ -- 70
+newline$ -- 347
+num.names$ -- 209
+pop$ -- 486
 preamble$ -- 1
-purify$ -- 484
+purify$ -- 526
 quote$ -- 0
-skip$ -- 818
+skip$ -- 884
 stack$ -- 0
-substring$ -- 1846
-swap$ -- 187
-text.length$ -- 18
+substring$ -- 2035
+swap$ -- 203
+text.length$ -- 19
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 372
+type$ -- 402
 warning$ -- 1
-while$ -- 219
+while$ -- 239
 width$ -- 0
-write$ -- 824
+write$ -- 889
 (There were 4 error messages)
