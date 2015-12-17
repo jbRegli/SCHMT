@@ -89,9 +89,11 @@
 	
 \renewcommand{\abstractname}{Abstract:}
   \begin{abstract}
-    A scattering convolutional hidden Markov tree proposes a new method to perform inference on an high-dimensional signal. It combines the interesting signal representation created by the scattering transform to a powerful probabilistic graphical model.  
-    %It expresses the signal representation created by a scattering convolutional network as a hidden Markov tree.
-    A wavelet scattering network computes a signal representation which is translation invariant, stable to deformations while preserving the informative content of the signal by cascading wavelet transform convolutions with nonlinear modulus and averaging operators. The network's structure and its distribution are described using a hidden Markov tree. This tree offers a mean of performing several inference tasks among which are predictions. The scattering convolutional hidden Markov tree displays promising results on both classification and segmentation tasks of complex images.
+    {\it
+			A scattering convolutional hidden Markov tree proposes a new inference mechanism for high-dimensional signals by combining the interesting signal representation created by the scattering transform to a powerful probabilistic graphical model.\\
+			A wavelet scattering network computes a signal translation invariant and  stable to deformations representation that still preserves the informative content of the signal. Such properties are acquired by cascading wavelet transform convolutions with nonlinear modulus and averaging operators.\\
+			The network's structure and its distributions are described using a hidden Markov tree. This yield a generative model for high-dimensional inference. It offers a mean for performing several inference tasks among which are predictions. The scattering convolutional hidden Markov tree displays promising results on both classification and segmentation tasks of complex images.
+		}
   \end{abstract}
 	 
 	% Table of contents
@@ -1660,7 +1662,7 @@
 			\label{fir:SAS raw}
 		\end{figure}		
 		
-		The data used are extracted from the \textit{UDRC MCM} sonar imagery dataset~\citep{udrc2015sonar}. This dataset comprises Synthetic Aperture RADAR ($7300 \times 2000$ pixels SAS imageries) and hyperspectral data ---not used in this experiment. From those images, easier to handle $100$ by $100$ patches have been extracted and labeled as either seabed or ripple (see respectively Figure~\ref{fig:Seabed patch} and Figure~\ref{fig:Ripple patch}). The classification task at hand is very challenging due to the low informative content of each images and the high intra-class variability.\\
+		The data used are extracted from the \textit{UDRC MCM} sonar imagery dataset~\citep{udrc2015sonar}. This dataset comprises Synthetic Aperture RADAR ($7300 \times 2000$ pixels SAS imageries) and meta-data ---not used in this experiment. From those images, easier to handle $100$ by $100$ patches have been extracted and labeled as either seabed or ripple (see respectively Figure~\ref{fig:Seabed patch} and Figure~\ref{fig:Ripple patch}). The classification task at hand is very challenging due to the low informative content of each images and the high intra-class variability.\\
 
 		\begin{figure}[h]
 			\centering

@@ -2,4 +2,5 @@
 \BOOKMARK [1][-]{section.1.1}{Future work:}{chapter.1}% 2
 \BOOKMARK [2][-]{subsection.1.1.1}{Inference:}{section.1.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.2}{Variational Bayes for hidden Markov trees:}{section.1.1}% 4
-\BOOKMARK [2][-]{subsection.1.1.3}{Hierarchical variational models:}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.3}{Hierarchical graphical models:}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.4}{Bayesian neural network:}{section.1.1}% 6

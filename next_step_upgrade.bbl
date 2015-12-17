@@ -205,6 +205,11 @@ Hinton, G.~E., Srivastava, N., Krizhevsky, A., Sutskever, I., and
   detectors.
 \newblock {\em arXiv preprint arXiv:1207.0580}.
 
+\bibitem[Hoffman et~al., 2013]{hoffman2013stochastic}
+Hoffman, M.~D., Blei, D.~M., Wang, C., and Paisley, J. (2013).
+\newblock Stochastic variational inference.
+\newblock {\em The Journal of Machine Learning Research}, 14(1):1303--1347.
+
 \bibitem[H{\"o}rmander, 1971]{hormander1971fourier}
 H{\"o}rmander, L. (1971).
 \newblock Fourier integral operators. i.
@@ -329,6 +334,11 @@ Platt, J. et~al. (1999).
 \newblock Probabilistic outputs for support vector machines and comparisons to
   regularized likelihood methods.
 \newblock {\em Advances in large margin classifiers}, 10(3):61--74.
+
+\bibitem[Ranganath et~al., 2015]{ranganath2015hierarchical}
+Ranganath, R., Tran, D., and Blei, D.~M. (2015).
+\newblock Hierarchical variational models.
+\newblock {\em arXiv preprint arXiv:1511.02386}.
 
 \bibitem[Rish et~al., 2002]{rish2002efficient}
 Rish, I., Brodie, M., and Ma, S. (2002).
